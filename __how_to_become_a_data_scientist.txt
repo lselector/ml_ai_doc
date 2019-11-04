@@ -1,0 +1,191 @@
+Below are general recommendations about 
+becoming a data scientist:
+
+=================================================
+1. 
+Almost all data science happens on unix 
+platform (Linux or Mac).
+At work we now buy new 15" MacBook Pro 
+with 32GB RAM and 1TB SSD.
+
+For personal use I recommend to buy a used laptop.
+Specific model - MJLT2LL/A
+It is a 15"-screen mid-2015 MacBook Pro.
+Current eBay prices are ~ $900.
+
+Apple Macbook Pro MJLT2LL/A 15-inch Laptop 
+mid-2015
+2.5 GHz Intel Core i7 Processor, 16GB RAM, 512GB SSD
+It has dual graphics:
+  Radeon R9 M370X and built-inIntel Iris Pro 5200
+Important:
+  It has SSD with fast PCIe 2.0 x4 interface.
+
+Alternatively if you don't like Mac, there are
+many other options, for example:
+
+MacBook Pro 15"
+
+Lambda Labs TensorBook:
+  https://lambdalabs.com/deep-learning/laptops/tensorbook/max/customize
+
+Dell Precision 5540:
+  https://www.dell.com/en-us/work/shop/cty/pdp/spd/precision-15-5540-laptop
+  https://wesmckinney.com/blog/linux-laptop-experience/
+
+=================================================
+2. 
+You need to learn constantly. 
+There are many online resources.
+The main resource is youtube.
+So - get yourself a Youtube Prime subscription 
+($12..$18/mo) to be able to download training videos
+on your phone.
+
+=================================================
+3.
+Python has become THE language of Data Science.
+Everybody uses Anaconda python distribution.
+
+The main dev. environment is JupyterLab:
+  https://jupyterlab.readthedocs.io/en/stable/
+
+Also you need da simple text editor, for example:
+  https://www.sublimetext.com/
+
+Look on youtube for online tutorials for:
+    python, pandas, numpy, scikit-learn
+for example:
+ - https://www.youtube.com/watch?v=N4mEzFDjqtA
+ - https://www.youtube.com/watch?v=vmEHCJofslg
+ - https://www.youtube.com/watch?v=8JfDAm9y_7s
+ - https://www.youtube.com/watch?v=0Lt9w-BxKFQ
+Note - I just spent 5 min to find those.
+You may find better tutorials (may be) if you search yourself.
+=================================================
+4.
+You need to know some statistics.
+Normal distribution & CLT (Central Limit Theorem), etc.
+There are many tutorials online (youtube).
+
+You also need to be familiar with Excel
+  (vlookup, pivot table, etc.)
+  - https://www.youtube.com/watch?v=-WAEzokHSJM
+  - https://www.youtube.com/watch?v=qu-AK0Hv0b4
+
+Also SQL (Structured Query Language):
+  - http://www.sqlcourse.com/
+  - https://www.youtube.com/watch?v=9Pzj7Aj25lw
+=================================================
+5. 
+Data Science uses some math.
+I don't recommend to start with it.
+Instead learn it as you need it.
+
+=================================================
+6.
+Data Science has become a huge field.
+Nobody can know everything.
+But it is important to know the main people,
+main milestones, main concepts.
+Start following some famous people on youtube, 
+facebook, twitter:
+    Yann LeCun
+    Geoffrey Hinton
+    Ian Goodfellow
+    Yoshua Bengio
+    Jürgen Schmidhuber
+    Andrew Ng
+    etc.
+
+Listen to these lectures:
+
+  Andrew Ng at Amazon re:MARS 2019
+    - https://www.youtube.com/watch?v=j2nGxw8sKYU
+
+  C3.ai - Thomas Siebel on Digital Transformation
+    - https://www.youtube.com/watch?v=4Ie4gat6idQ
+
+=================================================
+7. 
+There is a great podcast which I recommend to 
+listen to regularly:
+   Sam Charrington – “This Week in Machine Learning & AI”
+
+=================================================
+8. 
+Siraj Raval on youtube
+It is a great learning source.
+I know that he used other people materials
+without giving credit (plagiarized).
+So yes, he is not the best person in the world.
+But his videos are very good.
+
+=================================================
+9.
+Chris Olah:
+  - http://colah.github.io/ 
+  - http://distill.pub
+
+=================================================
+10.
+Download my lectures from: 
+    http://myhash.com/lectures/
+
+and listen to the first 3 (at least)
+
+I have also posted them on youtube - here are the first 4:
+   - https://youtu.be/1iGVdjw34iI
+   - https://youtu.be/oD0qtk09Lw4
+   - https://youtu.be/aPdrXQZy3ok
+   - https://youtu.be/MJhGmWlHbRw
+
+=================================================
+11. 
+Look at terms here: 
+
+    http://levselector.com/ai.html
+
+Then google them, memorize them.
+So if someone asks you what is 
+    Logistic Regression
+    Naive Bayes,
+    Random Forest
+    XGBoost
+    TF-IDF
+    KNN
+    SVM
+    etc.
+you should know the answer right away.
+
+=================================================
+12.
+You should also know terms related to training 
+the models and evaluating the quality of the models
+    error / loss function
+    regularization
+    cross-validation, folds
+    Precision and Recall
+    Accuracy
+    ROC curve
+    confusion matrix
+    etc.
+
+=================================================
+13.
+For Deep Leaning (CNNs, RNNs, etc.) I recommend
+to take this coursera course: 
+
+    deeplearning.ai
+
+But this only is after you have learned the basic 
+Machine Learning.
+=================================================
+14.
+Look at AutoML:
+
+    https://www.h2o.ai/
+    https://www.datarobot.com/
+    https://www.microsoft.com/en-us/research/project/automl/
+=================================================
+
