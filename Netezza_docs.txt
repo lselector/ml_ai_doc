@@ -1,0 +1,638 @@
+# --------------------------------------------------------------
+# Netezza_docs.txt
+# useful bits about working with Netezza
+# --------------------------------------------------------------
+
+nzsql - interactive client to work with Netezza.
+getting help:
+    nzsql -h
+    also from within nzsql:
+       type "\?" for internal commands
+       type "\help" for sql commands
+
+some common options:
+  -h, --help, -?       help
+  -h <host>            Specify database server host (default: netezza)
+  -port <port>         Specify database server port (default: hardwired)
+  -d <dbname>          Specify database name to connect to (default: .....)
+  -u <username>        Specify database username (default: .....)
+  -pw <password>       Specify the database user password
+    -A - use unaligned table output mode.
+    -t - print rows only.
+    -f <fname> - input file (with SQL)
+    -o <fname> - output file
+    -c <query> - run only single query or slash command, then exit.
+    -E - display queries that internal commands generate.
+    -F <string> - set the field separator. The default is a vertical bar '|'.
+    -x - enable expanded table output (vertical).
+    -h - display help.
+
+# --------------------------------------------------------------
+some useful commands from Netezza prompt
+# --------------------------------------------------------------
+
+\h - show help
+\h show procedure - show help for command 'show procedure'
+\q - quit
+\x - toggle output format between default-horizontal and expanded-vertical.
+----------------------
+\l - list databases
+set catalog somedatabase;
+----------------------
+adding printing lines into sql file using "echo":
+
+\echo some text 1
+select * from tab1 limit 2;
+
+\echo some text 2
+select * from tab1 limit 2;
+
+\echo DONE
+\echo
+----------------------
+adding printing lines into sql file using select:
+
+select 'some text 1' message;
+select * from tab1 limit 2;
+
+select 'some text 2' message;
+select * from tab1 limit 2;
+
+----------------------
+----------------------
+----------------------
+\d tab|view|sequence - describe table|view|sequence (no semicolon at the end)
+select get_viewdef(view_name);
+select viewname,owner,createdate,definition from _v_view where objtype='view';
+select * from mytable limit 1;
+show procedure myproc verbose;
+----------------------
+listing objects:
+    \dt       - list all tables in current database
+    \dt e%    - list tables with names starting with 'e'
+    \dv test% - list views with names starting with 'test'
+    \dmv - list of materialized views
+    \ds - list sequences
+    \de - list temp tables
+    \dSt , \dSv - list system tables and views
+    \df - list functions (built-in)
+    \dT - list data types
+    show procedure all;
+----------------------
+listing users, groups, permissions
+    \du - list users
+    \dg - list groups
+    \dpu - list permissions granted to a user
+    \dpg - list permissions granged to a group
+----------------------
+\act - show current active sessions
+----------------------
+
+exec dw_util..DROP_OBJECT_IF_EXISTS('T1', 'table');
+exec dw_util..DROP_OBJECT_IF_EXISTS('T1'    , 'view'   );
+exec dw_util..DROP_OBJECT_IF_EXISTS('SYN_T1', 'synonym');
+# --------------------------------------------------------------
+There are some unix utilities in "bin", for example
+you can get DDLs like this:
+    nz_ddl_table      dbname   tabname
+    nz_ddl_view       dbname   viewname
+    nz_ddl_procedure  dbname   procname
+
+Note:
+I have created a convenient bash script "nzdef" to print 
+object definitions from unix prompt, for example:
+
+    nzdef    dbname    drop_object_if_exists
+
+which you can invoke from nzsql prompt prepending by "\! "
+like this:
+
+    > \! nzdef webstats esp_prep2
+
+# --------------------------------------------------------------
+# all nzsql options
+# --------------------------------------------------------------
+    Usage:
+      nzsql [options] [security options] [dbname [username] [password]]
+
+    Security Options:
+      -securityLevel       Security Level you wish to request (default: preferredUnSecured)
+      -caCertFile          ROOT CA certificate file (default: NULL)
+
+    Options:
+      -a                   Echo all input from script
+      -A                   Unaligned table output mode (-P format=unaligned)
+      -c <query>           Run only single query (or slash command) and exit
+      -d <dbname>          Specify database name to connect to (default: .....)
+      -D <dbname>          Specify database name to connect to (default: .....)
+      -schema <schemaname> Specify schema name to connect to (default: $NZ_SCHEMA)
+      -e                   Echo queries sent to backend
+      -E                   Display queries that internal commands generate
+      -f <filename>        Execute queries from file, then exit
+      -F <string>          Set field separator (default: "|") (-P fieldsep=)
+                           For any binary/control/non-printable character use '$'
+                           (e.g., nzsql -F $'\t' // for TAB)
+      -host <host>         Specify database server host (default: netezza)
+      -h <host>            Specify database server host (default: netezza)
+      -H                   HTML table output mode (-P format=html)
+      -l                   List available databases, then exit
+      -n                   Disable readline
+      -o <filename>        Send query output to filename (or |pipe)
+      -O <filename>        Send query output with errors to filename (or |pipe)
+      -port <port>         Specify database server port (default: hardwired)
+      -P var[=arg]         Set printing option 'var' to 'arg' (see \pset command)
+      -q                   Run quietly (no messages, only query output)
+      -r                   Suppress row count in query output
+      -R <string>          Set record separator (default: newline) (-P recordsep=)
+      -Rev                 Show version information and exit
+      -rev                 Show version information and exit
+      -s                   Single step mode (confirm each query)
+      -S                   Single line mode (newline terminates query)
+      -t                   Print rows only (-P tuples_only)
+      -time                Print time taken by queries
+      -T text              Set HTML table tag options (width, border) (-P tableattr=)
+      -u <username>        Specify database username (default: .....)
+      -U <username>        Specify database username (default: .....)
+      -v name=val          Set nzsqlvariable 'name' to 'value'
+      -V                   Show version information and exit
+      -W <password>        Specify the database user password
+      -pw <password>       Specify the database user password
+      -x                   Turn on expanded table output (-P expanded)
+      -X                   Do not read startup file (~/.nzsqlrc)
+      -h or -? or --help   Display this help
+
+
+# --------------------------------------------------------------
+# \? help
+# --------------------------------------------------------------
+    DBNAME.ADMIN(USERNAME)=> \?
+     \a              toggle between unaligned and aligned mode
+     \act            show current active sessions
+     \c[onnect] [dbname [user] [password]]
+                      connect to new database (currently 'DBNAME')
+     \C <title>      HTML table title
+     \copy ...       perform SQL COPY with data stream to the client machine
+     \d <table>      describe table (or view, index, sequence, synonym)
+     \dO <table>     describe table or view in sorted order
+     \d{t|v|i|s|e|x} list tables/views/indices/sequences/temp tables/external tables
+     \d{m|y}         list materialized views/synonyms
+     \dS{t|v|i|s}    list system tables/views/indexes/sequences
+     \dM{t|v|i|s}    list system management tables/views/indexes/sequences
+     \dp <name>      list user permissions
+     \dpu <name>     list permissions granted to a user
+     \dpg <name>     list permissions granted to a group
+     \dgp <name>     list grant permissions for a user
+     \dgpu <name>    list grant permissions granted to a user
+     \dgpg <name>    list grant permissions granted to a group
+     \d{u|U}         list users/User Groups
+     \d{g|G|Gr}      list groups/Group Users/Resource Group Users
+     \da[+] [name]   list aggregates, + for additional fields
+     \dd [object]    list comment for object
+     \df[+] [name]   list functions, + for additional fields
+     \dl[+] [name]   list libraries, + for additional fields
+     \do             list operators
+     \dT             list data types
+     \e [file]       edit the current query buffer or [file] with external editor
+     \echo <text>    write text to stdout
+     \f <sep>        change field separator
+     \g [file]       send query to backend (and results in [file] or |pipe)
+     \h [cmd]        help on syntax of sql commands, * for all commands
+     \H              toggle HTML mode (currently off)
+     \i <file>       read and execute queries from <file>
+     \l              list all databases
+     \o [file]       send all query results to [file], or |pipe
+     \O [filename]   send query output with errors to filename (or |pipe)
+     \p              show the content of the current query buffer
+     \pset <opt>     set table output  <opt> = {format|border|expanded|fieldsep|
+                      null|recordsep|tuples_only|title|tableattr|pager}
+     \q              quit nzsql
+     \qecho <text>   write text to query output stream (see \o)
+     \r              reset (clear) the query buffer
+     \s [file]       print history or save it in [file]
+     \set <var> <value>  set internal variable
+     \t              show only rows (currently off)
+     \time           print time taken by queries
+     \T <tags>       HTML table tags
+     \unset <var>    unset (delete) internal variable
+     \w <file>       write current query buffer to a <file>
+     \x              toggle expanded output (currently off)
+     \! [cmd]        shell escape or command
+
+# --------------------------------------------------------------
+# \h help
+# --------------------------------------------------------------
+DBNAME.ADMIN(USERNAME)=> \h
+Available help:
+  ALTER AGGREGATE               CREATE REPLICATION SET        GRANT
+  ALTER CATEGORY                CREATE SCHEDULER RULE         GROOM TABLE
+  ALTER COHORT                  CREATE SCHEMA                 INSERT
+  ALTER DATABASE                CREATE SECURITY LEVEL         RESET
+  ALTER FUNCTION                CREATE SEQUENCE               REVERT
+  ALTER GROUP                   CREATE SYNONYM                REVOKE
+  ALTER HISTORY CONFIGURATION   CREATE TABLE                  ROLLBACK
+  ALTER PROCEDURE               CREATE TABLE AS               SELECT
+  ALTER KEYSTORE                CREATE USER                   SET
+  ALTER LIBRARY                 CREATE VIEW                   SET AUTHENTICATION
+  ALTER REPLICATION NODE        DELETE                        SET CATALOG
+  ALTER REPLICATION SET         DROP AGGREGATE                SET CONNECTION
+  ALTER SCHEDULER RULE          DROP CATEGORY                 SET HISTORY CONFIGURATION
+  ALTER SCHEMA                  DROP COHORT                   SET REPLICATION
+  ALTER SECURITY LEVEL          DROP CONNECTION               SET SCHEDULER RULE
+  ALTER SEQUENCE                DROP CRYPTO KEY               SET SCHEMA
+  ALTER SESSION                 DROP DATABASE                 SET SESSION
+  ALTER SYNONYM                 DROP FUNCTION                 SET SYSTEM DEFAULT
+  ALTER TABLE                   DROP GROUP                    SET TRANSACTION
+  ALTER USER                    DROP HISTORY CONFIGURATION    SHOW
+  ALTER VIEW                    DROP PROCEDURE                SHOW AGGREGATE
+  BEGIN                         DROP KEYSTORE                 SHOW AUTHENTICATION
+  CALL                          DROP LIBRARY                  SHOW CATEGORY
+  COMMENT                       DROP REPLICATION NODE         SHOW COHORT
+  COMMIT                        DROP REPLICATION SET          SHOW CONNECTION
+  CREATE AGGREGATE              DROP SCHEDULER RULE           SHOW CRYPTO KEY
+  CREATE CATEGORY               DROP SCHEMA                   SHOW FUNCTION
+  CREATE COHORT                 DROP SECURITY LEVEL           SHOW HISTORY CONFIGURATION
+  CREATE CRYPTO KEY             DROP SEQUENCE                 SHOW KEYSTORE
+  CREATE DATABASE               DROP SYNONYM                  SHOW LIBRARY
+  CREATE EXTERNAL TABLE         DROP TABLE                    SHOW PROCEDURE
+  CREATE FUNCTION               DROP USER                     SHOW SCHEDULER RULE
+  CREATE GROUP                  DROP VIEW                     SHOW SECURITY LEVEL
+  CREATE HISTORY CONFIGURATION  EXECUTE                       SHOW TAGS
+  CREATE PROCEDURE              EXECUTE AS                    SHOW SYSTEM DEFAULT
+  CREATE KEYSTORE               EXECUTE PROCEDURE             TRUNCATE
+  CREATE LIBRARY                EXPLAIN                       UPDATE
+  CREATE MATERIALIZED VIEW      EXTRACT
+  CREATE REPLICATION NODE       GENERATE STATISTICS
+
+# --------------------------------------------------------------
+-- how-to find database size in Netezza
+
+    select orx.database::nvarchar(64) as "dbname",
+    case when sum(sod.allocated_bytes) is null then 0
+         else sum(sod.allocated_bytes)/1073741824
+    end as "gbytes"
+    from _v_sys_object_dslice_info sod
+    inner join _v_obj_relation_xdb orx on orx.objid = sod.tblid
+    group by "dbname"
+    order by "gbytes" desc
+
+# --------------------------------------------------------------
+-- how-to create a database
+
+CREATE DATABASE DatabaseName;
+
+# --------------------------------------------------------------
+-- how-to rename a database
+
+ALTER DATABASE OldDatabaseName RENAME TO NewDatabaseName;
+
+# --------------------------------------------------------------
+-- how-to create a synomim
+
+CREATE SYNONYM synonym_name FOR DatabaseName.SchemaName.TableName;
+
+# --------------------------------------------------------------
+-- how-to create a table
+
+CREATE TABLE SVOC_OWNER.ExampleTable
+(
+    ByteIntCol        byteint            NOT NULL
+  , SmallIntCol       smallint           NOT NULL
+  , IntegerCol        integer            NOT NULL
+  , BigIntCol         bigint             NOT NULL
+  , NumericPSCol      numeric(38,38) NOT NULL
+  , NumericPCol       numeric(38,0)  NOT NULL
+  , NumericCol        numeric        NOT NULL
+  , DecimalCol        numeric        NOT NULL
+  , FloatCol          float(15)          NOT NULL
+  , RealCol           real               NOT NULL
+  , DoubleCol         double             NOT NULL
+  , CharCol           char(1)        NOT NULL
+  , VarcharCol        varchar(1)     NOT NULL
+  , NcharCol          nchar(1)       NOT NULL
+  , NvarcharCol       nvarchar(1)    NOT NULL
+  , BooleanCol        boolean            NOT NULL
+  , DateCol           date           NOT NULL
+  , TimeCol           time           NOT NULL
+  , TimeTzCol         timetz         NOT NULL
+  , TimestampCol      timestamp      NOT NULL
+
+ )
+DISTRIBUTE ON RANDOM
+;
+
+# --------------------------------------------------------------
+-- how-to copy table (CTAS = Create Table As Select)
+
+create table t1 as select * from t2;  -- definition and distribution will be same
+or
+create table t1 (...) distribute on (...);
+insert into t1 select ... from t2;
+
+# --------------------------------------------------------------
+-- how-to or insert data from non-current db to current db table
+
+INSERT INTO TableName SELECT * FROM DatabaseName..TableName;
+
+# --------------------------------------------------------------
+-- how-to drop a table
+
+DROP TABLE DatabaseName..TableName;
+
+# --------------------------------------------------------------
+-- how-to change the ownership of a table
+
+ALTER TABLE mytab OWNER TO NewOwner;
+
+# --------------------------------------------------------------
+-- how-to perform a simple select
+
+SELECT * FROM mytab
+WHERE 1=1
+  AND col1 = 'something'
+  AND col2 > 0.0
+ORDER BY col1;
+
+# --------------------------------------------------------------
+-- how-to delete from table
+
+DELETE FROM mytab WHERE col2 = 'something';
+
+# --------------------------------------------------------------
+-- how-to call a stored procedure
+
+CALL ProcName ;
+EXEC ProcName ;
+EXECUTE ProcName ;
+
+# --------------------------------------------------------------
+-- example stored procedure
+
+CREATE OR REPLACE PROCEDURE ProcName()
+RETURNS INT4 LANGUAGE NZPLSQL AS
+BEGIN_PROC
+  DECLARE
+    StrVar varchar;
+  BEGIN
+    StrVar := 'This string is quoted';
+  END;
+END_PROC
+; --END PROC
+
+# --------------------------------------------------------------
+-- a single line comment
+/*
+a multi-line comment
+*/
+
+# --------------------------------------------------------------
+-- example proc with parameters
+
+CREATE OR REPLACE PROCEDURE ProcName (int, varchar(ANY)) RETURNS int
+LANGUAGE NZPLSQL AS
+BEGIN_PROC
+  DECLARE
+    pId ALIAS FOR $1;
+    pName ALIAS FOR $2;
+  BEGIN
+    INSERT INTO t1 SELECT * FROM t2 WHERE id = pId;
+  END;
+END_PROC
+;
+
+# --------------------------------------------------------------
+-- Control structure
+
+IF movies.genre = 'd' THEN
+  film_genre := 'drama';
+ELSIF movies.genre = 'c' THEN
+  film_genre := 'comedy';
+ELSIF movies.genre = 'a' THEN
+  film_genre := 'action';
+ELSIF movies.genre = 'n' THEN
+  film_genre := 'narrative';
+ELSE
+  -- An uncategorized genre form has been requested.
+  film_genre := 'Uncategorized';
+END IF;
+
+# --------------------------------------------------------------
+-- how-to list all stored procedures
+
+SHOW PROCEDURE ALL ;
+
+# --------------------------------------------------------------
+-- how-to document a stored procedure
+
+COMMENT ON PROCEDURE customer() IS 'some comment';
+
+# --------------------------------------------------------------
+-- how-to convert date str into nzdate
+
+select  to_date(substring(20090731 from 1 for 8),'YYYYMMDD') as NZDATE
+
+# --------------------------------------------------------------
+-- select top
+
+select a.* from some_schema.some_table a limit 10
+
+# --------------------------------------------------------------
+-- how to remove duplicates
+
+CREATE TABLE TmpTableDuplicates as
+    SELECT col11,col2,col3 from DuplicatesContainingTable
+    where FilterCol = 'FilterValue'
+    group by 1,2,3;
+DELETE FROM DuplicatesContainingTable where FilterCol = 'FilterValue';
+INSERT INTO Source_table select * from TmpTableDuplicates;
+DROP TABLE TmpTableDuplicates;
+
+# --------------------------------------------------------------
+-- Query to get a list of databases:
+
+SELECT database
+FROM _v_database
+WHERE UPPER(database) <> 'MASTER_DB'
+ORDER BY database;
+
+# --------------------------------------------------------------
+-- Query to get a list of views and thier definitions in a database:
+
+SELECT VIEWNAME,OWNER,CREATEDATE,DEFINITION
+FROM _V_VIEW
+WHERE OBJTYPE='VIEW';
+
+# --------------------------------------------------------------
+-- Query to get a list of tables in a database:
+
+SELECT TABLENAME,OWNER,CREATEDATE
+FROM _V_TABLE
+WHERE OBJTYPE='TABLE';
+
+# --------------------------------------------------------------
+-- Query to get a list of columns from a table or a view:
+
+SELECT ATTNUM,ATTNAME
+FROM _V_RELATION_COLUMN
+WHERE NAME=UPPER('<TABLE NAME>')
+ORDER BY ATTNUM ASC;
+
+# --------------------------------------------------------------
+-- Query to get list of user groups on the box:
+
+SELECT GROUPNAME, OWNER, CREATEDATE, ROWLIMIT, SESSIONTIMEOUT,
+ QUERYTIMEOUT, DEF_PRIORITY, MAX_PRIORITY
+FROM _V_GROUP;
+
+# --------------------------------------------------------------
+-- Query to get list of users and the groups they are in, on the box:
+
+SELECT GROUPNAME, OWNER, USERNAME
+FROM _V_GROUPUSERS;
+-- (Does not give any LDAP users in this query)
+
+# --------------------------------------------------------------
+--Query to find the number of rows in a table without actually querying the
+table:
+-- (Sometimes needed for some really huge tables of rowcount > 80 Billion)
+
+SELECT RELNAME TABLE_NAME,
+  CASE  WHEN RELTUPLES < 0  THEN ((2^32) * RELREFS) + ((2^32) + RELTUPLES )
+                            ELSE ((2^32) * RELREFS) + ( RELTUPLES )
+  END NUM_ROWS
+FROM  _T_CLASS,  _T_OBJECT
+WHERE _T_OBJECT.OBJID = _T_CLASS.OID
+  AND _T_OBJECT.OBJCLASS = 4905  -- DISPLAY ONLY TABLES
+  AND RELNAME = UPPER('<TABLE NAME>') ;
+
+# --------------------------------------------------------------
+--Query to check if any of the SPU's are running slower than the rest:
+--  (This supposed to give the read-write speed of each SPU that is online -
+but it doesn't run for me)
+
+SELECT HWID, BYTE_COUNT/TOTAL_MSEC
+FROM  _VT_DISK_TIMING
+ORDER BY 2;
+
+# --------------------------------------------------------------
+--- query to get the list of tables and thier skew and size:
+
+ SELECT TABLENAME,OBJTYPE,OWNER,CREATEDATE,USED_BYTES,SKEW
+ FROM _V_TABLE_ONLY_STORAGE_STAT
+ WHERE OBJCLASS = 4905 OR OBJCLASS = 4911
+ ORDER BY TABLENAME;
+
+# --------------------------------------------------------------
+--- HOW-TO GET THE LIST OF VIEWS:
+
+SELECT distinct a.objname as db_name, b.objname as view_name
+FROM _t_object a, _t_object b
+WHERE a.objid = b.objdb
+  and b.objclass = 4906
+
+# --------------------------------------------------------------
+-- how to SELECT INTO
+
+INSERT INTO db2.schema2.tab2
+SELECT col1 , col2
+FROM db1.schema1.tab1;
+
+# --------------------------------------------------------------
+-- how-to remove duplicates by several columns
+
+delete from mytab
+where rowid not in ( select min(rowid) from mytab group by (col1 , col2 ,
+col3) );
+
+# --------------------------------------------------------------
+-- _V_USER : The user view gives information about the users in the netezza
+system.
+
+select * from _v_user;
+
+# --------------------------------------------------------------
+-- _V_TABLE: The table view contains the list of tables created in the netezza
+performance system.
+
+select * from _v_table;
+
+# --------------------------------------------------------------
+-- _V_RELATION_COLUMN: The relation column system catalog view contains the
+columns available in a table.
+
+select * from _v_relation_column;
+
+# --------------------------------------------------------------
+-- _V_TABLE_INDEX: This system catalog contains the information about the
+indexes created on table.
+netezza does not support creating indexes on a table as of now.
+
+select * from _v_table_index;
+
+# --------------------------------------------------------------
+-- _V_OBJECTS: Lists the different objects like tables, view, functions etc
+available in the netezza.
+
+select * from _v_objects;
+
+# --------------------------------------------------------------
+-- what is running currently
+
+select * from _v_qrystat;
+
+# --------------------------------------------------------------
+-- what has been running lately
+
+select * from _v_qryhist;
+
+# --------------------------------------------------------------
+    SELECT VIEWNAME,OWNER,CREATEDATE,DEFINITION
+    FROM _V_VIEW
+    WHERE OBJTYPE='VIEW';
+# --------------------------------------------------------------
+GROOM TABLE command
+Syntax:
+GROOM TABLE sometable  mode  reclaim
+where
+    mode := RECORDS READY | RECORDS ALL | PAGES ALL | PAGES START | VERSIONS
+    reclaim := RECLAIM BACKUPSET { NONE | DEFAULT | <backupsetid>}
+
+Examples:
+    GROOM TABLE mytable VERSIONS;
+    GROOM TABLE mytable RECORDS ALL;
+    GROOM TABLE mytable PAGES ALL;
+    GROOM TABLE mytable RECORDS READY;
+# --------------------------------------------------------------
+DROP TABLE X_LOAD_STATS;
+CREATE TABLE X_LOAD_STATS
+(
+    LOAD_DATE        DATE,
+    SOURCE_KEY INTEGER,
+    INPUT_FILE_ID      INTEGER,
+    NUM_FACT_ROWS      INTEGER,
+    NUM_PAGE_EXISTING  INTEGER,
+    NUM_PAGE_NEW       INTEGER,
+    NUM_CLICK_LOCATION_EXISTING INTEGER,
+    NUM_CLICK_LOCATION_NEW INTEGER
+)
+DISTRIBUTE ON RANDOM;
+
+ALTER TABLE X_LOAD_STATS
+OWNER TO ADMIN;
+# --------------------------------------------------------------
+truncate table sometable;
+
+INSERT INTO mytable (PAGE_KEY, DOMAIN, PAGENAME, URL_DIRECTORY,
+                           PAGE_URL, PAGE_URL_TYPE, LOAD_DATE)
+SELECT 100001, '', '', '', '', 'I', '2014-01-01'
+UNION
+SELECT 100002, '', '', '', '', 'V', '2014-01-01'
+UNION
+SELECT 100003, '', '', '', '', 'O', '2014-01-01';
+# --------------------------------------------------------------
+     create MYTABLE_SAVE as select * from MYTABLE
+     create the new version of MYTABLE manually
+     insert into MYTABLE select * from MYTABLE_SAVE
+# --------------------------------------------------------------
+ 
+
+

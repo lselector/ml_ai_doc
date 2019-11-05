@@ -1,0 +1,1565 @@
+# --------------------------------------------------------------
+# This file contains help for many Netezza SQL commands.
+# --------------------------------------------------------------
+
+Command:     ALTER CATEGORY
+Description: Alters an existing category.
+Syntax:
+ALTER CATEGORY name
+    RENAME TO new_name
+
+   Rename the category named
+    name
+    to new_name.
+
+
+Command:     ALTER COHORT
+Description: Alters an existing cohort.
+Syntax:
+ALTER COHORT name
+    { IN COHORT parent | IN NONE }
+
+   Change the cohort's place in the cohort hierarchy.  
+   If parent is specified, it must be another
+   existing cohort that will become the named cohort's parent.
+   If NONE is specified, the cohort has no parent and is the top of a
+   cohort hierarchy.
+
+ALTER COHORT name
+    RENAME TO new_name
+
+   Rename the cohort named
+    name
+    to new_name.
+
+
+Command:     ALTER DATABASE
+Description: Alter properties of a database
+Syntax:
+ALTER DATABASE database_name SET DEFAULT CHARACTER SET LATIN9
+
+    Alter the default 8-bit character set of the database to LATIN9.  
+    The default 8-bit character set of a database may only 
+    be altered if it is currently undeclared.
+
+ALTER DATABASE database_name OWNER TO user_name
+
+    Change the owner of the database.
+
+ALTER DATABASE database_name RENAME TO new_db_name
+
+    Rename the database.
+
+ALTER DATABASE database_name COLLECT HISTORY [ ON | OFF ]
+
+    Change the collect history attribute of the database.
+
+
+Command:     ALTER FUNCTION
+Description: Alter properties of a User Defined Function
+Syntax:
+ALTER FUNCTION function_name(argument_types)
+    OWNER TO user_name
+
+    Change the owner of the function
+
+   argument_types is a list of fully specified arguments and types.
+
+   All NPS types are supported.
+   Strings must have either a size or ANY for generic.
+   NUMERICS must have either precision and scale, or ANY for generic.
+
+
+ALTER FUNCTION function_name(argument_types)
+    [ RETURNS return_type ]
+    [ [ DETERMINISTIC | NOT DETERMINISTIC ] ]
+    [ [ RETURNS NULL ON NULL INPUT | CALLED ON NULL INPUT ] ]
+    [ MAXIMUM MEMORY [ '0' | '100' | '1k' | '10k' | '100k' | '1m' | '10m' ] ]
+    [ LOGMASK mask ]
+    [ NO DEPENDENCIES | DEPENDENCIES deplibs ]
+    [ EXTERNAL CLASS NAME 'class_name' ]
+    [ EXTERNAL HOST OBJECT 'host_object_filename' ]
+    [ EXTERNAL SPU OBJECT 'SPU_object_filename' ]
+
+    Modify a user defined function
+
+    argument_types is a list of fully specified arguments and types.
+    All NPS types are supported.
+    Strings must have either a size or ANY for generic.
+    NUMERICS must have either precision and scale, or ANY for generic.
+
+    return_type is one fully specified argument and type.
+    Follows same rules as argument_types.
+
+    DETERMINISTIC indicates that the UDF is a pure function, one which always
+    returns the same value given the same argument values and which has no side
+    effects. The system may consider multiple instances of a deterministic UDF
+    having identical argument lists to be candidates for common subexpression
+    elimination
+
+    RETURNS NULL ON NULL INPUT indicates that the function always returns null
+    whenever any of its arguments are null. If you specify this parameter, the
+    function will not be executed when there are null arguments; instead a null
+    result is assumed automatically. CALLED ON NULL INPUT (the default)
+    indicates that the function will be called normally when some of its
+    arguments are null. It is then the function creator's responsibility
+    to check for null values if necessary and respond appropriately.
+
+    MAXIUM MEMORY specifes expected maximum memory used.
+
+    mask specifies the log mask. Can be one or a comma seperate list of:
+    { DEBUG, TRACE, NONE }
+
+    deplibs specifies the library dependencies . Can be one or a comma separated list of library names
+
+    NO DEPENDENCIES specifies that there are no dependencies for the function and can be used to
+    clear preexisting dependencies.
+
+    class_name specifies the name of the C++ class that implements the function.
+
+    host_object_filename specifies the pathname of the host's compiled object
+    file.
+
+    SPU_object_filename specifies the pathname of the SPU's
+    compiled object file.
+
+
+
+Command:     ALTER GROUP
+Description: Alter properties of a group
+Syntax:
+ALTER GROUP name [WITH]
+     [ ROWSETLIMIT integer ]
+     [ SESSIONTIMEOUT integer ]
+     [ QUERYTIMEOUT integer ]
+     [ DEFPRIORITY [ CRITICAL | HIGH | NORMAL | LOW | NONE ] ]
+     [ MAXPRIORITY [ CRITICAL | HIGH | NORMAL | LOW | NONE ] ]
+     [ RESOURCELIMIT resourcePercent ]
+     [ SYSID gid ]
+     [ DROP USER username [, ... ] ]
+     [ [ADD] USER username [, ... ] ]
+     [ OWNER TO user_name ]
+     [ RENAME TO new_grp_name ]
+     [ COLLECT HISTORY [ ON | OFF | DEFAULT ] ]
+     [ CONCURRENT SESSIONS integer ]
+     [ ACCESS TIME [ ALL | day,... ]
+            [ [START time-literal END time-literal,]... ] ]
+
+Command:     ALTER HISTORY CONFIGURATION
+Description: Alters a new history configuration for the NPS.
+Syntax:
+ALTER HISTORY CONFIGURATION config_name
+     [ HISTTYPE [ QUERY | AUDIT | NONE ] ]
+     [ NPS [ LOCALHOST | hostname ] ]
+     [ DATABASE dbname ]
+     [ USER username ]
+     [ PASSWORD password ]
+     [ COLLECT [ QUERY | PLAN | TABLE | COLUMN | SERVICE | STATE ],... ]
+     [ LOADINTERVAL number ]
+     [ LOADMINTHRESHOLD number ]
+     [ LOADMAXTHRESHOLD number ]
+     [ DISKFULLTHRESHOLD number ]
+     [ STORAGELIMIT number ]
+     [ LOADRETRY number ]
+     [ ENABLEHIST [ TRUE | FALSE ] ]
+     [ ENABLESYSTEM [ TRUE | FALSE ] ]
+     [ VERSION  version ]
+     [ KEY key_store . key_alias ]
+     [ INCLUDING [ ALL | SUCCESS | FAILURE ] ]
+
+Command:     ALTER KEYSTORE
+Description: Changes the password of a keystore.
+Syntax:
+ALTER KEYSTORE name
+      PASSWORD old-password new-password
+
+
+    Change the password of a keystore.
+
+
+Command:     ALTER LIBRARY
+Description: Alter properties of a User Defined Shared Library
+Syntax:
+ALTER LIBRARY library_name
+    OWNER TO user_name
+
+    Change the owner of the library
+
+
+ALTER LIBRARY library_name
+    [ AUTOMATIC LOAD | MANUAL LOAD ]
+    [ NO DEPENDENCIES | DEPENDENCIES deplibs ]
+    [ EXTERNAL HOST OBJECT 'host_object_filename' ]
+    [ EXTERNAL SPU OBJECT 'SPU_object_filename' ]
+
+    Modify a user defined shared library
+
+    Automatic load means that the library will be automatically opened by NPS before any objects that
+    depend upon it are used. Manual means that a UDA or UDF must do the open via dlopen. Manual is
+    only honored for libraries that a UDF or UDA directly depends upon.
+
+    deplibs specifies the library dependencies . Can be one or a comma separated list of library names
+
+    NO DEPENDENCIES specifies that there are no dependencies for the library and can be used to
+    clear preexisting dependencies.
+
+    class_name specifies the name of the C++ class that implements the aggregate.
+
+    host_object_filename specifies the pathname of the host's compiled object
+    file.
+
+    SPU_object_filename specifies the pathname of the SPU's
+    compiled object file.
+
+
+
+
+
+Command:     ALTER PROCEDURE
+Description: Alter properties of a User Defined Procedure
+Syntax:
+ALTER PROCEDURE procedure_name(argument_types)
+    OWNER TO user_name
+
+    Change the owner of the procedure
+
+   argument_types is a list of fully specified arguments and types.
+
+   All NPS types are supported.
+   Strings must have either a size or ANY for generic.
+   NUMERICS must have either precision and scale, or ANY for generic.
+
+
+ALTER PROCEDURE procedure_name(argument_types)
+    [ RETURNS return_type ]
+    [ [ EXECUTE AS OWNER | EXECUTE AS CALLER ] ]
+    AS procedure_body
+
+    Modify a user defined NZPLSQL procedure
+
+    argument_types is a list of fully specified arguments and types.
+    All NPS types are supported.
+    Strings must have either a size or ANY for generic.
+    NUMERICS must have either precision and scale, or ANY for generic.
+
+    return_type is one fully specified argument and type.
+    Follows same rules as argument_types.
+
+    procedure_body specifies the body of the function. It must be enclosed with
+    either single quotes or BEGIN_PROC and END_PROC.
+
+
+
+
+
+Command:     ALTER SECURITY LEVEL
+Description: Alters an existing security level.
+Syntax:
+ALTER SECURITY LEVEL name
+    VALUE level
+
+   Change the level value. Higher
+   security level values are more restrictive.  You cannot alter a security
+   level value if you have row secure tables defined.
+
+ALTER SECURITY LEVEL name
+    RENAME TO new_name
+
+   Rename the security level named
+    name
+    to new_name.
+
+
+Command:     ALTER SEQUENCE
+Description: Alters a user sequence
+Syntax:
+ALTER SEQUENCE seqname
+     [ RESTART WITH start value ]
+     [ INCREMENT BY increment ]
+     [ NO MINVALUE | MINVALUE minimum value ]
+     [ NO MAXVALUE | MAXVALUE maximum value ]
+     [ NO CYCLE | CYCLE ]
+     [ OWNER TO user_name ]
+     [ RENAME TO new_seq_name ]
+
+Command:     ALTER SESSION
+Description: Alter properties of a session
+Syntax:
+ALTER SESSION session_id SET PRIORITY TO priority
+ALTER SESSION SET PRIORITY TO priority
+
+Use this command to change the priority of a session.  If the session_id is not entered,
+the current session is used.  The priority is one of the following literals (low, normal,
+high or critical).
+
+
+Command:     ALTER SYNONYM
+Description: Alter properties of a synonym
+Syntax:
+ALTER SYNONYM synonym OWNER TO user_name
+
+    Change the owner of the synonym
+
+ALTER SYNONYM synonym RENAME TO new_synonym_name
+
+    Rename the synonym
+
+
+Command:     ALTER TABLE
+Description: Alter properties of a table
+Syntax:
+ALTER TABLE  table
+    ALTER [ COLUMN ] column { SET DEFAULT value | DROP DEFAULT }
+
+    Modify column default
+
+ALTER TABLE table
+    RENAME [ COLUMN ] column TO newcolumn
+
+    Change attribute name on a table
+
+ALTER TABLE table
+    MODIFY COLUMN ( column varchar(maxsize) )
+
+    Increase the maximum size of a varchar column
+
+ALTER TABLE table SET PRIVILEGES TO table
+
+    Copy privileges from another table
+
+ALTER TABLE table OWNER TO user_name
+
+    Change the owner of the table
+
+ALTER TABLE table RENAME TO new_table_name
+
+    Rename the table
+
+ALTER TABLE table ADD [ constraint_name ] table_constraint [ constraint_characteristics ]
+
+    Add a new constraint to a table
+
+  constraint_name can be:
+  { CONSTRAINT name }
+
+  table_constraint can be:
+  { UNIQUE ( column_name [, ... ] ) |
+    PRIMARY KEY ( column_name [, ... ] ) |
+    FOREIGN KEY ( column_name [, ... ] )
+      REFERENCES table [ ( column [, ... ] ) ]
+        [ MATCH match_type ]
+        [ ON UPDATE referential_action ]
+        [ ON DELETE referential_action ]
+  }
+
+  match_type can be:
+  { FULL | PARTIAL }
+
+  referential_action can be:
+  { CASCADE | RESTRICT | SET NULL | SET DEFAULT | NO ACTION }
+
+  constraint_characteristics can be:
+  { [ [ NOT ] DEFERRABLE ] { INITIALLY DEFERRED | INITIALLY IMMEDIATE } |
+    [ INITIALLY DEFERRED | INITIALLY IMMEDIATE ] [ NOT ] DEFERRABLE }
+
+
+ALTER TABLE table DROP CONSTRAINT name { CASCADE | RESTRICT }
+
+    Drop a constraint defined for a table
+
+
+Command:     ALTER USER
+Description: Alter properties of a user
+Syntax:
+ALTER USER username
+    [WITH]
+     [ PASSWORD [ 'string' | NULL ] ]
+     [ IN GROUP group  [, ... ] ]
+     [ VALID UNTIL 'date' ]
+     [ ROWSETLIMIT integer ]
+     [ SESSIONTIMEOUT integer ]
+     [ QUERYTIMEOUT integer ]
+     [ DEFPRIORITY [ CRITICAL | HIGH | NORMAL | LOW | NONE ] ]
+     [ MAXPRIORITY [ CRITICAL | HIGH | NORMAL | LOW | NONE ] ]
+     [ IN RESOURCEGROUP resourcegroupname ]
+     [ RESET ACCOUNT ]
+     [ OWNER TO user_name ]
+     [ RENAME TO new_user_name ]
+     [ SECURITY LABEL '[level] : [category,]... : [cohort,]... ' ]
+     [ AUDIT CATEGORY [ NONE | 'category,...' ] ]
+     [ COLLECT HISTORY [ ON | OFF | DEFAULT ] ]
+     [ CONCURRENT SESSIONS integer ]
+     [ ACCESS TIME [ ALL | DEFAULT | ( access_time,... ) ]
+
+access_time:
+    DAY [ ALL | day,... ]
+            [ START time-literal END time-literal,]... ]
+
+Command:     ALTER VIEW
+Description: Alter properties of a view
+Syntax:
+ALTER VIEW view SET PRIVILEGES TO view
+
+    Copy privileges from another view
+
+ALTER VIEW view OWNER TO user_name
+
+    Change the owner of the view
+
+ALTER VIEW view RENAME TO new_view_name
+
+    Rename the view
+
+ALTER VIEW view MATERIALIZE { REFRESH | SUSPEND }
+
+    Change the state of a view
+
+ALTER VIEWS ON table MATERIALIZE { REFRESH | SUSPEND }
+
+    Change the state of all views associated with a base table
+
+
+Command:     BEGIN
+Description: Begins a transaction in chained mode
+Syntax:
+BEGIN [ WORK | TRANSACTION ]
+
+Command:     CALL
+Description: Invoke a procedure
+Syntax:
+CALL procedure_name(arguments)
+
+   Calls the procedure
+
+   arguments are a list of constant/literal arguments to the procedure.
+
+   The arguments may themselves be results of functions, so long as the procedures
+   only take constant/literal arguments as well.
+
+   Is equivalent to EXECUTE procedure_name(args) or SELECT procedure_name(args)
+
+
+
+Command:     COMMENT
+Description: Add comment to an object
+Syntax:
+COMMENT ON
+[
+  [ DATABASE | SEQUENCE | SYNONYM | TABLE | VIEW | FUNCTION | AGGREGATE | PROCEDURE | LIBRARY ]
+  object_name |
+  COLUMN table_name.column_name|
+] IS 'text'
+
+  For FUNCTION, PROCEDURE and AGGREGATE, object_name will be of the form name(args).
+
+Command:     COMMIT
+Description: Commits the current transaction
+Syntax:
+COMMIT [ WORK | TRANSACTION ]
+
+Command:     CREATE AGGREGATE
+Description: Create or replace a User Defined Aggregate
+Syntax:
+
+CREATE [ OR REPLACE ] AGGREGATE aggregate_name(argument_types)
+    RETURNS return_type
+    STATE (state_types)
+    LANGUAGE CPP
+    PARAMETER STYLE NPSGENERIC
+    [ MAXIMUM MEMORY [ '0' | '100' | '1k' | '10k' | '100k' | '1m' | '10m' ] ]
+    [ LOGMASK mask ]
+    [ NO DEPENDENCIES | DEPENDENCIES deplibs ]
+    [ TYPE ANY | ANALYTIC | GROUPED]
+    EXTERNAL CLASS NAME 'class_name'
+    EXTERNAL HOST OBJECT 'host_object_filename'
+    EXTERNAL SPU OBJECT 'SPU_object_filename'
+
+    Create (or replace)  a user defined aggregate
+
+    argument_types is a list of fully specified arguments and types.
+    All NPS types are supported.
+    Strings must have either a size or ANY for generic.
+    NUMERICS must have either precision and scale, or ANY for generic.
+
+    return_type is one fully specified argument and type.
+    Follows same rules as argument_types, except does not support ANY.
+
+    state_types is a list of fully specified arguments and types.
+    Follows same rules as argument_types, except does not support ANY.
+
+    MAXIUM MEMORY specifes expected maximum memory used.
+
+    mask specifies the log mask. Can be one or a comma separated list of:
+    { DEBUG, TRACE, NONE }
+
+    deplibs specifies the library dependencies . Can be one or a comma separated list of library names
+
+    NO DEPENDENCIES specifies that there are no dependencies for the aggregate, which is the default
+    if DEPENDENCIES deplibs is omitted.
+
+    class_name specifies the name of the C++ class that implements the aggregate.
+
+    host_object_filename specifies the pathname of the host's compiled object
+    file.
+
+    SPU_object_filename specifies the pathname of the SPU's
+    compiled object file.
+
+    Type specifies the context in which the UDA can be called. ANALYTIC means
+    only for window aggregates, GROUPED means from grouped or grand aggregates
+    and ANY means both contexts.
+
+
+
+
+Command:     CREATE CATEGORY
+Description: Creates a new category.
+Syntax:
+CREATE CATEGORY name
+
+   Create a new category named name.
+
+
+Command:     CREATE COHORT
+Description: Creates a new cohort.
+Syntax:
+CREATE COHORT name
+    [ IN COHORT parent | IN NONE ]
+
+   Create a new cohort named name.
+   If parent is specified, it
+   must be another existing cohort that will become the named cohort's parent.
+   If NONE is specified, the cohort has no parent and is the top of a
+   cohort hierarchy.  IN NONE is the default.
+
+
+Command:     CREATE CRYPTO KEY
+Description: Creates a new crypto key.
+Syntax:
+CREATE CRYPTO KEY name
+      [ TYPE string ]
+      [ VALUE string ]
+      [ KEYGEN string ]
+      [ PASSWORD password ]
+
+    Create a new crypto key.
+
+
+Command:     CREATE DATABASE
+Description: Creates a new database
+Syntax:
+CREATE DATABASE name
+CREATE DATABASE name
+
+    [WITH]
+        [ DEFAULT CHARACTER SET charset ]
+        [ DEFAULT CHARACTER SET charset COLLATION collation ]
+        [ COLLECT HISTORY [ ON | OFF ] ]
+
+Command:     CREATE EXTERNAL TABLE
+Description: Create a new external table
+Syntax:
+CREATE EXTERNAL TABLE table_name
+  SAMEAS table_name
+  USING external_table_options
+
+CREATE EXTERNAL TABLE table_name
+  (     {  column_name
+       type
+       [ column_constraint [ ... ] ]
+    } [, ... ]
+  )
+  USING external_table_options
+
+CREATE EXTERNAL TABLE [table_name] 'filename'
+  [USING external_table_options]
+  AS select_clause
+
+
+where external_table_options can be:
+  ( DATAOBJECT ('filename')
+    [BOOLSTYLE string] [COMPRESS boolean]
+    [CRINSTRING boolean] [CTRLCHARS boolean] [DATEDELIM string] [DATESTYLE string]
+    [DELIMITER string] [ENCODING string] [ESCAPECHAR string] [FILLRECORD boolean]
+    [FORMAT string] [IGNOREZERO boolean] [INCLUDEZEROSECONDS boolean] [LOGDIR string]
+    [MAXERRORS integer] [MAXROWS integer] [NULLVALUE string] [QUOTEDVALUE string]
+    [REMOTESOURCE string] [REQUIREQUOTES boolean] [SKIPROWS bigint] [SOCKETBUFSIZE int]
+    [TIMEDELIM string] [TIMEROUNDNANOS boolean] [TIMESTYLE string] [TRUNCSTRING boolean]
+    [Y2BASE integer]
+  )
+
+
+and column_constraint can be:
+{ NOT NULL | NULL | UNIQUE | PRIMARY KEY |
+  DEFAULT value |
+  REFERENCES table
+  [ ( column ) ]
+}
+
+
+Note: The system permits and maintains PRIMARY KEY, DEFAULT, FOREIGN KEY,
+      UNIQUE, and REFERENCES.  The NPS does not support constraint checks
+      and referential integrity. It is up to the user to ensure constraint
+      checks and referential integrity.
+
+
+Command:     CREATE FUNCTION
+Description: Create or replace a User Defined Function
+Syntax:
+CREATE [ OR REPLACE ]  FUNCTION function_name(argument_types)
+    RETURNS return_type
+    LANGUAGE CPP
+    PARAMETER STYLE NPSGENERIC
+    [ [ DETERMINISTIC | NOT DETERMINISTIC ] ]
+    [ [ RETURNS NULL ON NULL INPUT | CALLED ON NULL INPUT ] ]
+    [ MAXIMUM MEMORY [ '0' | '100' | '1k' | '10k' | '100k' | '1m' | '10m' ] ]
+    [ LOGMASK mask ]
+    [ NO DEPENDENCIES | DEPENDENCIES deplibs ]
+    EXTERNAL CLASS NAME 'class_name'
+    EXTERNAL HOST OBJECT 'host_object_filename'
+    EXTERNAL SPU OBJECT 'SPU_object_filename'
+
+    Create (or replace)  a user defined function
+
+    argument_types is a list of fully specified arguments and types.
+    All NPS types are supported.
+    Strings must have either a size or ANY for generic.
+    NUMERICS must have either precision and scale, or ANY for generic.
+
+    return_type is one fully specified argument and type.
+    Follows same rules as argument_types.
+
+    DETERMINISTIC indicates that the UDF is a pure function, one which always
+    returns the same value given the same argument values and which has no side
+    effects. The system may consider multiple instances of a deterministic UDF
+    having identical argument lists to be candidates for common subexpression
+    elimination
+
+    RETURNS NULL ON NULL INPUT (the default) indicates that the function always
+    returns null whenever any of its arguments are null. If you specify this
+    parameter, the function will not be executed when there are null arguments;
+    instead a null result is assumed automatically. CALLED ON NULL INPUT indicates
+    that the function will be called normally when some of its arguments are null.
+    It is then the function creator's responsibility to check for null values if
+    necessary and respond appropriately.
+
+    MAXIUM MEMORY specifes expected maximum memory used.
+
+    mask specifies the log mask. Can be one or a comma separated list of:
+    { DEBUG, TRACE, NONE }
+
+    deplibs specifies the library dependencies . Can be one or a comma separated list of library names
+
+    NO DEPENDENCIES specifies that there are no dependencies for the function, which is the default
+    if DEPENDENCIES deplibs is omitted.
+
+    class_name specifies the name of the C++ class that implements the function.
+
+    host_object_filename specifies the pathname of the host's compiled object
+    file.
+
+    SPU_object_filename specifies the pathname of the SPU's
+    compiled object file.
+
+
+
+
+Command:     CREATE GROUP
+Description: Creates a new group
+Syntax:
+CREATE GROUP name [WITH]
+     [ SYSID gid ]
+     [ ROWSETLIMIT integer ]
+     [ SESSIONTIMEOUT integer ]
+     [ QUERYTIMEOUT integer ]
+     [ DEFPRIORITY [ CRITICAL | HIGH | NORMAL | LOW | NONE ] ]
+     [ MAXPRIORITY [ CRITICAL | HIGH | NORMAL | LOW | NONE ] ]
+     [ [ADD] USER username [, ...] ]
+     [ RESOURCELIMIT resourcePercent ] ]
+     [ COLLECT HISTORY [ ON | OFF | DEFAULT ] ]
+     [ CONCURRENT SESSIONS integer ]
+     [ ALLOW CROSS JOIN [ TRUE | FALSE | NULL ] ]
+     [ ACCESS TIME [ ALL | day,... ]
+            [ [START time-literal END time-literal,]... ] ]
+
+Command:     CREATE HISTORY CONFIGURATION
+Description: Creates a new history configuration for the NPS.
+Syntax:
+CREATE HISTORY CONFIGURATION config_name
+     HISTTYPE [ QUERY | AUDIT | NONE ]
+     NPS [ LOCALHOST | hostname ]
+     DATABASE dbname
+     USER username
+     PASSWORD password
+     COLLECT [ QUERY | PLAN | TABLE | COLUMN | SERVICE | STATE ],...
+     LOADINTERVAL number
+     LOADMINTHRESHOLD number
+     LOADMAXTHRESHOLD number
+     DISKFULLTHRESHOLD number
+     STORAGELIMIT number
+     LOADRETRY number
+     ENABLEHIST [ TRUE | FALSE ]
+     ENABLESYSTEM [ TRUE | FALSE ]
+     VERSION  version
+     [ KEY key_store . key_alias ]
+     [ INCLUDING [ ALL | SUCCESS | FAILURE ] ]
+
+Command:     CREATE KEYSTORE
+Description: Creates a new keystore.
+Syntax:
+CREATE KEYSTORE name
+      TYPE [ LOCAL ]
+      PASSWORD password
+
+
+    Create a new keystore. The only keystore type for this version is LOCAL; a
+    keystore maintained on the NPS.  The password is a password for the keystore
+    which is used for encryption of the key data in the store.
+
+
+Command:     CREATE LIBRARY
+Description: Create or replace a User Defined Shared Library
+Syntax:
+
+CREATE [ OR REPLACE ] LIBRARY library_name
+    [ AUTOMATIC LOAD | MANUAL LOAD ]
+    [ NO DEPENDENCIES | DEPENDENCIES deplibs ]
+    EXTERNAL HOST OBJECT 'host_object_filename'
+    EXTERNAL SPU OBJECT 'SPU_object_filename'
+
+    Create (or replace)  a user defined shared library
+
+    Automatic load means that the library will be automatically opened by NPS before any objects that
+    depend upon it are used. Manual means that a UDA or UDF must do the open via dlopen. Manual is
+    only honored for libraries that a UDF or UDA directly depends upon.
+
+    deplibs specifies the library dependencies . Can be one or a comma separated list of library names
+
+    NO DEPENDENCIES specifies that there are no dependencies for the library, which is the default
+    if DEPENDENCIES deplibs is omitted.
+
+    host_object_filename specifies the pathname of the host's compiled object
+    file.
+
+    SPU_object_filename specifies the pathname of the SPU's
+    compiled object file.
+
+
+
+Command:     CREATE MATERIALIZED VIEW
+Description: Creates a new materialized view
+Syntax:
+CREATE MATERIALIZED VIEW view AS SELECT column [, ...]
+     FROM table [ ORDER BY column [, ...] ]
+
+    Creates a new materialized view.
+
+CREATE OR REPLACE MATERIALIZED VIEW view AS SELECT column [, ...]
+     FROM table [ ORDER BY column [, ...] ]
+
+    Creates a new materialized view or replaces an existing materialized view.
+
+
+Command:     CREATE PROCEDURE
+Description: Create or replace a User Defined Procedure
+Syntax:
+CREATE [ OR REPLACE ]  PROCEDURE procedure_name(argument_types)
+    RETURNS return_type
+    LANGUAGE NZPLSQL
+    [ [ EXECUTE AS OWNER | EXECUTE AS CALLER ] ]
+    AS procedure_body
+
+
+    Create (or replace)  a NZPLSQL user defined procedure
+
+    argument_types is a list of fully specified arguments and types.
+    All NPS types are supported.
+    Strings must have either a size or ANY for generic.
+    NUMERICS must have either precision and scale, or ANY for generic.
+
+    return_type is one fully specified argument and type.
+    Follows same rules as argument_types.
+
+    procedure_body specifies the body of the procedure. It must be enclosed with
+    either single quotes or BEGIN_PROC and END_PROC.
+
+
+
+Command:     CREATE SECURITY LEVEL
+Description: Creates a new security level.
+Syntax:
+CREATE SECURITY LEVEL name
+    VALUE level
+
+   Create a new security level named name.
+   The name must be unique among security levels.  You must provide the
+   level value.  Higher
+   security level values are more restrictive.
+
+
+Command:     CREATE SEQUENCE
+Description: Creates a new user sequence
+Syntax:
+CREATE SEQUENCE seqname
+     [ AS datatype ]
+     [ START WITH start value ]
+     [ INCREMENT BY increment ]
+     [ NO MINVALUE | MINVALUE minimum value ]
+     [ NO MAXVALUE | MAXVALUE maximum value ]
+     [ NO CYCLE | CYCLE ]
+
+Command:     CREATE SYNONYM
+Description: Creates a new synonym
+Syntax:
+CREATE SYNONYM name FOR refname
+
+Command:     CREATE TABLE
+Description: Creates a new table
+Syntax:
+CREATE [ TEMPORARY | TEMP ] TABLE table_name
+  (
+    column_name type [ [ constraint_name ] column_constraint [ constraint_characteristics ] ] [, ... ]
+    [ [ constraint_name ] table_constraint [ constraint_characteristics ] ] [, ... ]
+  ) [ DISTRIBUTE ON ( column [, ...] ) ] [ ROW SECURITY ]
+
+  constraint_name can be:
+  { CONSTRAINT name }
+
+  column_constraint can be:
+  { NOT NULL | NULL | UNIQUE | PRIMARY KEY | DEFAULT value |
+    REFERENCES table [ ( column [, ... ] ) ]
+      [ MATCH match_type ]
+      [ ON UPDATE referential_action ]
+      [ ON DELETE referential_action ]
+  }
+
+  table_constraint can be:
+  { UNIQUE ( column_name [, ... ] ) |
+    PRIMARY KEY ( column_name [, ... ] ) |
+    FOREIGN KEY ( column_name [, ... ] )
+      REFERENCES table [ ( column [, ... ] ) ]
+        [ MATCH match_type ]
+        [ ON UPDATE referential_action ]
+        [ ON DELETE referential_action ]
+  }
+
+  match_type can be:
+  { FULL | PARTIAL }
+
+  referential_action can be:
+  { CASCADE | RESTRICT | SET NULL | SET DEFAULT | NO ACTION }
+
+  constraint_characteristics can be:
+  { [ [ NOT ] DEFERRABLE ] { INITIALLY DEFERRED | INITIALLY IMMEDIATE } |
+    [ INITIALLY DEFERRED | INITIALLY IMMEDIATE ] [ NOT ] DEFERRABLE }
+
+
+NOTE:  The system permits and maintains UNIQUE, PRIMARY KEY, DEFAULT, and REFERENCES.
+       The NPS does not support constraint checks and referential integrity. It is up
+       to the user to ensure constraint checks and referential integrity.
+
+
+Command:     CREATE TABLE AS
+Description: Creates a new table
+Syntax:
+CREATE [ TEMPORARY | TEMP ] TABLE table [ (column [, ...] ) ]
+     AS select_clause [ DISTRIBUTE ON ( column [, ...] ) ]
+
+Command:     CREATE USER
+Description: Creates a new database user
+Syntax:
+CREATE USER username
+    [WITH]
+       PASSWORD [ 'string' | NULL ]
+     [ IN GROUP groupname [, ...] ]
+     [ VALID UNTIL 'date' ]
+     [ ROWSETLIMIT integer ]
+     [ SESSIONTIMEOUT integer ]
+     [ QUERYTIMEOUT integer ]
+     [ DEFPRIORITY [ CRITICAL | HIGH | NORMAL | LOW | NONE ] ]
+     [ MAXPRIORITY [ CRITICAL | HIGH | NORMAL | LOW | NONE ] ]
+     [ SYSID uid ]
+     [ IN RESOURCEGROUP resourcegroupname ] ]
+     [ SECURITY LABEL '[level] : [category,]... : [cohort,]... ' ]
+     [ AUDIT CATEGORY [ NONE | 'category,...' ] ]
+     [ COLLECT HISTORY [ ON | OFF | DEFAULT ] ]
+     [ CONCURRENT SESSIONS integer ]
+     [ ALLOW CROSS JOIN [ TRUE | FALSE | NULL ] ]
+     [ ACCESS TIME [ ALL | DEFAULT | ( access_time,... ) ]
+
+access_time:
+    DAY [ ALL | day,... ]
+            [ START time-literal END time-literal,]... ]
+
+Command:     CREATE VIEW
+Description: Constructs a virtual table
+Syntax:
+CREATE VIEW view AS SELECT query
+
+    Creates a new view.
+
+CREATE OR REPLACE VIEW view AS SELECT query
+
+    Creates a new view or replaces an existing view.
+
+
+Command:     DELETE
+Description: Removes rows from a table
+Syntax:
+DELETE FROM table [ WHERE condition ]
+
+Command:     DROP AGGREGATE
+Description: Drop a User Defined Aggregate
+Syntax:
+DROP AGGREGATE aggregate_name(argument_types)
+
+    Drops the aggregate
+
+   argument_types is a list of fully specified arguments and types.
+
+   All NPS types are supported.
+   Strings must have either a size or ANY for generic.
+   NUMERICS must have either precision and scale, or ANY for generic.
+
+
+
+Command:     DROP CATEGORY
+Description: Drops a category.
+Syntax:
+DROP CATEGORY name
+
+   Drop the category named name.
+You cannot drop a category if you have row secure tables defined.
+
+
+Command:     DROP COHORT
+Description: Drops a cohort.
+Syntax:
+DROP COHORT name
+
+   Drop the cohort named name.
+You cannot drop a cohort if you have row secure tables defined.
+
+
+Command:     DROP CONNECTION
+Description: Drop a system connection setting
+Syntax:
+DROP CONNECTION connection_number
+
+Command:     DROP CRYPTO KEY
+Description: Drops a new crypto key.
+Syntax:
+DROP CRYPTO KEY name
+
+    Drop a crypto key.  The key must not be in use.
+
+
+Command:     DROP DATABASE
+Description: Removes an existing database
+Syntax:
+DROP DATABASE name
+
+Command:     DROP FUNCTION
+Description: Drop a User Defined Function
+Syntax:
+DROP FUNCTION function_name(argument_types)
+
+    Drops the function
+
+   argument_types is a list of fully specified arguments and types.
+
+   All NPS types are supported.
+   Strings must have either a size or ANY for generic.
+   NUMERICS must have either precision and scale, or ANY for generic.
+
+
+
+Command:     DROP GROUP
+Description: Removes a group
+Syntax:
+DROP GROUP name
+
+Command:     DROP HISTORY CONFIGURATION
+Description: Drops a history configuration.
+Syntax:
+DROP HISTORY CONFIGURATION name
+
+   Drop the history configuration named name.
+
+
+Command:     DROP KEYSTORE
+Description: Drop a keystore.
+Syntax:
+DROP KEYSTORE name
+
+    Drop a keystore.  The keystore must be empty to be dropped.
+
+
+Command:     DROP LIBRARY
+Description: Drop a User Defined Shared Library
+Syntax:
+DROP LIBRARY library_name
+
+    Drops the shared library
+
+
+
+Command:     DROP PROCEDURE
+Description: Drop a User Defined Procedure
+Syntax:
+DROP PROCEDURE procedure_name(argument_types)
+
+    Drops the procedure
+
+   argument_types is a list of fully specified arguments and types.
+
+   All NPS types are supported.
+   Strings must have either a size or ANY for generic.
+   NUMERICS must have either precision and scale, or ANY for generic.
+
+
+
+Command:     DROP SECURITY LEVEL
+Description: Drops a security level.
+Syntax:
+DROP SECURITY LEVEL name
+
+   Drop the security level named name.
+You cannot drop a security level if you have row secure tables defined.
+
+
+Command:     DROP SEQUENCE
+Description: Drop a sequence
+Syntax:
+DROP SEQUENCE sequence
+
+    Drop the sequence
+
+
+Command:     DROP SYNONYM
+Description: Drop a synonym
+Syntax:
+DROP SYNONYM synonym
+
+    Drop the synonym
+
+
+Command:     DROP TABLE
+Description: Removes existing tables from a database
+Syntax:
+DROP TABLE name [, ...]
+
+Command:     DROP USER
+Description: Removes a user
+Syntax:
+DROP USER name
+
+Command:     DROP VIEW
+Description: Removes existing views from a database
+Syntax:
+DROP VIEW name [, ...]
+
+Command:     EXECUTE
+Description: Invoke a procedure
+Syntax:
+EXECUTE procedure_name(arguments)
+
+   Calls the procedure
+
+   arguments are a list of constant/literal arguments to the procedure.
+
+   The arguments may themselves be results of functions, so long as the procedures
+   only take constant/literal arguments as well.
+
+   Is equivalent to CALL procedure_name(args) or SELECT procedure_name(args)
+
+
+
+Command:     EXECUTE AS
+Description: Change the user identity under which the session is currently operating.
+Syntax:
+EXECUTE AS user_name(arguments)
+
+   Changes the current user of the session to the specified user name.
+
+   user_name is the name of a
+   user on the NPS.  You must have EXECUTE AS permission on that user in order
+   to perform the EXECUTE AS statement.
+
+
+Command:     EXECUTE PROCEDURE
+Description: Invoke a procdure
+Syntax:
+EXECUTE PROCEDURE procdure_name(arguments)
+
+   Calls the procdure
+
+   arguments are a list of constant/literal arguments to the procdure.
+
+   The arguments may themselves be results of functions, so long as the procdures
+   only take constant/literal arguments as well.
+
+   Is equivalent to CALL procdure_name(args) or SELECT procdure_name(args)
+
+
+
+Command:     EXPLAIN
+Description: Shows statement execution plan
+Syntax:
+EXPLAIN [ VERBOSE ] query
+
+Command:     EXTRACT
+Description: extract subfield from date/time value extract subfield from interval value
+Syntax:
+EXTRACT(identifier from timestamp)
+   EXTRACT(identifier from interval)
+
+Command:     GENERATE STATISTICS
+Description: Generates statistics on a database, table, and columns within a table.
+Syntax:
+GENERATE STATISTICS [ ON table [ ( column_name [, ... ] ) ] ]
+GENERATE EXPRESS STATISTICS ON table [ ( column_name [, ... ] ) ]
+
+Command:     GRANT
+Description: Grants access privilege to a user, a group or all users
+Syntax:
+GRANT object_privilege [, ...] ON object [, ...]
+    TO { PUBLIC | GROUP group | username } [ WITH GRANT OPTION ]
+GRANT admin_privilege [, ...]
+    TO { PUBLIC | GROUP group | username } [ WITH GRANT OPTION ]
+
+object_privilege
+    ALL, ABORT, ALTER, DELETE, DROP, EXECUTE, EXECUTE AS,
+    GENSTATS, INSERT, LABEL ACCESS, LABEL RESTRICT, LABEL EXPAND,
+    LIST, SELECT, TRUNCATE, UPDATE
+
+admin_privilege
+    ALL ADMIN, BACKUP, [ CREATE ] DATABASE, [ CREATE ] GROUP,
+    [ CREATE ] INDEX, [ CREATE ] SEQUENCE, [ CREATE ] SYNONYM,
+    [ CREATE ] TABLE, [ CREATE ] EXTERNAL TABLE, [ CREATE ] TEMP TABLE,
+    [ CREATE ] FUNCTION, [ CREATE ] AGGREGATE, [ CREATE ] USER,
+    [ CREATE ] VIEW, [ CREATE ] MATERIALIZED VIEW, [CREATE] PROCEDURE,
+    [ CREATE ] LIBRARY, [ MANAGE ] HARDWARE, [ MANAGE ] SYSTEM, [ MANAGE ] SECURITY, RECLAIM, RESTORE
+
+Command:     INSERT
+Description: Inserts new rows into a table
+Syntax:
+INSERT INTO table [ ( column [, ...] ) ]
+    { DEFAULT VALUES | VALUES ( expression [, ...] ) | SELECT query }
+
+Command:     RESET
+Description: Restores run-time parameters to default values
+Syntax:
+RESET variable
+
+Command:     REVERT
+Description: Restore the previous user identity under which the session was operating before an EXECUTE AS was performed.
+Syntax:
+REVERT
+
+   Restores the current user of the session to the user that was current at
+   the time of the EXECUTE AS statement.
+
+
+Command:     REVOKE
+Description: Revokes access privilege from a user, a group or all users.
+Syntax:
+REVOKE [ GRANT OPTION FOR ] object_privilege [, ...]
+    ON object [, ...]
+    FROM { PUBLIC | GROUP groupname | username }
+REVOKE [ GRANT OPTION FOR ] admin_privilege [, ...]
+    FROM { PUBLIC | GROUP groupname | username }
+
+object_privilege
+    ALL, ABORT, ALTER, DELETE, DROP, EXECUTE, EXECUTE AS,
+    GENSTATS, INSERT, LABEL ACCESS, LABEL RESTRICT, LABEL EXPAND,
+    LIST, SELECT, TRUNCATE, UPDATE
+
+admin_privilege
+    ALL ADMIN, BACKUP, [ CREATE ] DATABASE, [ CREATE ] GROUP,
+    [ CREATE ] INDEX, [ CREATE ] SEQUENCE, [ CREATE ] SYNONYM,
+    [ CREATE ] TABLE, [ CREATE ] EXTERNAL TABLE, [ CREATE ] TEMP TABLE,
+    [ CREATE ] FUNCTION, [ CREATE ] AGGREGATE, [ CREATE ] USER,
+    [ CREATE ] VIEW, [ CREATE ] MATERIALIZED VIEW, [CREATE] PROCEDURE,
+    [ CREATE ] LIBRARY, [ MANAGE ] HARDWARE, [ MANAGE ] SYSTEM, [ MANAGE ] SECURITY, RECLAIM, RESTORE
+
+Command:     ROLLBACK
+Description: Aborts the current transaction
+Syntax:
+ROLLBACK [ WORK | TRANSACTION ]
+
+Command:     SELECT
+Description: Retrieve rows from a table or view.
+Syntax:
+SELECT [ ALL | DISTINCT ]
+  * | column [ AS output_name ]| expression [ AS output_name ] [, ...]
+
+    [ FROM from_item [, ...] ]
+    [ WHERE condition ]
+    [ GROUP BY expression [, ...] ]
+    [ HAVING condition [, ...] ]
+    [ { UNION | INTERSECT | EXCEPT | MINUS [ ALL | DISTINCT ] } select ]
+    [ ORDER BY expression [ ASC | DESC | USING operator ] [, ...] ]
+    [ LIMIT { count | ALL } ]
+
+where from_item can be:
+
+table_name
+    [ [ AS ] alias [ ( column_alias_list ) ] ]
+|
+( select )
+    [ AS ] alias [ ( column_alias_list ) ]
+|
+from_item [ NATURAL ] join_type from_item
+    [ ON join_condition | USING ( join_column_list ) ]
+
+Command:     SET
+Description: Set run-time parameters
+Syntax:
+SET variable { TO | = } { value | 'value' | DEFAULT }
+SET TIME ZONE { 'timezone' | LOCAL | DEFAULT }
+
+Command:     SET AUTHENTICATION
+Description: Sets the system authentication method settings
+Syntax:
+SET AUTHENTICATION { LOCAL | LDAP ldap_settings }
+
+ldap_settings ::=   BASE base_string
+                    SERVER server
+                  [ VERSION version_number ]
+                  [ BINDDN bind_string ]
+                  [ BINDPW bind_password ]
+                  [ PORT port ]
+                  [ SCOPE { SUB | ONE | BASE } ]
+                  [ SSL { ON | OFF } ]
+                  [ ATTRNAME attrname_string ]
+                  [ NAMECASE { LOWERCASE | UPPERCASE } ]
+
+Command:     SET CONNECTION
+Description: Sets the system connection settings
+Syntax:
+SET CONNECTION { LOCAL | HOST | HOSTSSL | HOSTNOSSL }
+                 DATABASE { db_string | ALL }
+               [ IPADDR  ip addr ]
+               [ IPMASK ip addr mask ]
+
+Command:     SET HISTORY CONFIGURATION
+Description: Sets a history configuration.
+Syntax:
+SET HISTORY CONFIGURATION name
+
+   Set the history configuration named name to be the active history
+   configuration.  The new setting will take effect when the NPS system is
+   stopped and restarted.
+
+
+Command:     SET SESSION
+Description: Set the characteristics of the current SQL-transaction
+Syntax:
+SET SESSION { READ ONLY | READ WRITE }
+
+Command:     SET SYSTEM DEFAULT
+Description: Set the system default values
+Syntax:
+SET SYSTEM DEFAULT { SESSIONTIMEOUT | ROWSETLIMIT | QUERYTIMEOUT }
+        TO { number | UNLIMITED }
+SET SYSTEM DEFAULT { DEFPRIORITY | MAXPRIORITY }
+        TO { low | normal | high | critical }
+SET SYSTEM DEFAULT MATERIALIZE [ REFRESH ] THRESHOLD TO percentage
+
+Command:     SET TRANSACTION
+Description: Set the characteristics of the current SQL-transaction
+Syntax:
+SET TRANSACTION ISOLATION LEVEL { READ UNCOMMITTED | READ COMMITTED |
+                                  REPEATABLE READ | SERIALIZABLE }
+
+Command:     SHOW
+Description: Shows run-time parameters
+Syntax:
+SHOW name
+
+Command:     SHOW AGGREGATE
+Description: Shows information about aggregates
+Syntax:
+SHOW AGGREGATE [ ALL | ident ] [ VERBOSE ]
+
+
+Specifying ALL will show all aggregates.
+Specifying ident will show all that start with ident.
+ALL is the default if neither are specified.
+
+Specifying VERBOSE will display additional fields.
+
+
+
+Command:     SHOW AUTHENTICATION
+Description: Shows the system authentication method settings
+Syntax:
+SHOW AUTHENTICATION [ ALL ]
+
+Command:     SHOW CATEGORY
+Description: Shows one or more categories.
+Syntax:
+SHOW CATEGORY
+[ [NAME] name | ALL ]
+
+   If ALL is specified, shows all categories.  If a
+    name is specified, shows
+    that one category.
+
+
+Command:     SHOW COHORT
+Description: Shows one or more cohorts or shows a cohort hierarchy.
+Syntax:
+SHOW COHORT
+[ [NAME] name | ALL ]
+[ HIERARCHY ]
+
+   If ALL is specified, shows all cohorts.  If a
+    name is specified, shows
+    that one cohort.
+   If HIERARCHY is specified, a pretty printing of the cohort hierarchy is
+    displayed.  In that case, if name is specified, it must be a
+    top-level cohort; that is, it must not have any parent cohort.
+
+
+Command:     SHOW CONNECTION
+Description: Shows the system connection settings
+Syntax:
+SHOW CONNECTION
+
+Command:     SHOW CRYPTO KEY
+Description: Show details of one or more crypto keys.
+Syntax:
+SHOW CRYPTO KEY [ keystore | ALL ] . [ keyalias | ALL ]
+
+    If ALL is specified for the keystore, shows keys from all keystores.
+    Otherwise, shows keys from keystore.
+
+    If ALL is specified for the key alias, details of all keys from the
+    keystore(s) are shown. Otherwise, the single keyalias is shown.
+
+
+Command:     SHOW FUNCTION
+Description: Shows information about functions
+Syntax:
+SHOW FUNCTION [ ALL | ident ] [ VERBOSE ]
+
+
+Specifying ALL will show all functions.
+Specifying ident will show all that start with ident.
+ALL is the default if neither are specified.
+
+Specifying VERBOSE will display additional fields.
+
+
+
+Command:     SHOW HISTORY CONFIGURATION
+Description: Shows one or more history configurations.
+Syntax:
+SHOW HISTORY CONFIGURATION [ name | ALL ]
+
+   If ALL is specified, shows all history configurations.  If a
+    name is specified, shows
+    that one history configuration.
+
+
+Command:     SHOW KEYSTORE
+Description: Show attributes of one or more keystores.
+Syntax:
+SHOW KEYSTORE [ name | ALL ]  [ VERBOSE ]
+
+    If ALL is specified for the keystore, shows attributes of all keystores.
+    Otherwise, shows attributes of keystore.
+
+    If VERBOSE is specified, lists all keys in the keystore(s).
+
+
+Command:     SHOW LIBRARY
+Description: Shows information about libraries
+Syntax:
+SHOW LIBRARY [ ALL | ident ] [ VERBOSE ]
+
+
+Specifying ALL will show all libraries.
+Specifying ident will show all that start with ident.
+ALL is the default if neither are specified.
+
+Specifying VERBOSE will display additional fields.
+
+
+
+Command:     SHOW PROCEDURE
+Description: Shows information about procedures
+Syntax:
+SHOW PROCEDURE [ ALL | ident ] [ VERBOSE ]
+
+
+Specifying ALL will show all procedures.
+Specifying ident will show all that start with ident.
+ALL is the default if neither are specified.
+
+Specifying VERBOSE will display additional fields.
+
+
+
+Command:     SHOW SECURITY LEVEL
+Description: Shows one or more security levels.
+Syntax:
+SHOW SECURITY LEVEL
+[ [NAME] name | ALL ]
+
+   If ALL is specified, shows all security levels.  If a
+    name is specified, shows
+    that one security level.
+
+
+Command:     SHOW SYSTEM DEFAULT
+Description: Shows system defaults values
+Syntax:
+SHOW SYSTEM DEFAULT { SESSIONTIMEOUT | ROWSETLIMIT | QUERYTIMEOUT |
+                      DEFPRIORITY | MAXPRIORITY }
+SHOW SYSTEM DEFAULT MATERIALIZE [ REFRESH ] THRESHOLD
+
+Command:     TRUNCATE
+Description: Empty a table
+Syntax:
+TRUNCATE [ TABLE ] name
+
+Command:     UPDATE
+Description: Replaces values of columns in a table
+Syntax:
+UPDATE table SET col = expression [, ...]
+    [ FROM fromlist ]
+    [ WHERE condition ]
+
+Command:     USER
+Description: Returns the current user name
+Syntax:
+USER
+
+
+######################################################################
+##############  NZSQL  options
+
+nzsql -?
+
+This is nzsql, the Netezza SQL interactive terminal.
+
+Usage:
+  nzsql [options] [security options] [dbname [username] [password]]
+
+Security Options:
+  -securityLevel  Security Level you wish to request (default: preferredUnSecured)
+  -caCertFile     ROOT CA certificate file (default: NULL)
+
+Options:
+  -a              Echo all input from script
+  -A              Unaligned table output mode (-P format=unaligned)
+  -c <query>      Run only single query (or slash command) and exit
+  -d <dbname>     Specify database name to connect to (default: system)
+  -D <dbname>     Specify database name to connect to (default: system)
+  -e              Echo queries sent to backend
+  -E              Display queries that internal commands generate
+  -f <filename>   Execute queries from file, then exit
+  -F <string>     Set field separator (default: "|") (-P fieldsep=)
+  -host <host>    Specify database server host (default: domain socket)
+  -H              HTML table output mode (-P format=html)
+  -l              List available databases, then exit
+  -n              Disable readline
+  -o <filename>   Send query output to filename (or |pipe)
+  -port <port>    Specify database server port (default: hardwired)
+  -P var[=arg]    Set printing option 'var' to 'arg' (see \pset command)
+  -q              Run quietly (no messages, only query output)
+  -R <string>     Set record separator (default: newline) (-P recordsep=)
+  -Rev            Show version information and exit
+  -rev            Show version information and exit
+  -s              Single step mode (confirm each query)
+  -S              Single line mode (newline terminates query)
+  -t              Print rows only (-P tuples_only)
+  -time           Print time taken by queries
+  -T text         Set HTML table tag options (width, border) (-P tableattr=)
+  -u <username>   Specify database username (default: smeka591)
+  -U <username>   Specify database username (default: smeka591)
+  -v name=val     Set nzsql variable 'name' to 'value'
+  -V              Show version information and exit
+  -W <password>   Specify the database user password
+  -pw <password>  Specify the database user password
+  -x              Turn on expanded table output (-P expanded)
+  -X              Do not read startup file (~/.nzsqlrc)
+  -h or -?        Display this help
+
+For more information, type "\?" (for internal commands) or "\help"
+(for SQL commands) from within nzsql.
+
+
+######################################################################
+##############  NZSQL \? output: 
+
+Note that lots of internal \ (slash) commands 
+have a corresponding nzsql - (dash) options at command line
+
+
+ \a              toggle between unaligned and aligned mode
+ \act            show current active sessions
+ \c[onnect] [dbname [user] [password]]
+                  connect to new database (currently 'SYSTEM')
+ \C <title>      table title
+ \copy ...       perform SQL COPY with data stream to the client machine
+ \d <table>      describe table (or view, index, sequence, synonym)
+ \d{t|v|i|s|e|x} list tables/views/indices/sequences/temp tables/external tables
+ \d{m|y}         list materialized views/synonyms
+ \dS{t|v|i|s}    list system tables/views/indexes/sequences
+ \dM{t|v|i|s}    list system management tables/views/indexes/sequences
+ \dp <name>      list user permissions
+ \dpu <name>     list permissions granted to a user
+ \dpg <name>     list permissions granted to a group
+ \dgp <name>     list grant permissions for a user
+ \dgpu <name>    list grant permissions granted to a user
+ \dgpg <name>    list grant permissions granted to a group
+ \d{u|U}         list users/User Groups
+ \d{g|G|Gr}      list groups/Group Users/Resource Group Users
+ \da[+] [name]   list aggregates, + for additional fields
+ \dd [object]    list comment for object
+ \df[+] [name]   list functions, + for additional fields
+ \dl[+] [name]   list libraries, + for additional fields
+ \do             list operators
+ \dT             list data types
+ \e [file]       edit the current query buffer or [file] with external editor
+ \echo <text>    write text to stdout
+ \f <sep>        change field separator
+ \g [file]       send query to backend (and results in [file] or |pipe)
+ \h [cmd]        help on syntax of sql commands, * for all commands
+ \H              toggle HTML mode (currently off)
+ \i <file>       read and execute queries from <file>
+ \l              list all databases
+ \o [file]       send all query results to [file], or |pipe
+ \p              show the content of the current query buffer
+ \pset <opt>     set table output  <opt> = {format|border|expanded|fieldsep|
+                  null|recordsep|tuples_only|title|tableattr|pager}
+ \q              quit nzsql
+ \qecho <text>   write text to query output stream (see \o)
+ \r              reset (clear) the query buffer
+ \s [file]       print history or save it in [file]
+ \set <var> <value>  set internal variable
+ \t              show only rows (currently off)
+ \time           print time taken by queries
+ \T <tags>       HTML table tags
+ \unset <var>    unset (delete) internal variable
+ \w <file>       write current query buffer to a <file>
+ \x              toggle expanded output (currently off)
+ \! [cmd]        shell escape or command
+
+
+######################################################################
+##############  A few useful commands at NZSQL, after logging in
+
+\d TABLENAME        Shows table fields
+\dt            Shows all tables in that database
+\du            Shows list of all users in that database
+\dU            List of users and their corresponding groups
+\dg            List of groups
+\dG            List of groups and their corresponding members
+\l             Lists all databases
+\!            To escape to shell or OS command, similar to Oracle
+\e            To edit using editor; if default is vi, allows vi operations on that file    
