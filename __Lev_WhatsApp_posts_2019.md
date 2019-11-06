@@ -2,6 +2,32 @@
 <body>
 <p>Lev Selector - WhatsApp messages, 2019</p>
 =================================================<br/>
+2019-11-06<br/>
+<br/>
+Linear regression model has two parameters.<br/>
+Standard Convolutional Neural Networks have 10-100 Mln parameters.<br/>
+The GPT-2 has 1.5 Bln parameters:<br/>
+<br/>
+&nbsp;- <a href="https://openai.com/blog/gpt-2-1-5b-release/" target="_blank">https://openai.com/blog/gpt-2-1-5b-release/</a>&nbsp;<br/>
+<br/>
+=================================================<br/>
+2019-10-31<br/>
+Tom Siebel Apr 8, 2019 at Carnegie Mellon.<br/>
+Very good and insightful keynote.<br/>
+&nbsp;- <a href="https://www.youtube.com/watch?v=4Ie4gat6idQ" target="_blank">https://www.youtube.com/watch?v=4Ie4gat6idQ</a>&nbsp;<br/>
+<br/>
+Tom Siebel, Sept 23, 2019 at Berkely Engineering<br/>
+&nbsp;- <a href="https://www.youtube.com/watch?v=EQJrYkSLafU" target="_blank">https://www.youtube.com/watch?v=EQJrYkSLafU</a>&nbsp;<br/>
+<br/>
+Basically same content as before, but I want to<br/>
+highlight two short segments:<br/>
+<br/>
+time 43:30 - 46:30<br/>
+   How C3.ai pays to educate its employees<br/>
+<br/>
+time 49:00 - 51:40<br/>
+   Italy - 14 regions, 14 models<br/>
+<br/>
 =================================================<br/>
 2019-10-29<br/>
 Today's note is about Tom Siebel and his companies.<br/>
@@ -10,12 +36,12 @@ Tom Siebel was employee #20 at Oracle, <br/>
 then in 1993 he started his own <br/>
 Company “Siebel Systems”, <br/>
 which he sold back to Oracle in 2016<br/>
-for $5.85 Bln.<br/>
-Then in 2009 he started “C3 Energy”<br/>
+for \$5.85 Bln. <br/>
+<br/>Then in 2009 he started “C3 Energy”<br/>
 (Carbon-3, where 3 comes from Measure-Mitigate-Monetize), <br/>
 which he restructured in 2011 into “C3 IoT” (Internet of Things), <br/>
 and in 2016 into C3.ai.<br/>
-Today C3.ai is evaluated at $2+ Bln - and growing fast.<br/>
+Today C3.ai is evaluated at \$2+ Bln - and growing fast.<br/>
 <br/>
 In his last book “Digital Transformation" <br/>
 he writes that AI and related technologies<br/>
@@ -303,7 +329,7 @@ a must-watch for any computer engineer.<br/>
 Tesla plans to provide taxi services at 1/10th of <br/>
 the price of Uber or Lyft. And Tesla car owners <br/>
 will be able to let their car to work as a taxi <br/>
-and earn ~$30K/year, $300K over car's lifetime. <br/>
+and earn ~\$30K/year, \$300K over car's lifetime. <br/>
 Musk said: "The fundamental message that <br/>
 consumers should be taking today is that <br/>
 it is financially insane to buy anything <br/>
