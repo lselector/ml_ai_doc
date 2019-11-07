@@ -1,0 +1,64 @@
+Clickable Dummy for a Software Project Architecture and Delivery
+
+Published on November 5, 2019
+
+Lev Selector, Ph.D.
+
+Twenty years ago I had a privilege to listen to Jesse Erlbaum:
+
+  - http://www.erlbaum.net/jesse_erlbaum/
+
+The title of his talk was something like “How to Deliver
+Software Projects on Time and on Budget”. 
+
+The main takeaway for me was the idea of importance of using a
+“Clickable Dummy” prototype of the application. It is not just
+documenting the desired functionality. You need to actually sit
+down with the end-user and develop a live prototype. 
+
+What is a “dummy” prototype? It is a very simple application
+which goes through the steps and just gives you print
+statements. It is a skeleton, a baby.
+
+For example, for an ETL (Extract, Transform, Load) it is a
+sequence of procedures to run. The procedures don’t do any
+actual work – they are just simple placeholders with print
+statements.
+
+For a web application, it is a set of static web pages with
+short descriptions on them and links to go from one page to
+another.
+
+Etc. 
+
+Once you have this “dummy” application developed and agreed
+upon, only then you can create project docs, estimates of time
+and resources needed.
+
+The phase of developing a “dummy” app is very important. And it
+usually takes 25-50% of overall time and cost of the project.
+
+Yes, up to 50%.
+
+So, before you sign papers with the client, you need to agree on
+a two-phase approach.
+
+ - 1st phase - preparing specifications and estimate
+ - 2nd phase - actually implementing
+
+Notes about the 1st phase:
+ - specifications are prepared involving end-users (and developers)
+ - 1st phase constitutes ~25 ..50% of total development costs
+ - 1st phase allows to give a time/money estimate (don't
+   overpromise and don't take unnecessary responsibilities)
+
+For a typical web-based application, the specifications would
+include:
+ - UI Screens (just buttons, form fields and links - may be 
+   HTML-templates)
+ - Data model
+ - State Transition Diagrams (1 state per screen for a web-app)
+   or wireframes
+ - Textual description
+ - Revised Estimate and schedule
+ 

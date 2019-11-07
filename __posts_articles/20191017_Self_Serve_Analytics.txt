@@ -1,0 +1,56 @@
+Self-Serve Analytics
+
+Lev Selector, Ph.D.
+
+Published October 17, 2019
+
+Should analytics team build analytics dashboards and reports for
+all departments? Or should departments do most of their
+analytics themselves?
+
+In my opinion you should encourage and enable “self-serve
+analytics” as much as possible. And here is why.
+
+Note, that this is not a new problem. Almost 50 years ago (in
+1971) IBM has introduced SQL (Structured Query Language) with
+the goal to give business people access to data. 
+
+The SQL was designed to be very simple - so that non-technical
+people can use it.
+
+Since then SQL has become a standard. There are multiple SQL
+databases to choose from. Many of them are optimized for fast
+queries for analytics.
+
+Also nowadays business people are very good with computers. They
+use Microsoft Excel to do their own analysis, graphs,
+dashboards. So it is very natural for them to start using some
+Business Intelligence tools (like Microsoft Power BI, Tableau,
+etc., or even Jupyter Lab and Jupyter Dashboards). These tools
+can use SQL to get data from databases.
+
+The mistake some companies make is to have analytics team to do
+all analytics work for all business units. Why is it wrong?
+Because instead of enabling business people to do the work
+themselves (walk by themselves), the analytics team is doing the
+work for them (moving business people’ feet).
+
+This takes a big analytics team. It creates lots of emails,
+meetings, tickets, lots of unnecessary friction. The development
+and maintenance becomes slow and expensive, the whole
+organizational structure becomes very ineffective.
+
+Also note that if you are building an analytics team, there are
+multiple targets. I would highlight the following four:
+  1. do strategic and ad-hoc analysis and predictive analytics for
+     higher management
+  2. provide tools, training, and support for all departments to
+     have access to data, and to do their own “self-serve analytics”
+  3. build company-wide and department-specific analytics
+     (reports, dashboards)
+  4. enable usage of Machine Learning and AI tools (optimization
+     via predictive analytics, automated data collection/extraction,
+     automated chatbots, etc., etc.)
+
+By leveraging other departments to do their own analytics (p.2), 
+you will free up your resources to concentrate on pp.1,3,4

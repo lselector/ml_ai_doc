@@ -1,0 +1,30 @@
+If you are a Data Scientist, you must have heard about H2O.ai.
+This company was developing Machine Learning tools since 2011. 
+These tools are used by ~250,000 users and ~18,000 companies 
+around the world.
+
+Yesterday, October 22nd, I have attended H2OWORLD - a big 
+annual event in New York City. 
+See the list of 60+ speakers and the agenda here: 
+
+  https://lnkd.in/eHsYApN
+
+The main announcement was the H2O “Q” - very flexible 
+framework: 
+
+  https://www.h2o.ai/h2o-q/
+
+I was really impressed by its ability to help in 
+exploring/visualizing the data, and with some specific 
+apps and recipes for NLP analysis, extracting data 
+from PDF documents, and time-series analysis.
+
+Another announcements was that Driverless AI 
+
+  https://lnkd.in/efnMSaF
+
+is now available as software-as-a-service: 
+
+  https://lnkd.in/eEMcx-A
+
+#h2o  #machinelearning  #datascience

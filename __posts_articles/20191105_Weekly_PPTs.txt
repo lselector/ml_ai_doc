@@ -1,0 +1,70 @@
+Weekly PowerPoint Presentations as a Way to Develop Project
+Management Skills
+
+Lev Selector
+
+Published on November 5, 2019
+
+Leaders vs workers.
+
+Leaders can easily see structure in things. They can see the big
+picture – and how it translates into strategy and into tactical
+solutions. They can make diagrams, make step-by step plans,
+divide responsibilities between team members for parallel
+execution, define vision, long-term and shot-term goals, set
+priorities.
+
+Workers – valuable team members who unfortunately can not do
+what leaders do. They have difficulties figuring out the
+dependencies and the order of the steps. These people need to be
+told exactly what to do, step by step.
+
+Of course this classification into leaders and workers is not
+absolute. A leader does not necessarily has a managerial
+position. And vice versa, a manager may be a “worker” (not a
+good situation for the team).
+
+Question: Is there a way to train “workers” to see structure? To
+become better at managing their projects?
+
+The answer is “YES”.
+
+One of the methods I have found to be effective is to schedule
+weekly 5-10 min PowerPoint presentations where each team member
+explains his or her project, task, and status.
+
+For example, suppose a person's project is to create a website
+using standard MVC architecture (Model-View-Controller). The
+PowerPoint presentation may cover the following:
+
+SLIDE 1 - Name of the project, functional description; 
+          benefits if success, losses if failure.
+SLIDE 2 - Model – database schema (tables and relationships)
+SLIDE 3 - View - diagram of web pages and state-transition
+          diagrams
+SLIDE 4 - Controller - diagram of business logic
+SLIDE 5 - Step-by-step plan of implementation, what is done,
+          what needs to be done
+SLIDE 6 - Estimated time to completion, potential problems and
+          delays, planned vs actual costs (time, resources, money)
+
+Nowadays it is common to make regular scrum meetings where each
+team member gives short summary of the status of his/her task.
+This helps to keep track of existing tasks, but doesn’t help
+“workers” to understand the vision, strategy, steps, etc.
+
+So in addition to scrum meetings I highly recommend to start
+doing weekly PowerPoint presentations by each “worker”. These
+presentations have many benefits:
+
+ - understanding of the big picture and role of specific 
+   tasks in it 
+ - understanding of relationships between different pieces
+   of the project
+ - increasing effectiveness of work
+ - increasing collaboration between team members
+ - increasing self-confidence, improving public speaking 
+   skills
+ - improving job satisfaction
+
+Conclusion - I highly recommend the weekly PPT presentations.
