@@ -1,0 +1,27 @@
+Posted 2019-11-08
+
+By Lev Selector, Ph.D.
+
+Faster Data Files I/O.
+
+In Data Science and Analytics we routinely need to save 
+and load big chunks of data. i
+Question – which file format should we use?
+Saving/Loading CSV files is very-very slow. 
+Here us a short comparison between CSV, pickle, and feather formats:
+ - https://lnkd.in/en2JiS8
+
+Result: pickle and feather file formats are ~40 times faster i than CSV ! 
+
+I prefer pickle, because it allows me to save a "bag" object 
+(basically a dictionary) containing several DataFrames and parameters.
+
+Eventually we will probably switch to Apache Arrow:
+ - https://arrow.apache.org/
+
+Here is a comparison of six file formats i
+(CSV, Pickle, MessagePack, HDF5, Feather, Parquet):
+ - https://lnkd.in/eAyWjMj 
+
+#analytics  #datascience #machinelearning
+
