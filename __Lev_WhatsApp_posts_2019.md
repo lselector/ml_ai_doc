@@ -2,6 +2,13 @@
 <body>
 <p>Lev Selector - WhatsApp messages, 2019</p>
 =================================================<br/>
+2019-11-08<br/>
+Compute used in AI:<br/>
+1959 - 2012  - 2y doubling (Moore's law)<br/>
+2012-present - 3.4 month doubling<br/>
+<br/>
+&nbsp;- <a href="https://openai.com/blog/ai-and-compute/#addendum" target="_blank">https://openai.com/blog/ai-and-compute/#addendum</a>&nbsp;<br/><br/>
+=================================================<br/>
 2019-11-06<br/>
 <br/>
 Linear regression model has two parameters.<br/>
