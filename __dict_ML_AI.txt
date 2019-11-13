@@ -1,0 +1,714 @@
+
+Dictionary of Common Machine Learning & AI terms.
+
+
+=================
+Data Science (DS) - use computer to process data from
+different sources (CSV files, Databases), apply
+statistics, make graphs.
+
+=================
+Machine Learning (ML) - subset of DS focusing on
+extracting patterns from data to do predictions. 
+
+Regress vs Progress.
+
+Regress = simplify.
+
+Regression - develop a simple model (based 
+on training data) so that this simple model can
+do predictions.
+
+Model - a function that returns prediction based
+on input arguments.
+
+=================
+Example 1 - Linear Regression
+  (draw straight line through points). 
+  Model function uses two parameters [a,b] under the hood:
+
+          def linear_regression(x):
+              return (a*x + b)
+
+  Training data - array of data points (x,y)
+ 
+  Training of the Linear Regression model means simply
+  finding two numbers (a=slope, b=intercept) which do
+  the best fit between the model and training data 
+  (minimize the error between model and data).
+
+=================
+Example 2 - Logistic Regression
+  Classification, usually binary using sigmoid function.
+
+  Model function uses two (or more) parameters:
+
+      def logistic_regression(x)
+          return ( 1/(1+exp(-a -b*x)) )
+  
+
+  Training data - array of points:
+      (x1, x2, ..., xN, Class) 
+  where features can be numeric or categorical,
+  and class is usually binary (1 or 0, True of False)
+
+=================
+Term "Machine Learning" (ML) covers many types of 
+models, including:
+ - Linear Regression
+ - Logistic Regression
+ - SVM = Support Vector Machines
+ - KNN = K-nearest neighbors, 
+ - K-means clustering
+ - Decision Trees
+ - Ensembles of models
+ - Random Forest
+ - GBM (Gradient Boosting Machine)
+ - XGBoost, LightGBM, CatBoost, etc.
+ - Neural Networks (CNNs, RNNs, etc.) 
+
+=================
+Deep Learning (DL)  = ML models implemented using 
+multi-layered structures (Networks)
+
+=================
+Artificial Intelligence (AI) = DL algorithms trained
+to perform functions which are usually associated only
+with humans (vision, speech comprehension, autonomous
+driving, etc.)
+
+=================
+ML classification:
+=================
+
+- Logistic Regression (LgRg) - a model to perform 
+classification. This means predicting a class label
+(typically True of False, 1 or 0) from features.
+Number of features may be one or more.
+Number of class label's values may be two or more.
+
+=================
+- Random Forest (RF) - an ensemble decision tree model
+that trains many decision trees (typically ~200) 
+using random subsets of observations and features
+sampled from a training data set.
+  Leo Breiman, 2002 (Berkeley)
+
+All data subsets are independent. 
+Trees are trained independently. 
+
+Model does prediction by running data through all trees,
+and voting their predicitons.
+RF can be used for both classification and regression.
+
+=================
+GBM (Gradient Boosting Machine) is an ensemble 
+decision tree model (Jerome Friedman, 1999).
+But the trees are trained sequentially so that each 
+tree has ability to decrease the error of the 
+model made of previously trained trees.
+
+Implementations of GBM:
+ - XGBoost - eXtreme Gradient Boosting
+ - LightGBM
+ - CatBoost
+
+=================
+- Naive Bayes - a classifier working off of Bayes
+rule/theorem: P(B|A) = P(A|B)*P(B)/P(A). This model
+is called "naive" because it assumes that all 
+features' influences are equally important and 
+independent.
+
+=================
+- SVM (Support Vector Machine) - a family of algorithms
+separating groups of points by a line or a plane.
+The points closest to separation line/plane are
+called "Support Vectors".
+A common technique is to project data points into 
+a higher-dimensional space in which the data is 
+linearly separable.
+
+=================
+- KNN (K-Nearest Neighbors)--a classification
+algorithm that classifies a new observation by the
+majority of the k points closest to it by some 
+chosen metric. (Tell me who are your K closest
+friends, and I will tell you who you are).
+
+=================
+- K-means - a clustering algorithm that finds centers
+of clusters in data as following:
+  0. Start with N data points and K randomly chosen centers
+  1. Label each data point by which center it is closest to
+  2. Compute the means for points belonging to each center -
+     and set them as new chosen centers
+  3. repeat pp.1,2
+
+=================
+- Gaussian Mixture Model Clustering - we suggest that
+the observations are generated from multiple 
+gaussian distributions - and solve the problem of
+finding the parameters of those distributions.
+ 
+=================
+Neural Networks (NN)
+
+=================
+ - MLP = Multi-Level Perceptron - a simplest 
+form of NN. It consists of layers of nodes.
+Node of each layer may be connected to nodes
+of the next layer. They may also receive a bias 
+shift value. 
+
+Nodes calculate the total input - and apply 
+nonlinear "activation function" to it to 
+calculate the output.
+
+- SGD - Stochastic Gradient Descent - most
+  common algorithm to train Neural Networks
+
+- back propagaion (backprop) - most-common
+  method of training NNs
+
+=================
+ - CNN = Convolutional Neural Network - a specific
+type of NN designed to analyze images. 
+Inspired by brain visual cortex.
+Yann LeCun et al. (1989, 1998) "LeNet-5", 
+a 7-level NN with the following layers:
+  input           - 32x32 image
+  convolutional   - 6 @ 28x28 feature maps
+  pooling         - 6 @ 14x14
+  convolutional   - 16 @ 10x10
+  pooling         - 16 @ 5x5
+  fully-connected - 120 nodes
+  fully-connected -  84 nodes
+  output          -  10 nodes
+
+=================
+ - ResNet - Residual NN - includes connections
+skipping one or more layers to reduce vanishing
+gradient problem.
+
+=================
+ - U-Net - Network model used for Image segmentation
+(for example, in biology and medicine - identifying
+and counting living cells)
+
+=================
+ - RNN = Recurrent Neural Network - NN for 
+processing sequences. Examples - text, speech, 
+music, time series, etc. 
+
+=================
+ - LSTM & GRU - Gated RNNs in which each node has
+internal structure with gates and hidden parameters.
+Gated RNNs helped to fight the vanishing gradient problem.
+LSTM = Long Short Term Memory
+GRU = Gated Recurrent Unit
+
+=================
+ - GAN = Generative Adversarial Network - using two NNs:
+  --- a disriminator - "police detective"
+  --- a generator - "creative fake-generating artist"
+A generator generates lots of fakes to train the
+discriminator to learn to better distinguish 
+between true, false, and fake examples.
+
+=================
+   Auto-Encoder (AE) - NN used for data compression
+(encoder) and restoration (decoder). AE has 
+a bottleneck middle layer which is much smaller 
+than the input/output layers.
+
+ - Variational Auto-Encoder (VAE) - an AE which 
+uses randomness in the middle botleneck layer.
+Motivation - to make AE output less sensitive to 
+small changes in the input.
+VAEs are useful for encoding noisy images and 
+then extracting de-noised images. Also used in
+reinforcement learning.
+
+=================
+ - Reinforcement Learning (RL) - a family of ML
+algorithms where an agent learns best moves
+and strategies. Applications - games, robotics,
+self-driving cars, protein folding, etc.
+
+In RL the feedback is delayed. So it is not 
+obvious which action to take at the moment to 
+win the game in the long run. 
+
+RL algorith tries to learn the "policy", which
+is simply a matrix which gives probability
+of "winning" for each possible action ("move").
+
+For more complex games the policy matrix becomes
+too big. So modern algorithm use a different
+approach - a set of networks working together,
+for example actor & critic.
+Here the "critic" network works as a long-term
+strategy advisor, whereas the "actor" network 
+makes short-term decisions based on the value
+fnuction proposed by "critic".
+
+=================
+- underfitting - model misses some important regularities
+
+- overfitting - model tries to fit training data too well.
+The error becomes very small on training data because
+the model learns all small details, even noise.
+Unfortunately on new data the error will be still big.
+
+=================
+- bias-variance trade-off.
+  Model_Error = Bias + Vairance + Noise
+  - Bias happens when model is too simple 
+    so it doesn't fit the data well.
+    For example, model is straight line.
+    Adding data doesn't help.
+    Training longer doesn't help.
+
+  - Vairance happens when algorithm tries
+    to fit training data too well (over-fitting)
+    but the error on test dataset doesn't decrease.
+    In fact, the error on test data can increase.
+
+  - Noise - Data will always have noise 
+    from sample to sample.<br/>
+
+=================
+- regularization - methods to focus model on some
+  "regularities" in the data, to avoid overfitting,
+  and to increase robustness of the model.
+  Common methods of regularization include:
+   - adding randomness into the training data
+     (adding noise, transformations, etc., GANs)
+   - adding randomness into the model
+     (variational autoencoder)
+   - adding randomness into the training process
+     (drop-out)
+   - keeping coefficients values in reasonable range
+     (adding a term to the loss function,
+      using activation function with "leaky" saturation
+      using gated networks (LSTM, GRU))
+
+=================
+- data-sets: training , validation, test
+  -- training set   - to train the model
+  -- validation set - to track model convergence
+  -- test set       - to estimate model accuracy
+
+=================
+- cross-validation folding - standard method for 
+  evaluating the accuracy of the model. 
+
+You randomly split your data into several (4) 
+parts of approximately equal size and consistency.
+
+Then you use one part as test set, and others as training set.
+You then rotate which part you choose as a test.
+
+Thus you will get 4 models and 4 error estimates.
+From these 4 errors you can estimate the average
+error and its variance.
+
+=================
+- confusion matrix - typically a 2x2 matrix showing
+  numbers of true positives, true negatives, 
+  false positives, and false negatives.
+
+  The "True" values are on the diagonal.
+  Often matrix is color-coded, so you can easily see
+  if it is mostly "diagonal" or not.
+
+=================
+- ROC curve - Receiver Operating Characteristic curve.
+  Originally used during World War II.
+
+  Shows True Positive Rate (TPR) 
+  vs False Positive Rate (FPR)
+  at different values of some parameters (threshold).
+
+  Helps to visually see if there is some good value
+  of threshold (sweet spot) which allows to correctly
+  catch most of positives, while rejecting most of noise.
+
+- AUC = Area Under the Curve
+  The ROC curve goes from (0,0) to (1,1). 
+  The area under the curve usually is between 0.5 and 1
+
+  If the model is bad at separating signal from noise,
+  then TPR ~= FPR. The curve is diagonal, the AUC = 0.5
+  
+  if the model is very good at separating signal from noise,
+  then TPR ~= 1, FPR ~= 0,
+  and the Area Under the curve (AUC) is ~ 1
+
+=================
+- Precision, recall, accuracy - three common metrics
+  for model quality.
+
+  Suppose we are training the model to separate "planes"
+  from noise.
+
+  high precision (sniper) - hits only planes.
+    But - sniper has limited ability to cover everything
+  high recall (nuclear bomb) - hits everyone.
+    But has low precision (hits not only true targets)
+  high accuracy - low amont of FP and FN 
+    (False Positives and False Negatives)
+    Accuracy = weight_of_diagonal/whole_matrix
+
+=================
+ - MSE = Mean Square Error = sum ( Yi - Yi_model)^2
+   MSE is a common error function for regression
+   
+=================
+ - Log-Loss - common error function for classification.
+   Suppose that the model predicts value "p" between 0 and 1.
+   We calculate error as following:
+   
+   Target    Error
+    0         -log(1 - p)
+    1         -log(p)
+
+    For example, 
+      if target is 0:
+         p -> 0, Error = -log(1-p) -> -log(1) = 0
+         p -> 1, Error = -log(1-p) -> -log(0) = infinity
+
+    Total loss is the sum of errors for each data point.
+
+=================
+- Cross-Entropy error - same as Log-Loss
+
+The term "Cross Entropy" comes from information theory
+where it is used to measure the increase in length
+of binary messages when we changing the coding scheme
+from optimal.
+
+The word "Entropy" comes from Information Theory
+(Claude Shannon, 1948) and from physics (statistical 
+thermodynamics).
+
+=================
+KL-divergence = KullbackLeibler divergence
+(also called relative entropy) is a measure of how 
+one probability distribution is different from another.
+ D_KL(p,q) = H(p,q) - H(p)
+ where H(p,q) - cross-entropy
+       H(p)   - entroopy
+=================
+- NLP (Natural Language Processing) - part of ML
+dealing with processing of speech and text.
+For example - sentiment analysis, translation, etc.
+
+=================
+- TF-IDF = (Term-Frequency) * (Inverse-Document-Frequency)
+  This is a number which weights a word's importance.
+  The number is calculated by multiplying two numbers:
+  TF = frequency of this word in the given document
+  IDF = -ln(in-docs-frequency).
+
+  For example, a common word "the" usually has high TF.
+  But it also can be found in almost all docs,
+  so its "in-docs-frequency" => 1, so IDF => 0
+  so TF-IDF = TF * IDF = TF * 0 = 0
+
+  But for a rare term, in-docs-frequency -> 0,
+  so IDF = -ln(small number) = very_big_number
+  so the TF-IDF may be reasonably big.
+
+=================
+- Word2vec - a group of models that tries to represent 
+each word in a large text as a vector in a space 
+of ~300 dimensions (which we will call features) 
+making similar words also be close to each other. 
+
+     V(King)  V(Man) + V(Woman)  ~  V(Queen)
+
+You can download standard Word2Vec pre-trained vectors.
+
+=================
+- hidden layers, latent factors - intermediate nodes,
+layers, and parameters of a Neural Network
+
+=================
+ - bag of words - a simple approach in NLP where 
+a text is modeled as a bag of words without 
+considering order of words and composition of
+sentences.
+
+=================
+- explainability - how well can a model explain
+why it makes certain predictions.
+Explainability becomes a required feature for
+models in high-risk domains like medicine 
+or finance.
+
+=================
+- Monte-Carlo - a methods of making predictions 
+by running random scenarious multiple times 
+and averaging the outcomes.
+
+=================
+- Numenta - a company devoted to figuring out how
+the brain cortex works. 
+Created open source software.
+Founded and led by Jeff Hawkins.
+
+=================
+- PCA (Principal Component Analysis) - a method
+of simplifying the data by reducing the 
+number of dimensions - usually by switching to a 
+set of new synthetic dimensions ("features").
+
+=================
+- Propensity Score Matching (PSM) is a statistical
+matching technique that attempts to estimate the 
+effect of a treatment, policy, etc.
+by accounting for the covariates that predict 
+receiving the treatment.
+
+=================
+- Topic Model - a model for discovering the abstract 
+"topics" that occur in a collection of documents. 
+
+- LDA = Latent Dirichlet Allocation. LDA is an example
+of topic model and is used to classify text in a 
+document to a particular topic. 
+
+- LDA = Linear Discriminant Analysis - trying to find 
+a linear combination of features to separate/classify
+a predicted variable
+
+=================
+- Boltzmann Machine (BM) - a network of symmetrically
+connected nodes. Not used in practice.
+
+- Restricted Boltzmann Machine (RBM) - a BM where
+nodes arranged in layers, and training happens one
+layer at a time (Hinton, Salakhutdinov, 2006)
+
+=================
+- Recommender Systems
+  Make recommendations in different ways:
+  - based on features of the customer
+    (country, language, age, ...)
+  - based on features of products customer considered or bought
+  - based on similarity of customer to other
+    customers (by customer features or products features)
+
+- Collaborative filtering - customers who bought
+this, have also bought that ...
+
+=================
+- Google translate, 
+  in 2016 Google has created new translation algorithm
+  which was made using Neural Netwokrs and has
+  proven to be much better than previous linguistic
+  algorithms.
+
+- Attention Is All You Need 2017 - A famous Google 
+publication describing the Attention mechanism wich is
+one of the central methods used in Google Translate and
+other text-processing algorithms.
+
+=================
+- BERT = "Bidirectional Encoder Representations 
+from Transformers" - a language representation model.
+  (Google, 2018)
+  BERT is designed to pretrain deep bidirectional 
+  representations from unlabeled text
+
+=================
+- Data Engineering - the process of collecting, 
+storing, cleaning, preprocessing, and loading data.
+
+=================
+- ETL - Extract, Transform, Load. 
+Reading data from some sources (databases, files, APIs),
+transforming data as needed, 
+and then loading it into the target systems.
+Typically into an SQL Data Warehouse
+
+=================
+- Data Governance (DG) - processes to manage data quality,
+integrity, availability, and security. 
+
+=================
+- Data Lineage (DL) - a description of data life cycle.
+Where the data comes from, how it flows, gets processed,
+etc. Data lineage gives visibility and allows to trace
+data problems.
+
+=================
+Data Quality - the trustworthiness of data.
+How accurate, anomalies in the data
+(nonsensical entries, missing data, anything that
+requires cleaning prior to analysis, etc.).
+
+=================
+- ML on Cloud (Google, AWS, Azure)
+All vendors offer various ways for data preparaion,
+model training, and model deployment and hosting.
+For example, using pre-trained models allows to 
+dramatically reduce the training time and cost.
+
+- ML at the Edge (in devices - phones, cars, robots, etc.)
+
+- GPU (Nvidia Graphics Processing Unit) - video card
+  with thousands processors to massive parallel
+  matrix operations.
+
+- TPU - Tensor Processing Units - Google proprietary
+  hardware for Deep Learning
+
+- FPGA - Field-Programmable Gate Array 
+
+- distributed ML (running on top of Hadoop Spark, etc.)
+
+- productionalizing ML
+
+- ML libraries:
+ - sklearn (SciKit-Learn)
+ - PyTorch
+ - fast.ai
+ - TensorFlow & Keras
+ - Swift for TensorFlow
+
+=================
+- Differential Privacy - assuring that data is 
+anonymized and cleaned in a way to prevent tracing
+it to specific individuals.
+
+Sometimes just removing the contact information 
+is not enough. Cross-referencing datasets may lead
+to mapping the data to individuals unless special 
+precaution measures are put in place.
+
+=================
+- GDPR = General Data Protection Regulation
+  A European Union law that tries to give more control
+  of personal data to individuals, stating that 
+  individuals must be informed when their data is 
+  collected, how that data is used, and reserve the 
+  right to be forgotten, for that data to be used for 
+  its original purpose, and so on. 
+
+=================
+- Fraud Detection - methods to detect fraudulent 
+bank or credit card transactions by applying 
+ML classification techniques. 
+As fraudulent transactions constitute a tiny
+minority of all transactions, the training data
+is heavily imbalanced. Special methods need to 
+be used to work with imbalanced data.
+
+=================
+- Anomaly Detection - use ML/DS techniques to 
+detect points that are vastly different from the 
+majority of the data, such that they affect model 
+construction in unintended ways. 
+
+=================
+- Model Validation - procedures to ensure that a
+model generalizes well to future data. This means
+that the error on future un-seen data is not much 
+higher than error on training data.
+
+Typically people use cross validation techniques
+or having a completely separate data set
+just for validation purposes.
+
+=================
+- Model Fairness - the idea that an ML model may be
+biased against certain individuals due to various 
+features in a data set.
+
+Model Bias (examples - gender, race, age, etc) should
+be taken into consideration. For example, the model 
+may suggest to deny a loan to an individual based on
+his race. Because in training data many Afrecan
+Americans had low credit scores.
+ 
+Features pertaining to gender, race, and so on, 
+should be removed, as well as features which
+potentially may be highly correlated with them
+(for example, zip code, because certain races
+live in close proximity to each other).
+
+=================
+AutoML - systems allowing to run multiple models,
+  try different features and parameters, and come
+  up with the best model very quickly.
+
+H2O - Silicon Valley based company providing libraries,
+  applications, frameworks, and Cloud-based 
+  distributed & scalable AutoML. 
+  Most of the libraries are open source.
+  Written in Java and Python
+  Main commercial offerings 
+    - Driverless AI (feature generation, AutoML, AutoDoc)
+    - Q-platform
+  Used by more than 250,000 people accross 18,000 companies
+  H2O employs many Kaggle Masters and famous data scientits.
+  For example Matt Dowle, who wrote the Data.table
+  package in R.
+
+DataRobot - Boston based commercial AutoML vendor.
+  Cloud-hosted. Runs H2O and proprietary software.
+  Like H2O proud of employing multiple Kaggle winners.
+
+C3.ai (Carbon-3) - a Tom Siebel's enterprise AI framework.
+  Targeted to large corporations ($20-$250 Bln).
+  Has big government and military contracts.
+  Written in Java.
+  Typical contracts - multi-million scale.
+
+=================
+-Data Leakage (a.k.a. Target Leakage) - when 
+data that would not be available at the time
+of model prediction is used to allow the model to make
+a prediction. 
+
+In quantitative finance, this is called
+lookahead bias, but since data science is not
+necessarily time-indexed, it's much easier for a
+feature to slip into a training set which would not
+have been available at the time needed to make a
+prediction. 
+
+An example would be that a patient taking
+medicine (yes/no) predicts whether or not the 
+patient is sick. 
+Healthy people don't take medicine.
+So obviously, a patient not taking medicine
+would not be sick, and vice versa.
+
+=================
+Python:
+ - anaconda: https://www.anaconda.com/download/
+ - iPython - interactive Python - a convenient 
+   utility for working with python interactively
+ - Jupyter notebook (formerly called iPython notebook)
+   a way to run python in browser window. Allows
+   to do coding, documentation, graphics. Good
+   for coding, tutorials, presentations, dashboards.
+   The code actually runs in terminal window, and 
+   communicates with javascript app in browser.
+   The work is saved as a JSON file with extension 
+   "ipynb" (ipython notebook).
+
+=================
+ - Python versions 2.7 vs 3.7
+   All new projects should use latest 3.* python
+
+ - numpy
+ - pandas DataFrame
+   pd.read_csv(file)
+   df.to_csv(file)
+
+=================
