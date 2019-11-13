@@ -1,6 +1,25 @@
 
 Dictionary of Common Machine Learning & AI terms.
 
+=================
+"AI is the New Electricity" 
+  -- Andrew Ng
+
+"... ultimately, AI will benefit us in the same way 
+that previous technologies have. 
+ ... My view is not that AI is going to displace us, 
+ ... (but) ...  Its going to enhance us. It does already.
+  -- Ray Kurzweil, Chief Engineer for Google and 
+                   famous futurist stated that.
+
+Millions of jobs will be "outsourced" to AI. 
+Also you will see new jobs, like "Chief AI Officer", AI departments. 
+We already see big shortage in AI specialists. 
+Top AI talent is paid millions of $$.
+
+=================
+Machine Learning        = "Cheap Predictions"
+Artificial Intelligence = "Cheap Predictions"
 
 =================
 Data Science (DS) - use computer to process data from
@@ -78,6 +97,32 @@ with humans (vision, speech comprehension, autonomous
 driving, etc.)
 
 =================
+Supervised Learning - trained with labeled data
+
+Unsupervised learning - no labels. System learns to 
+                        recognize structure in data.
+
+=================
+Feature Engineering
+  Feature - measurable property or characteristic of the data.
+  Feature engineering - prepare data for ML algorithms to work:
+  - clean data, 
+  - extract / select data
+  - convert data to numeric vectors, clean
+  - transform - scale/normalize (rotate/rescale/crop image, etc.)
+  - transform  concentrate (for example, PCA  Principal Component Analysis, 
+  - impute (shift, rotate, mirror, rescale images, add 
+       fake data to minority class to decrease imbalance, etc. )
+  - make composite features
+  - add generated features
+
+=================
+One-hot encoding
+
+=================
+Ridge Regression, LASSO, Elastic Net
+
+=================
 ML classification:
 =================
 
@@ -87,6 +132,10 @@ classification. This means predicting a class label
 Number of features may be one or more.
 Number of class label's values may be two or more.
 
+=================
+Ensemble - combine multiple models together
+Bagging  - combining models in parallel (Random Forest)
+Boosting - combining models sequentially (XGBoost ...)
 =================
 - Random Forest (RF) - an ensemble decision tree model
 that trains many decision trees (typically ~200) 
@@ -98,7 +147,7 @@ All data subsets are independent.
 Trees are trained independently. 
 
 Model does prediction by running data through all trees,
-and voting their predicitons.
+and voting their predictions.
 RF can be used for both classification and regression.
 
 =================
@@ -112,6 +161,7 @@ Implementations of GBM:
  - XGBoost - eXtreme Gradient Boosting
  - LightGBM
  - CatBoost
+ - AdaBoost
 
 =================
 - Naive Bayes - a classifier working off of Bayes
@@ -121,16 +171,18 @@ features' influences are equally important and
 independent.
 
 =================
-- SVM (Support Vector Machine) - a family of algorithms
-separating groups of points by a line or a plane.
-The points closest to separation line/plane are
-called "Support Vectors".
-A common technique is to project data points into 
-a higher-dimensional space in which the data is 
-linearly separable.
+- SVM (Support Vector Machine)
+  Vladimir Vapnik and Alexey Chervonenkis (1963)
+  - a family of algorithms separating groups of points
+    by a line or a plane.
+    The points closest to separation line/plane are
+    called "Support Vectors".
+    A common technique is to project data points into 
+    a higher-dimensional space in which the data is 
+    linearly separable.
 
 =================
-- KNN (K-Nearest Neighbors)--a classification
+- KNN (K-Nearest Neighbors) - a classification
 algorithm that classifies a new observation by the
 majority of the k points closest to it by some 
 chosen metric. (Tell me who are your K closest
@@ -155,7 +207,9 @@ finding the parameters of those distributions.
 Neural Networks (NN)
 
 =================
- - MLP = Multi-Level Perceptron - a simplest 
+ - Perceptron - simple single-layer network (1957)
+
+ - MLP = Multi-Level Perceptron - a simplest
 form of NN. It consists of layers of nodes.
 Node of each layer may be connected to nodes
 of the next layer. They may also receive a bias 
@@ -165,11 +219,52 @@ Nodes calculate the total input - and apply
 nonlinear "activation function" to it to 
 calculate the output.
 
-- SGD - Stochastic Gradient Descent - most
-  common algorithm to train Neural Networks
+Examples of activation functions:
+  ReLU = Rectified Linear Unit (diode function)
+  Leaky ReLU
+  Sigmoid Function
 
-- back propagaion (backprop) - most-common
+- SGD - Stochastic Gradient Descent - most
+  common algorithm to train Neural Networks.
+  Computing true gradient is expensive when number of 
+  dimensions is large. Solution  SGD: each step we 
+  calculate gradient for a small random subset of 
+  dimensions. Each step is much cheaper to calculate.
+
+- Batch-processing, Mini-batch, batch-size
+  Idea is that we calculate the error for each example 
+  in the training dataset, but only updates the model 
+  after certain number of training examples have been
+  evaluated.
+
+- Dynamic learning rate - changing the size of the 
+    step dynamically as we do SGD
+
+- ADAM - Adaptive Moments - most popular adaptive 
+    learning rate optimization algorithm. 
+    Others - RMSProp, AdaDelta, ...
+
+- back propagation (backprop) - most-common
   method of training NNs
+
+Typical output stages of NN include:
+ - softmax function - to do normalization of output
+ - cross-entropy calculation - as error function
+
+Hyper-parameters of the NN model
+  - number of layers
+  - size of layers
+  - batch size
+  - regularization parameters
+  - etc.
+
+Exploding/Vanishing Gradient problem - as the error
+  back-propagates, it can get progressively smaller
+  (or larger) as it goes through layers. Especially
+  as the number of layers increases. Multiple methods
+  were proposed to overcome this problem - gated nodes,
+  skip-connections (ResNets), Multi-Level Hierarchy
+  (pre-training one level at a time), ...
 
 =================
  - CNN = Convolutional Neural Network - a specific
@@ -185,6 +280,9 @@ a 7-level NN with the following layers:
   fully-connected - 120 nodes
   fully-connected -  84 nodes
   output          -  10 nodes
+
+Various CNN architectures:
+  LeNet, AlexNet, VGG, GoogLeNet, ResNet and more 
 
 =================
  - ResNet - Residual NN - includes connections
@@ -209,9 +307,10 @@ LSTM = Long Short Term Memory
 GRU = Gated Recurrent Unit
 
 =================
- - GAN = Generative Adversarial Network - using two NNs:
-  --- a disriminator - "police detective"
-  --- a generator - "creative fake-generating artist"
+ - GAN = Generative Adversarial Network (Ian Goodfellow, 2014)
+   - using two NNs:
+   --- a discriminator - "police detective"
+   --- a generator    - "creative fake-generating artist"
 A generator generates lots of fakes to train the
 discriminator to learn to better distinguish 
 between true, false, and fake examples.
@@ -223,7 +322,7 @@ a bottleneck middle layer which is much smaller
 than the input/output layers.
 
  - Variational Auto-Encoder (VAE) - an AE which 
-uses randomness in the middle botleneck layer.
+uses randomness in the middle bottleneck layer.
 Motivation - to make AE output less sensitive to 
 small changes in the input.
 VAEs are useful for encoding noisy images and 
@@ -240,7 +339,7 @@ In RL the feedback is delayed. So it is not
 obvious which action to take at the moment to 
 win the game in the long run. 
 
-RL algorith tries to learn the "policy", which
+RL algorithm tries to learn the "policy", which
 is simply a matrix which gives probability
 of "winning" for each possible action ("move").
 
@@ -251,7 +350,21 @@ for example actor & critic.
 Here the "critic" network works as a long-term
 strategy advisor, whereas the "actor" network 
 makes short-term decisions based on the value
-fnuction proposed by "critic".
+function proposed by "critic".
+
+=================
+Transfer Learning
+  Solve one problem, use gained knowledge to solve 
+  a different but related problem. 
+  Example:
+     Train a CNN to recognize cars. 
+     Then use first pre-trained layers of this CNN
+     to effectively train new CNN to recognize trucks
+     using very small dataset of trucks. 
+     If objects a similar in nature, we can freeze 
+     these first layers, and only train the output 
+     fully-connected layers of the CNN. 
+     Which makes training much faster and easier.
 
 =================
 - underfitting - model misses some important regularities
@@ -263,20 +376,20 @@ Unfortunately on new data the error will be still big.
 
 =================
 - bias-variance trade-off.
-  Model_Error = Bias + Vairance + Noise
+  Model_Error = Bias + Variance + Noise
   - Bias happens when model is too simple 
     so it doesn't fit the data well.
     For example, model is straight line.
     Adding data doesn't help.
     Training longer doesn't help.
 
-  - Vairance happens when algorithm tries
+  - Variance happens when algorithm tries
     to fit training data too well (over-fitting)
     but the error on test dataset doesn't decrease.
     In fact, the error on test data can increase.
 
   - Noise - Data will always have noise 
-    from sample to sample.<br/>
+    from sample to sample.
 
 =================
 - regularization - methods to focus model on some
@@ -284,15 +397,28 @@ Unfortunately on new data the error will be still big.
   and to increase robustness of the model.
   Common methods of regularization include:
    - adding randomness into the training data
-     (adding noise, transformations, etc., GANs)
+     (adding noise, transformations, etc.,
+      adversarial training - GANs)
    - adding randomness into the model
      (variational autoencoder)
    - adding randomness into the training process
-     (drop-out)
+     (dropout)
    - keeping coefficients values in reasonable range
      (adding a term to the loss function,
       using activation function with "leaky" saturation
       using gated networks (LSTM, GRU))
+   - Example - L1 & L2 Regularization
+       L1 norm - minimize sum of the absolute errors
+       L2 norm - minimize sum of the squares of errors
+
+   - Ridge Regression = L2 regularization
+                      = "Tikhonov Regularization"
+                      = "weight decay regularization"
+   - LASSO       = L1 regularization
+   - Elastic Net = combination of L1 and L2 
+
+   - regularization via Bagging or using other Ensemble methods
+   
 
 =================
 - data-sets: training , validation, test
@@ -357,9 +483,9 @@ error and its variance.
     But - sniper has limited ability to cover everything
   high recall (nuclear bomb) - hits everyone.
     But has low precision (hits not only true targets)
-  high accuracy - low amont of FP and FN 
+  high accuracy - low amount of FP and FN 
     (False Positives and False Negatives)
-    Accuracy = weight_of_diagonal/whole_matrix
+    Accuracy = weight_of_diagonal / whole_matrix
 
 =================
  - MSE = Mean Square Error = sum ( Yi - Yi_model)^2
@@ -394,16 +520,25 @@ The word "Entropy" comes from Information Theory
 thermodynamics).
 
 =================
-KL-divergence = KullbackLeibler divergence
+KL-divergence = Kullback-Leibler divergence
 (also called relative entropy) is a measure of how 
 one probability distribution is different from another.
  D_KL(p,q) = H(p,q) - H(p)
  where H(p,q) - cross-entropy
-       H(p)   - entroopy
+       H(p)   - entropy
 =================
 - NLP (Natural Language Processing) - part of ML
 dealing with processing of speech and text.
-For example - sentiment analysis, translation, etc.
+
+ - sentiment analysis
+ 
+ - text translation
+ 
+ - text understanding
+ 
+ - extracting data from text
+
+ - etc.
 
 =================
 - TF-IDF = (Term-Frequency) * (Inverse-Document-Frequency)
@@ -422,14 +557,29 @@ For example - sentiment analysis, translation, etc.
   so the TF-IDF may be reasonably big.
 
 =================
-- Word2vec - a group of models that tries to represent 
-each word in a large text as a vector in a space 
-of ~300 dimensions (which we will call features) 
-making similar words also be close to each other. 
+Stemming & Lemmatization - process of reducing inflected
+  (or derived) words to their word stem, base or root form
+  lemma = the base or dictionary form of a word
 
-     V(King)  V(Man) + V(Woman)  ~  V(Queen)
+=================
+- Word2vec - (Mikolov et al, Google) - a group of 
+models that tries to represent each word in a large 
+text as a vector in a space of ~300 dimensions 
+(which we will call features) making similar words 
+also be close to each other.
+Main idea - a word can be described by its neighbors,
+a company this word has. 
+
+     V(King)   V(Man) + V(Woman)  ~  V(Queen)
 
 You can download standard Word2Vec pre-trained vectors.
+
+=================
+GloVe - Global Vectors for Word Representation (2014)
+  GloVe is an unsupervised learning algorithm for 
+  obtaining vector representations for words. 
+  Training is performed on aggregated global 
+  word-word co-occurrence statistics from a corpus.
 
 =================
 - hidden layers, latent factors - intermediate nodes,
@@ -450,7 +600,7 @@ or finance.
 
 =================
 - Monte-Carlo - a methods of making predictions 
-by running random scenarious multiple times 
+by running random scenarios multiple times 
 and averaging the outcomes.
 
 =================
@@ -492,6 +642,8 @@ connected nodes. Not used in practice.
 nodes arranged in layers, and training happens one
 layer at a time (Hinton, Salakhutdinov, 2006)
 
+Deep Belief Network - many layers of RBMs.
+
 =================
 - Recommender Systems
   Make recommendations in different ways:
@@ -507,12 +659,12 @@ this, have also bought that ...
 =================
 - Google translate, 
   in 2016 Google has created new translation algorithm
-  which was made using Neural Netwokrs and has
+  which was made using Neural Networks and has
   proven to be much better than previous linguistic
   algorithms.
 
 - Attention Is All You Need 2017 - A famous Google 
-publication describing the Attention mechanism wich is
+publication describing the Attention mechanism which is
 one of the central methods used in Google Translate and
 other text-processing algorithms.
 
@@ -552,7 +704,7 @@ requires cleaning prior to analysis, etc.).
 
 =================
 - ML on Cloud (Google, AWS, Azure)
-All vendors offer various ways for data preparaion,
+All vendors offer various ways for data preparation,
 model training, and model deployment and hosting.
 For example, using pre-trained models allows to 
 dramatically reduce the training time and cost.
@@ -560,24 +712,34 @@ dramatically reduce the training time and cost.
 - ML at the Edge (in devices - phones, cars, robots, etc.)
 
 - GPU (Nvidia Graphics Processing Unit) - video card
-  with thousands processors to massive parallel
-  matrix operations.
+  with thousands processors can do massive parallel
+  matrix operations using CUDA parallel compute platform.
+  CUDA = (Compute Unified Device Architecture) 
 
 - TPU - Tensor Processing Units - Google proprietary
   hardware for Deep Learning
 
-- FPGA - Field-Programmable Gate Array 
+- FPGA - Field-Programmable Gate Array (Microsoft, Amazon)
+
+- Many proprietary hardware solutions (Tesla, AMD, 
+    QUALCOMM, Apple, Xilinx, IBM, etc.
 
 - distributed ML (running on top of Hadoop Spark, etc.)
 
 - productionalizing ML
 
 - ML libraries:
- - sklearn (SciKit-Learn)
- - PyTorch
- - fast.ai
- - TensorFlow & Keras
- - Swift for TensorFlow
+  - sklearn (SciKit-Learn)
+  - PyTorch
+  - fast.ai
+  - TensorFlow & Keras
+  - Swift for TensorFlow
+  - NLTK (Natural Language ToolKit)
+
+- Many others:
+  Theano (end of life), Lasagne (on top of Theano), 
+  Caffe, DSSTNE, mxnet, DL4J, 
+  CNTK (Cognitive Toolkit, Microsoft), ...
 
 =================
 - Differential Privacy - assuring that data is 
@@ -631,7 +793,7 @@ features in a data set.
 Model Bias (examples - gender, race, age, etc) should
 be taken into consideration. For example, the model 
 may suggest to deny a loan to an individual based on
-his race. Because in training data many Afrecan
+his race. Because in training data many African
 Americans had low credit scores.
  
 Features pertaining to gender, race, and so on, 
@@ -653,8 +815,8 @@ H2O - Silicon Valley based company providing libraries,
   Main commercial offerings 
     - Driverless AI (feature generation, AutoML, AutoDoc)
     - Q-platform
-  Used by more than 250,000 people accross 18,000 companies
-  H2O employs many Kaggle Masters and famous data scientits.
+  Used by more than 250,000 people across 18,000 companies
+  H2O employs many Kaggle Masters and famous data scientists.
   For example Matt Dowle, who wrote the Data.table
   package in R.
 
@@ -703,6 +865,21 @@ Python:
    "ipynb" (ipython notebook).
 
 =================
+Kaggle - community of data scientists and machine learners
+ - since 2010, acquired by Google in 2017
+   more than 1 million registered users
+ - Kaggle Competitions
+ - Public Datasets
+ - Kaggle Kernels (Jupyter notebooks, code snippets)
+
+=================
+Knowledge Base, Expert Systems - old rule-based systems
+  New approach - unstructured data, deep learning systems
+  IBM Watson (2011) - a question-answering computer system
+    capable of answering questions posed in natural language.
+    Competed on TV show Jeopardy and won first place prize of $1 million. 
+
+=================
  - Python versions 2.7 vs 3.7
    All new projects should use latest 3.* python
 
@@ -712,3 +889,97 @@ Python:
    df.to_csv(file)
 
 =================
+Some Conferences / Events:
+
+NIPS = NeurIPS - https://nips.cc/
+
+IntelliSys - https://saiconference.com/IntelliSys
+
+IJCAI = International Joint Conferences on Artificial Intelligence
+  - https://www.ijcai.org/
+
+ICML = International Conference on Machine Learning
+  - https://icml.cc/
+
+UAI = Uncertainty in Artificial Intelligence
+  - http://www.auai.org/
+  
+ICAPS = International Conference on Automated Planning and Scheduling
+  - http://www.icaps-conference.org/
+
+ICDM = IEEE International Conference on Data Mining
+  - http://icdm2019.bigke.org/
+
+OReilly AI Conference
+  - https://conferences.oreilly.com/artificial-intelligence/ai-ny
+
+Open Data Science Conference (ODSC) 
+  - https://odsc.com
+
+The European Conference on Machine Learning and Principles 
+and Practice of Knowledge Discovery in Databases
+  - https://www.ecmlpkdd2019.org/
+
+ICIP = IEEE International Conference on Image Processing
+  - http://2019.ieeeicip.org/
+
+CoRL = Conference on Robot Learning
+  - https://www.robot-learning.org/
+
+AI & Big Data Expo
+  - https://www.ai-expo.net/northamerica/
+
+AAAI Conference on AI 
+  (AAAI = Association for the Advancement of Artificial Intelligence)
+  - https://aaai.org/Conferences/AAAI-20/
+
+
+=================
+Some Prominent People:
+  Geoffrey Hinton - Toronto, Canada
+  Yoshua Bengio - Montreal, Canada
+  Yann LeCun - Facebook, NYU
+  Ian Goodfellow - Apple
+  Jürgen Schmidhuber, Switzerland
+  Demis Hassabis - Deep Mind, Google
+  Quoc Le - Google
+  Sepp Hochreiter, Austria
+  Andrej Karpathy - Tesla, Stanford
+  Ilya Sutskever - Open AI
+  Alex Krizhevsky - AlexNet, Toronto
+  Vincent Vanhoucke
+  Hugo Larochelle
+  Michael I Jordan
+  Terry Sejnowski
+  Ruslan Salakhutdinov
+  Sebastian Thrun
+  Jeffrey Hawkins
+  David M. Blei 
+  Zoubin Ghahramani
+  Adam Coates
+  Pascal Lamblin
+  Richard Socher
+  John Schulman
+  Alex Wiltschko
+  Tomas Mikolov
+  Alex Graves
+  Marc'Aurelio 
+Ranzato
+  Shubho
+ Sengupta
+  James D. McCaffrey
+  Matthew Zeiler
+
+=================
+Some information sources to follow:
+
+Sam Charrington  podcast This Week in Machine Learning & AI
+
+Chris Olah - http://colah.github.io/ - - http://distill.pub  
+
+Siraj Raval  on youtube
+
+=================
+ReLU = Rectified Linear Unit (diode function)
+Leaky ReLU
+
