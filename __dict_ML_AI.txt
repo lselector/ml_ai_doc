@@ -815,7 +815,7 @@ H2O - Silicon Valley based company providing libraries,
   distributed & scalable AutoML. 
   Most of the libraries are open source.
   Written in Java and Python
-  Main commercial offerings 
+  Main commercial offerings: 
     - Driverless AI (feature generation, AutoML, AutoDoc)
     - Q-platform
   Used by more than 250,000 people across 18,000 companies
@@ -825,12 +825,12 @@ H2O - Silicon Valley based company providing libraries,
 
 DataRobot - Boston based commercial AutoML vendor.
   Cloud-hosted. Runs H2O and proprietary software.
-  Like H2O proud of employing multiple Kaggle winners.
+  Proud of employing multiple Kaggle winners.
 
 C3.ai (Carbon-3) - a Tom Siebel's enterprise AI framework.
+  Written in Java. Designed to scale.
   Targeted to large corporations ($20-$250 Bln).
   Has big government and military contracts.
-  Written in Java.
   Typical contracts - multi-million scale.
 
 =================
