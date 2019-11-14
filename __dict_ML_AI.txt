@@ -2,18 +2,21 @@
 Dictionary of Common Machine Learning & AI terms.
 
 =================
-"AI is the New Electricity" 
-  -- Andrew Ng
+""" AI is the New Electricity """ 
+            -- Andrew Ng
 
-"... ultimately, AI will benefit us in the same way 
-that previous technologies have. 
- ... My view is not that AI is going to displace us, 
- ... (but) ...  Its going to enhance us. It does already.
-  -- Ray Kurzweil, Chief Engineer for Google and 
-                   famous futurist stated that.
+""" ultimately, AI will benefit us in the same way 
+    that previous technologies have. 
+    My view is not that AI is going to displace us, 
+    (but) ...  Its going to enhance us. 
+    It does already. """
+            -- Ray Kurzweil, 
+               famous futurist
+               Chief Engineer for Google
 
 Millions of jobs will be "outsourced" to AI. 
-Also you will see new jobs, like "Chief AI Officer", AI departments. 
+Also you will see new jobs, like "Chief AI Officer".
+Companies and Universities will have AI departments. 
 We already see big shortage in AI specialists. 
 Top AI talent is paid millions of $$.
 
@@ -24,7 +27,7 @@ Artificial Intelligence = "Cheap Predictions"
 =================
 Data Science (DS) - use computer to process data from
 different sources (CSV files, Databases), apply
-statistics, make graphs.
+statistics, make graphs, make predictions.
 
 =================
 Machine Learning (ML) - subset of DS focusing on
@@ -853,8 +856,10 @@ would not be sick, and vice versa.
 =================
 Python:
  - anaconda: https://www.anaconda.com/download/
+
  - iPython - interactive Python - a convenient 
    utility for working with python interactively
+
  - Jupyter notebook (formerly called iPython notebook)
    a way to run python in browser window. Allows
    to do coding, documentation, graphics. Good
@@ -863,6 +868,12 @@ Python:
    communicates with javascript app in browser.
    The work is saved as a JSON file with extension 
    "ipynb" (ipython notebook).
+
+ - numpy
+
+ - pandas DataFrame
+   pd.read_csv(file)
+   df.to_csv(file)
 
 =================
 Kaggle - community of data scientists and machine learners
@@ -880,13 +891,22 @@ Knowledge Base, Expert Systems - old rule-based systems
     Competed on TV show Jeopardy and won first place prize of $1 million. 
 
 =================
- - Python versions 2.7 vs 3.7
-   All new projects should use latest 3.* python
-
- - numpy
- - pandas DataFrame
-   pd.read_csv(file)
-   df.to_csv(file)
+Some companies to know:
+  University of Toronto, CA
+  Université de Montréal
+  Google AI Research
+     Google Brain 
+     DeepMind
+     Kaggle
+  OpenAI
+  Facebook AI Research
+  Apple
+  NYU
+  Stanford University
+  Carnegie Mellon University
+  University of California, Berkeley
+  Numenta
+  Columbia University
 
 =================
 Some Conferences / Events:
@@ -933,15 +953,18 @@ AAAI Conference on AI
   (AAAI = Association for the Advancement of Artificial Intelligence)
   - https://aaai.org/Conferences/AAAI-20/
 
-
 =================
 Some Prominent People:
-  Geoffrey Hinton - Toronto, Canada
+  Geoffrey Hinton - University of Toronto, Canada
   Yoshua Bengio - Montreal, Canada
   Yann LeCun - Facebook, NYU
   Ian Goodfellow - Apple
   Jürgen Schmidhuber, Switzerland
+  Andrew Ng - Coursera, Google Brain, Baidu, Stanford,
+              Woebot Labs, Landing AI, drive.ai
   Demis Hassabis - DeepMind, Google
+  Leo Breiman - University of California, Berkeley
+  Jerome H. Friedman - Stanford
   Jeff Dean - Google Brain
   Quoc Le - Google
   Sepp Hochreiter, Austria
@@ -979,6 +1002,36 @@ Chris Olah - http://colah.github.io/ - - http://distill.pub 
 Siraj Raval  on youtube
 
 =================
-ReLU = Rectified Linear Unit (diode function)
-Leaky ReLU
+Some books:
 
+Jason Brownlee:
+  - https://machinelearningmastery.com/
+
+Andriy Burkov
+  - http://themlbook.com/
+
+Deep Learning (2016)
+  - http://www.deeplearningbook.org/
+    by Ian Goodfellow, Yoshua Bengio, Aaron Courville
+
+Aurélien Géron
+  Hands-On Machine Learning with Scikit-Learn, Keras, 
+  and TensorFlow. 2nd Edition (2019) 
+
+Francois Chollet
+  Deep Learning with Python 1st Edition (2017)
+
+Classification and Regression Trees (1984)
+  by Leo Breiman, Jerome Friedman, 
+     Charles J. Stone, R.A. Olshen
+
+An Introduction to Statistical Learning
+  by Gareth James, Daniela Witten, Trevor Hastie, Robert Tibshirani
+  - http://faculty.marshall.usc.edu/gareth-james/ISL/
+
+The Elements of Statistical Learning: Data Mining, 
+  Inference, and Prediction
+  by Trevor Hastie, Robert Tibshirani, Jerome Friedman
+  - https://web.stanford.edu/~hastie/ElemStatLearn/
+
+=================
