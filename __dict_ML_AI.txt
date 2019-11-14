@@ -941,34 +941,33 @@ Some Prominent People:
   Yann LeCun - Facebook, NYU
   Ian Goodfellow - Apple
   Jürgen Schmidhuber, Switzerland
-  Demis Hassabis - Deep Mind, Google
+  Demis Hassabis - DeepMind, Google
+  Jeff Dean - Google Brain
   Quoc Le - Google
   Sepp Hochreiter, Austria
   Andrej Karpathy - Tesla, Stanford
   Ilya Sutskever - Open AI
   Alex Krizhevsky - AlexNet, Toronto
-  Vincent Vanhoucke
-  Hugo Larochelle
-  Michael I Jordan
-  Terry Sejnowski
-  Ruslan Salakhutdinov
-  Sebastian Thrun
-  Jeffrey Hawkins
-  David M. Blei 
-  Zoubin Ghahramani
-  Adam Coates
-  Pascal Lamblin
-  Richard Socher
-  John Schulman
-  Alex Wiltschko
-  Tomas Mikolov
-  Alex Graves
-  Marc'Aurelio 
-Ranzato
-  Shubho
- Sengupta
-  James D. McCaffrey
-  Matthew Zeiler
+  Vincent Vanhoucke - Google Brain
+  Hugo Larochelle - Google Brain
+  Michael I Jordan -  University of California, Berkeley
+  Terry Sejnowski -  Salk Institute for Biological Studies
+  Ruslan Salakhutdinov - Director or AI Research at Apple
+  Sebastian Thrun - Udacity, Stanford, Google, Kitty Hawk
+  Jeffrey Hawkins - Numenta, PalmPilot
+  David M. Blei - Topic Models, Columbia University
+  Zoubin Ghahramani - Cambridge, Uber
+  Adam Coates - Apple
+  Pascal Lamblin - Theano, Canada
+  Richard Socher - Chief Scientist at Salesforce, Stanford
+  John Schulman - OpenAI, robotics
+  Alex Wiltschko - Google Brain
+  Tomas Mikolov - Facebook, Google
+  Alex Graves - DeepMind
+  Marc'Aurelio Ranzato - AI Research at Facebook
+  Shubho Sengupta - AI Research at Facebook
+  James D. McCaffrey - Research at Microsoft
+  Matthew Zeiler - Clarifai
 
 =================
 Some information sources to follow:
