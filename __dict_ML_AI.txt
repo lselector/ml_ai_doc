@@ -892,21 +892,24 @@ Knowledge Base, Expert Systems - old rule-based systems
 
 =================
 Some companies to know:
-  University of Toronto, CA
-  Université de Montréal
+  University of Toronto, Canada - Geoffrey Hinton
+  Université de Montréal - Yoshua Bengio
   Google AI Research
      Google Brain 
-     DeepMind
+     DeepMind - Deep Reinforcement Learning, 
+                AlphaGo, AlphaFold, WaveNet, AlphaStar
      Kaggle
-  OpenAI
-  Facebook AI Research
-  Apple
-  NYU
-  Stanford University
-  Carnegie Mellon University
-  University of California, Berkeley
-  Numenta
-  Columbia University
+  OpenAI - Ilya Sutskever - Gym, RoboSumo, Debate Game,
+           OpenAI Five (Dota 2), Dactyl (robot hand),
+           GPT2 (text generation), GYM Retro
+  Facebook AI Research - Yann LeCun 
+  Apple - Ian Goodfellow, Chris Lattner (LLVM, Swift)
+  NYU - Yann LeCun
+  Stanford University - ...
+  Carnegie Mellon University - ...
+  University of California, Berkeley - ...
+  Numenta - Jeff Hawkins
+  Columbia University - David M. Blei
 
 =================
 Some Conferences / Events:
@@ -977,7 +980,7 @@ Some Prominent People:
   Terry Sejnowski -  Salk Institute for Biological Studies
   Ruslan Salakhutdinov - Director or AI Research at Apple
   Sebastian Thrun - Udacity, Stanford, Google, Kitty Hawk
-  Jeffrey Hawkins - Numenta, PalmPilot
+  Jeff Hawkins - Numenta, PalmPilot
   David M. Blei - Topic Models, Columbia University
   Zoubin Ghahramani - Cambridge, Uber
   Adam Coates - Apple
