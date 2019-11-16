@@ -99,11 +99,24 @@ to perform functions which are usually associated only
 with humans (vision, speech comprehension, autonomous
 driving, etc.)
 
+As soon as it works, no one calls it AI anymore.
+
+ANI = Artificial Narrow Intelligence - this is what we
+   have today - many ML/AI systems
+
+AGI = Artificial General Intelligence 
+   - projected to be created by 2029 (Ray Kurzweil)
+   - AGI confirming tests:
+     - Turing Test (chat)
+     - make coffee (Wozniak)
+     - get a college degree (Goertzel)
+     - assemble IKEA furniture (Tony Severyns) 
+
 =================
 Supervised Learning - trained with labeled data
 
-Unsupervised learning - no labels. System learns to 
-                        recognize structure in data.
+Unsupervised learning - no labels. 
+  System learns to recognize structure in data.
 
 =================
 Feature Engineering
@@ -1022,22 +1035,48 @@ Aurélien Géron
   and TensorFlow. 2nd Edition (2019) 
 
 Francois Chollet
-  Deep Learning with Python 1st Edition (2017)
+  Deep Learning with Python (2017)
 
 Classification and Regression Trees (1984)
   by Leo Breiman, Jerome Friedman, 
      Charles J. Stone, R.A. Olshen
 
-An Introduction to Statistical Learning
+The Elements of Statistical Learning (2003, 2009)
+  by T. Hastie, R. Tibshirani, J. Friedman
+  - https://web.stanford.edu/~hastie/ElemStatLearn/
+
+An Introduction to Statistical Learning (2013)
   by Gareth James, Daniela Witten, Trevor Hastie, Robert Tibshirani
   - http://faculty.marshall.usc.edu/gareth-james/ISL/
 
-The Elements of Statistical Learning: Data Mining, 
-  Inference, and Prediction
-  by Trevor Hastie, Robert Tibshirani, Jerome Friedman
-  - https://web.stanford.edu/~hastie/ElemStatLearn/
+Andrew Ng
+  Machine Learning Yearning (2018)
+  - https://www.deeplearning.ai/machine-learning-yearning/
 
-=================
-=================
+Reinforcement Learning: An Introduction, 2nd edition
+  - by R. Sutton, Andrew Barto (2018)
+  - http://incompleteideas.net/book/RLbook2018.pdf
+  - http://incompleteideas.net/book/the-book-2nd.html
+
+Mathematics for Machine Learning (2019)
+  by M. Deisenroth, A. Faisal, Cheng Soon Ong
+  - https://mml-book.com
+
+Dive into Deep Learning 
+  by A. Zhang, Z. Lipton, M. Li, A. Smola
+  - http://d2l.ai/
+
+Feature Engineering and Selection (2019)
+  by Max Kuhn and Kjell Johnson
+  - https://bookdown.org/max/FES/
+
+Interpretable Machine Learning (2019)
+  by Christoph Molnar
+  - https://christophm.github.io/interpretable-ml-book/
+
+Reinforcement Learning and Optimal Control (2019)
+  by Dimitri Bertsekas (Author)
+  - http://web.mit.edu/dimitrib/www/RLbook.html
+
 =================
 
