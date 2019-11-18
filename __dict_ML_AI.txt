@@ -341,9 +341,39 @@ than the input/output layers.
 uses randomness in the middle bottleneck layer.
 Motivation - to make AE output less sensitive to 
 small changes in the input.
+
+Randomness is added by sampling from gaussian
+distribution. During training we need to tune
+the mean and standard deviation of this distribution.
+
+Reparameterization Trick - a method to backpropagate
+  through a random node. The node is effectively 
+  split into 3:
+    - mean value
+    - standard deviation
+    - sampled latent value
+
 VAEs are useful for encoding noisy images and 
 then extracting de-noised images. Also used in
 reinforcement learning.
+
+=================
+Distributed Representation of features in NN:
+  the features are spread between nodes and layers.
+  Features are "entangled".
+  This entanglement makes explainability difficult.
+  Model is a "black box" from outside.
+
+Disentangled Representation - a single node (neuron)
+  learns a specific feature. Like in real brain.
+
+The features may be for "low" dimension details
+  as well as for high dimension reasoning.
+
+Disentangled Variational Auto-Encoder (D-VAE) - we 
+  train the VAE in a way so that the latent generative 
+  factors would be disentangled (separate). This makes
+  the representation more explainable.
 
 =================
  - Reinforcement Learning (RL) - a family of ML
