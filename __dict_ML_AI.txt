@@ -382,6 +382,15 @@ Disentangled Variational Auto-Encoder (D-VAE) - we
   factors would be disentangled (separate). This makes
   the representation more explainable.
 
+Higher-level Cognition:
+  - disentangle the underlying causal factors
+     - find independently controllable factors
+     - objects, agents, self
+  - consciousness prior - our conscious thoughts are
+      low-dimensional objects with a strong predictive
+      or explanatory power.
+  - naming objects and abstract concepts, language 
+
 =================
  - Reinforcement Learning (RL) - a family of ML
 algorithms where an agent learns best moves
@@ -753,7 +762,7 @@ data problems.
 Data Quality - the trustworthiness of data.
 How accurate, anomalies in the data
 (nonsensical entries, missing data, anything that
-requires cleaning prior to analysis, etc.).
+requires cleaning before doing analysis, etc.).
 
 =================
 - ML on Cloud (Google, AWS, Azure)
@@ -1005,6 +1014,11 @@ AI & Big Data Expo
 AAAI Conference on AI 
   (AAAI = Association for the Advancement of Artificial Intelligence)
   - https://aaai.org/Conferences/AAAI-20/
+  
+CVPR = Conference on Computer Vision and Pattern Recognition   
+  - http://cvpr2020.thecvf.com/
+  - http://www.wikicfp.com/cfp/program?id=628
+  
 
 =================
 Some Prominent People:
