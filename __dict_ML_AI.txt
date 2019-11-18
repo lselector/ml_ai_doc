@@ -370,6 +370,13 @@ Disentangled Representation - a single node (neuron)
 The features may be for "low" dimension details
   as well as for high dimension reasoning.
 
+Disentangled Representation means extracting and 
+  learning abstract ideas. Humans are good at 
+  learning by forming abstract ideas. That's how
+  humans can learn from few explanations, while
+  modern networks need million data samples.
+   is how human brains works.
+
 Disentangled Variational Auto-Encoder (D-VAE) - we 
   train the VAE in a way so that the latent generative 
   factors would be disentangled (separate). This makes
