@@ -323,6 +323,36 @@ LSTM = Long Short Term Memory
 GRU = Gated Recurrent Unit
 
 =================
+ - seq2seq model (Google, 2017) first introduced for 
+   machine translation.
+     Input - a sequence (sentence(s)) of words
+     Output - another sequence (translation)
+     It mainly has two components i.e encoder and decoder.
+     It uses:
+       - RNN (Google used LSTM).
+       - attention mechanism to narrow decoder's focus.
+       - "Beam Search", "Bucketing", etc.
+
+=================
+- Google translate, 
+  in 2016 Google has created new translation algorithm
+  which was made using Neural Networks and has
+  proven to be much better than previous linguistic
+  algorithms.
+
+- Attention Is All You Need 2017 - A famous Google 
+  publication describing the Attention mechanism 
+  which is one of the central methods used in Google 
+  Translate and other text-processing algorithms.
+
+=================
+- BERT = "Bidirectional Encoder Representations 
+          from Transformers" - a language representation
+          model. (Google, 2018)
+  BERT is designed to pre-train deep bidirectional 
+  representations from unlabeled text
+
+=================
  - GAN = Generative Adversarial Network (Ian Goodfellow, 2014)
    - using two NNs:
    --- a discriminator - "police detective"
@@ -717,25 +747,6 @@ Deep Belief Network - many layers of RBMs.
 
 - Collaborative filtering - customers who bought
 this, have also bought that ...
-
-=================
-- Google translate, 
-  in 2016 Google has created new translation algorithm
-  which was made using Neural Networks and has
-  proven to be much better than previous linguistic
-  algorithms.
-
-- Attention Is All You Need 2017 - A famous Google 
-publication describing the Attention mechanism which is
-one of the central methods used in Google Translate and
-other text-processing algorithms.
-
-=================
-- BERT = "Bidirectional Encoder Representations 
-from Transformers" - a language representation model.
-  (Google, 2018)
-  BERT is designed to pretrain deep bidirectional 
-  representations from unlabeled text
 
 =================
 - Data Engineering - the process of collecting, 
