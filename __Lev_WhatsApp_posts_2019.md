@@ -2,6 +2,26 @@
 <body>
 <p>Lev Selector - WhatsApp messages, 2019</p>
 =================================================<br/>
+2019-11-16<br/>
+PyTorch at Tesla - Andrej Karpathy<br/>
+&nbsp;- <a href="https://youtu.be/oBklltKXtDE" target="_blank">https://youtu.be/oBklltKXtDE</a><br/>
+<br/>
+=================================================<br/>
+2019-11-13<br/>
+I often say that learning Machine Learning and AI <br/>
+boils down to learning ~ 100 new words.<br/>
+<br/>
+So finally I have put together a sort-off dictionary.<br/>
+It is split into two files.<br/>
+<br/>
+Please review.<br/>
+Let me know if I have missed something worth including there.<br/>
+<br/>
+&nbsp;- <a href="https://github.com/lselector/ml_ai_doc/blob/master/__dict_ML_AI.txt" target="_blank">https://github.com/lselector/ml_ai_doc/blob/master/__dict_ML_AI.txt</a>&nbsp;<br/>
+<br/>
+&nbsp;- <a href="https://github.com/lselector/ml_ai_doc/blob/master/__dict_Math.txt" target="_blank">https://github.com/lselector/ml_ai_doc/blob/master/__dict_Math.txt</a>&nbsp;<br/>
+<br/>
+=================================================<br/>
 2019-11-08<br/>
 Compute used in AI:<br/>
 1959 - 2012  - 2y doubling (Moore's law)<br/>
