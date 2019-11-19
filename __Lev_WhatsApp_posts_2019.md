@@ -2,6 +2,15 @@
 <body>
 <p>Lev Selector - WhatsApp messages, 2019</p>
 =================================================<br/>
+2019-11-19<br/>
+This is a more detailed lecture by Andrej Karpathy at <br/>
+ICML (The International Conference on Machine Learning) <br/>
+in June 2019. Tesla's auto-pilot is a great real <br/>
+example of AI in production.<br/>
+<br/>
+&nbsp;- <a href="https://slideslive.com/38917690/multitask-learning-in-the-wilderness" target="_blank">https://slideslive.com/38917690/multitask-learning-in-the-wilderness</a><br/>
+<br/>
+=================================================<br/>
 2019-11-16<br/>
 PyTorch at Tesla - Andrej Karpathy<br/>
 &nbsp;- <a href="https://youtu.be/oBklltKXtDE" target="_blank">https://youtu.be/oBklltKXtDE</a><br/>
