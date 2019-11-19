@@ -3,28 +3,22 @@ becoming a data scientist:
 
 =================================================
 1. 
-Almost all data science happens on unix 
-platform (Linux or Mac).
-At work we now buy new 15" MacBook Pro 
-with 32GB RAM and 1TB SSD.
+Almost all data science happens on Unix (Linux or Mac).
 
-For personal use I recommend to buy a used laptop.
-Specific model - MJLT2LL/A
-It is a 15"-screen mid-2015 MacBook Pro.
-Current eBay prices are ~ $900.
+New Mac - 16" MacBook Pro with 64GB RAM and 1TB SSD.
 
-Apple Macbook Pro MJLT2LL/A 15-inch Laptop 
-mid-2015
-2.5 GHz Intel Core i7 Processor, 16GB RAM, 512GB SSD
-It has dual graphics:
-  Radeon R9 M370X and built-inIntel Iris Pro 5200
-Important:
-  It has SSD with fast PCIe 2.0 x4 interface.
+Used Mac - 15" mid-2015 MacBook Pro
+           Specific model (!!) MJLT2LL/A
+           Current eBay prices are ~ $900.
+           2.5 GHz Intel Core i7 Processor, 
+           16GB RAM
+           512GB SSD (fast PCIe 2.0 x4 interface)
+           Dual graphics:
+               Radeon R9 M370X
+               built-inIntel Iris Pro 5200
 
 Alternatively if you don't like Mac, there are
 many other options, for example:
-
-MacBook Pro 15"
 
 Lambda Labs TensorBook:
   https://lambdalabs.com/deep-learning/laptops/tensorbook/max/customize
