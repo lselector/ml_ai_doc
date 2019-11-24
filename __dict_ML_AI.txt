@@ -777,12 +777,21 @@ requires cleaning before doing analysis, etc.).
 
 =================
 - ML on Cloud (Google, AWS, Azure)
-All vendors offer various ways for data preparation,
-model training, and model deployment and hosting.
-For example, using pre-trained models allows to 
-dramatically reduce the training time and cost.
+  All vendors offer various ways for data preparation,
+  model training, deployment, and hosting.
+  For example, using pre-trained models allows to 
+  dramatically reduce the training time and cost.
 
 - ML at the Edge (in devices - phones, cars, robots, etc.)
+
+- ML in Javascript - TensorFlow.js, Brain.js, stdlib-js,
+    machinelearn.js, Math.js, face-api.js, R-js,
+    natural (nlp)
+
+- ML in WebAssembly (Wasm) - a virtual machine running
+  at the edge (in browser). Coding can be done in variety
+  of high-level languages (C/C++/Rust). Can run much
+  faster than javascript.
 
 - GPU (Nvidia Graphics Processing Unit) - video card
   with thousands processors can do massive parallel
