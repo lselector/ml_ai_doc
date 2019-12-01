@@ -2,6 +2,25 @@
 <body>
 <p>Lev Selector - WhatsApp messages, 2019</p>
 =================================================<br/>
+2019-12-01<br/>
+ <br/>
+Very interesting way to use Neural Network <br/>
+to speed up complex calculations. <br/>
+ <br/>
+A physical viscoelastic earthquake model <br/>
+takes long time to compute. <br/>
+ <br/>
+Scientists trained a simple fully-connected <br/>
+neural network to do the same calculations <br/>
+500 times faster ! <br/>
+ <br/>
+Only ~ 100 lines of python code <br/>
+(Theano & TensorFlow). <br/>
+<br/>
+&nbsp;- <a href="https://agupubs.onlinelibrary.wiley.com/doi/full/10.1002/2017GL072716" target="_blank">https://agupubs.onlinelibrary.wiley.com/doi/full/10.1002/2017GL072716</a><br/>
+<br/>
+
+=================================================<br/>
 2019-11-19<br/>
 This is a more detailed lecture by Andrej Karpathy at <br/>
 ICML (The International Conference on Machine Learning) <br/>
