@@ -2,6 +2,28 @@
 <body>
 <p>Lev Selector - WhatsApp messages, 2019</p>
 =================================================<br/>
+2019-12-04<br/>
+David Makovoz, a Lead Data Scientist at TCS.com <br/>
+and a good friend of mine has sent me the <br/>
+“Gartner's Hype Cycle For AI, 2019”: <br/>
+<br/>
+&nbsp;- <a href="https://www.forbes.com/sites/louiscolumbus/2019/09/25/whats-new-in-gartners-hype-cycle-for-ai-2019/#7fb8774c547b" target="_blank">https://www.forbes.com/sites/louiscolumbus/2019/09/25/whats-new-in-gartners-hype-cycle-for-ai-2019/#7fb8774c547b</a><br/>
+<br/>
+Speech Recognition is predicted to deliver the most <br/>
+significant transformational benefits of all technologies <br/>
+on the Hype Cycle. <br/>
+<br/>
+Some other technologies to consider:<br/>
+  - AI Cloud Services<br/>
+  - AutoML<br/>
+  - Augmented Intelligence<br/>
+  - Explainable AI<br/>
+  - Edge AI<br/>
+  - Reinforcement Learning<br/>
+  - Quantum Computing<br/>
+  - AI Marketplaces<br/>
+<br/>
+=================================================<br/>
 2019-12-01<br/>
  <br/>
 Very interesting way to use Neural Network <br/>
