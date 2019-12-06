@@ -9,6 +9,9 @@ and a good friend of mine has sent me the <br/>
 <br/>
 &nbsp;- <a href="https://www.forbes.com/sites/louiscolumbus/2019/09/25/whats-new-in-gartners-hype-cycle-for-ai-2019/#7fb8774c547b" target="_blank">https://www.forbes.com/sites/louiscolumbus/2019/09/25/whats-new-in-gartners-hype-cycle-for-ai-2019/#7fb8774c547b</a><br/>
 <br/>
+Here is the main graph:<br/>
+&nbsp;- <img src="https://blogs-images.forbes.com/louiscolumbus/files/2019/09/Gartner-Hype-Cycle-For-Artificial-Intelligence-2019.jpg"><br/>
+<br/>
 Speech Recognition is predicted to deliver the most <br/>
 significant transformational benefits of all technologies <br/>
 on the Hype Cycle. <br/>
