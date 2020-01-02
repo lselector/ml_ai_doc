@@ -107,10 +107,10 @@ Probability & Statistics:
        of binomial distribution when we trying
        to solve a problem of how many events 
        would occure during given time
-           P(x; ) = exp(-) * ^x / x! 
-       where  = lambda = expected number of
+           P(x; l) = exp(-l) * l^x / x! 
+       where l = lambda = expected number of
        events per unit of time. 
-       For Poisson distribution mean = variance = 
+       For Poisson distribution mean = variance = l
 
      Exponential Distributions - distribution of
        time gaps between events for a Poisson process 
