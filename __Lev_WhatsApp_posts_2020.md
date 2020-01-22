@@ -21,7 +21,6 @@ Graph algorithms: <br/>
 2020-01-12<br/>
 AI in 2020 - predictions from Siraj Raval <br/>
 &nbsp;- <a href="https://www.youtube.com/watch?v=eN9Lb3vXsAw" target="_blank">https://www.youtube.com/watch?v=eN9Lb3vXsAw</a><br/>
- - https://www.youtube.com/watch?v=eN9Lb3vXsAw
 <br/>
 =================================================<br/>
 2019-12-04<br/>
