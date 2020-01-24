@@ -57,7 +57,7 @@ example of AI in production.<br/>
 =================================================<br/>
 2019-11-16<br/>
 PyTorch at Tesla - Andrej Karpathy<br/>
-&nbsp;- <a href="https://youtu.be/oBklltKXtDE" target="_blank">https://youtu.be/oBklltKXtDE</a><br/>
+&nbsp;- <a href="https://www.youtube.com/watch?v=oBklltKXtDE" target="_blank">https://www.youtube.com/watch?v=oBklltKXtDE</a><br/>
 <br/>
 =================================================<br/>
 2019-11-13<br/>
@@ -223,7 +223,7 @@ Number of AI jobs increased 35-times in last two years. <br/>
 Exponential growth of number of AI teams and companies. <br/>
 Main areas of growth of AI, Andrew’s own focus.<br/>
 <br/>
-&nbsp;- <a href="https://youtu.be/j2nGxw8sKYU" target="_blank">https://youtu.be/j2nGxw8sKYU</a>&nbsp;<br/>
+&nbsp;- <a href="https://www.youtube.com/watch?v=j2nGxw8sKYU" target="_blank">https://www.youtube.com/watch?v=j2nGxw8sKYU</a>&nbsp;<br/>
 <br/>
 =================================================<br/>
 2019-08-28<br/>
@@ -271,7 +271,7 @@ But here they use multiple generators, do natural selection, <br/>
 then create new generators as variation of winners. <br/>
 This is Darwin’s evolution in action!<br/>
 <br/>
-&nbsp;- <a href="https://youtu.be/ni6P5KU3SDU" target="_blank">https://youtu.be/ni6P5KU3SDU</a>&nbsp;<br/>
+&nbsp;- <a href="https://www.youtube.com/watch?v=ni6P5KU3SDU" target="_blank">https://www.youtube.com/watch?v=ni6P5KU3SDU</a>&nbsp;<br/>
 <br/>
 =================================================<br/>
 2019-08-03<br/>
@@ -287,7 +287,7 @@ Automatic Machine Learning<br/>
 Nice explanation, especially at time mark 7:30 <br/>
 where Siraj starts talking about specific AutoML frameworks.<br/>
 <br/>
-&nbsp;- <a href="https://youtu.be/jn-22XyKsgo" target="_blank">https://youtu.be/jn-22XyKsgo</a>&nbsp;<br/>
+&nbsp;- <a href="https://www.youtube.com/watch?v=jn-22XyKsgo" target="_blank">https://www.youtube.com/watch?v=jn-22XyKsgo</a>&nbsp;<br/>
 <br/>
 =================================================<br/>
 2019-07-21<br/>
@@ -376,7 +376,7 @@ numbers of nodes in the model !!<br/>
 This short video is 3.5 years old - still excellent <br/>
 explanation of why we need multiple layers in <br/>
 Neural Networks<br/>
-&nbsp;- <a href="https://youtu.be/He4t7Zekob0" target="_blank">https://youtu.be/He4t7Zekob0</a>&nbsp;<br/>
+&nbsp;- <a href="https://www.youtube.com/watch?v=He4t7Zekob0" target="_blank">https://www.youtube.com/watch?v=He4t7Zekob0</a>&nbsp;<br/>
 <br/>
 =================================================<br/>
 2019-05-22<br/>
@@ -384,7 +384,7 @@ Robot trains to throw objects into a box in real <br/>
 physical world and in simulation. <br/>
 I guess soon we will have professional basketball <br/>
 players-robots ?<br/>
-&nbsp;- <a href="https://youtu.be/JJlSgm9OByM" target="_blank">https://youtu.be/JJlSgm9OByM</a>&nbsp;<br/>
+&nbsp;- <a href="https://www.youtube.com/watch?v=JJlSgm9OByM" target="_blank">https://www.youtube.com/watch?v=JJlSgm9OByM</a>&nbsp;<br/>
 <br/>
 =================================================<br/>
 2019-05-18<br/>
@@ -450,7 +450,7 @@ tissue and vessels":<br/>
 =================================================<br/>
 2019-04-17<br/>
 Great video from Siraj - How AI will look in 2040 ?!<br/>
-&nbsp;- <a href="https://youtu.be/mvwBgAqrheo" target="_blank">https://youtu.be/mvwBgAqrheo</a>&nbsp;<br/>
+&nbsp;- <a href="https://www.youtube.com/watch?v=mvwBgAqrheo" target="_blank">https://www.youtube.com/watch?v=mvwBgAqrheo</a>&nbsp;<br/>
 <br/>
 =================================================<br/>
 2019-04-10<br/>
@@ -652,17 +652,17 @@ Geoff Hinton<br/>
 =================================================<br/>
 2019-03-11<br/>
 How neural networks learn<br/>
-&nbsp;- <a href="https://youtu.be/pFWiauHOFpY" target="_blank">https://youtu.be/pFWiauHOFpY</a>&nbsp;<br/>
+&nbsp;- <a href="https://www.youtube.com/watch?v=pFWiauHOFpY" target="_blank">https://www.youtube.com/watch?v=pFWiauHOFpY</a>&nbsp;<br/>
 <br/>
 =================================================<br/>
 2019-03-09<br/>
 bags of features, explain-ability<br/>
-&nbsp;- <a href="https://youtu.be/QpptSohzuDo" target="_blank">https://youtu.be/QpptSohzuDo</a>&nbsp;<br/>
+&nbsp;- <a href="https://www.youtube.com/watch?v=QpptSohzuDo" target="_blank">https://www.youtube.com/watch?v=QpptSohzuDo</a>&nbsp;<br/>
 <br/>
 =================================================<br/>
 2019-03-05<br/>
 Augmenting dataset <br/>
-&nbsp;- <a href="https://youtu.be/YFL-MI5xzgg" target="_blank">https://youtu.be/YFL-MI5xzgg</a>&nbsp;<br/>
+&nbsp;- <a href="https://www.youtube.com/watch?v=YFL-MI5xzgg" target="_blank">https://www.youtube.com/watch?v=YFL-MI5xzgg</a>&nbsp;<br/>
 <br/>
 =================================================<br/>
 =================================================<br/>
