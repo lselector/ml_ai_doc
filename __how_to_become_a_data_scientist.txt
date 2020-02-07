@@ -11,10 +11,14 @@ To drive a car you need to pass some driving lessons.
 You don't need to know how to build a car.
 You just need to know how to drive it.
 
+In ML you need to know some standard ML models, how to use
+them, how to select the best one, how to evaluate its
+quality, etc.
+
 =================================================
 2.
 There are probably ~ 100-200 terms commonly used in DS & ML. 
-Here are most of them in one text file (lie a dictionary).
+Here are most of them in one text file (a dictionary).
 You can learn them by looking them up on YouTube, Wikipedia, etc.:
   - https://github.com/lselector/ml_ai_doc/blob/master/__dict_ML_AI.txt
 
@@ -37,8 +41,9 @@ And here are some math terms (no need to learn them):
 So if you look up 5-10 terms/day - then you can learn all DS
 terminology in ~ 1 month.
 
-Remember the rule: to retain information you have repeat
-each term for 2 weeks.
+Remember the rule: to retain information you have to
+repeat terms for 2 weeks. So each day you learn new terms
+and repeat terms studied over the previous 2 weeks.
 
 =================================================
 3.
