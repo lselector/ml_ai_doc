@@ -31,15 +31,17 @@ statistics, make graphs, make predictions.
 
 =================
 Citizen Data Scientist (CDS) - a term coined in 2016 
-  by Joao Tapadinhas, Carlie Idoine from Gartner:
+  by Joao Tapadinhas, Carlie Idoine from Gartner Research:
   - https://www.gartner.com/en/documents/3534848
-  The basic idea is to make advanced analytics accessible
-  to a wider audience by using better tools. 
-  Companies like DataRobot use this idea as their
-  main marketing statement. They say that you
-  can not possibly hire all Data Scientists you need,
-  but you can buy tools which will allow regular
-  people to do Data Science (without being a real DS)
+
+The basic idea is to make advanced analytics accessible
+to a wider audience by using better tools.
+
+Companies like DataRobot use this idea as their
+main marketing statement. They say that you
+can not possibly hire all the Data Scientists you need,
+but you can buy tools which will allow business
+users to do Data Science themselves.
 
 =================
 Machine Learning (ML) - subset of DS focusing on
