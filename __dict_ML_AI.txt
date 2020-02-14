@@ -30,6 +30,18 @@ different sources (CSV files, Databases), apply
 statistics, make graphs, make predictions.
 
 =================
+Citizen Data Scientist (CDS) - a term coined in 2016 
+  by Joao Tapadinhas, Carlie Idoine from Gartner:
+  - https://www.gartner.com/en/documents/3534848
+  The basic idea is to make advanced analytics accessible
+  to a wider audience by using better tools. 
+  Companies like DataRobot use this idea as their
+  main marketing statement. They say that you
+  can not possibly hire all Data Scientists you need,
+  but you can buy tools which will allow regular
+  people to do Data Science (without being a real DS)
+
+=================
 Machine Learning (ML) - subset of DS focusing on
 extracting patterns from data to do predictions. 
 
@@ -1150,4 +1162,3 @@ Reinforcement Learning and Optimal Control (2019)
   - http://web.mit.edu/dimitrib/www/RLbook.html
 
 =================
-
