@@ -1,6 +1,53 @@
 <html>
 <body>
 <p>Lev Selector - WhatsApp messages, 2020</p>
+<br/>
+=================================================<br/>
+2020-02-14<br/>
+Citizen Data Scientist (CDS) - a term coined in 2016<br/>
+by Joao Tapadinhas, Carlie Idoine from Gartner research:<br/>
+<br/>
+&nbsp;- <a href="https://www.gartner.com/en/documents/3534848" target="_blank">https://www.gartner.com/en/documents/3534848</a><br/>
+<br/>
+The basic idea is to make advanced analytics accessible<br/>
+to a wider audience by using better tools.<br/>
+<br/>
+Companies like DataRobot use this idea as their<br/>
+main marketing statement. They say that you<br/>
+can not possibly hire all the Data Scientists you need,<br/>
+but you can buy tools which will allow business<br/>
+users to do Data Science themselves.<br/>
+<br/>
+=================================================<br/>
+2020-02-04<br/>
+Cryptocurrency - China becomes cashless, Facebook Libra:<br/>
+<br/>
+&nbsp;- <a href="https://www.youtube.com/watch?v=XvJnTQjdC-E" target="_blank">https://www.youtube.com/watch?v=XvJnTQjdC-E</a><br/>
+<br/>
+&nbsp;- <a href="https://www.youtube.com/watch?v=vPu4kn5GN5M" target="_blank">https://www.youtube.com/watch?v=vPu4kn5GN5M</a><br/>
+<br/>
+=================================================<br/>
+2020-01-26<br/>
+Self-explainable models. <br/>
+The model should not only give a prediciton, but<br/>
+also explain why it made this prediction.<br/>
+<br/>
+&nbsp;- <a href="https://www.kdnuggets.com/2019/01/explainable-ai.html" target="_blank">https://www.kdnuggets.com/2019/01/explainable-ai.html</a><br/>
+<br/>
+&nbsp;- <a href="https://towardsdatascience.com/python-libraries-for-interpretable-machine-learning-c476a08ed2c7" target="_blank">https://towardsdatascience.com/python-libraries-for-interpretable-machine-learning-c476a08ed2c7</a><br/>
+<br/>
+&nbsp;- <a href="https://www.youtube.com/watch?v=Q8rTrmqUQsU" target="_blank">https://www.youtube.com/watch?v=Q8rTrmqUQsU</a><br/>
+<br/>
+&nbsp;- <a href="https://www.youtube.com/watch?v=B-c8tIgchu0" target="_blank">https://www.youtube.com/watch?v=B-c8tIgchu0</a><br/>
+<br/>
+By the way, today is my birthday - 62 years !<br/>
+<br/>
+=================================================<br/>
+2020-01-24<br/>
+Dataset Search has indexed almost 25 million datasets - and growing<br/>
+<br/>
+&nbsp;- <a href="https://datasetsearch.research.google.com/" target="_blank">https://datasetsearch.research.google.com/</a><br/>
+<br/>
 =================================================<br/>
 2020-01-21<br/>
 This year - all about graphs. <br/>
@@ -51,5 +98,7 @@ Some other technologies to consider:<br/>
 =================================================<br/>
 =================================================<br/>
 =================================================<br/>
+&nbsp;- <a href="test" target="_blank">test</a><br/>
+
 </body>
 </html>

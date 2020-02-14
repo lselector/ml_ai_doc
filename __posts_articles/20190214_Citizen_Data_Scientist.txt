@@ -1,0 +1,31 @@
+Most of the Businesses Choose Citizen Data
+Scientist Approach.
+
+Citizen Data Scientist (CDS) - a term coined in
+2016 by Joao Tapadinhas, Carlie Idoine from
+Gartner research:
+- https://www.gartner.com/en/documents/3534848
+
+The basic idea is to make advanced analytics
+accessible to a wider audience by using better
+tools.
+
+Companies like DataRobot use this idea as their
+main marketing statement. They say that you can’t
+possibly hire all the Data Scientists you need,
+but you can buy tools which will allow business
+users to do Data Science themselves.
+
+I can definitely attest to the fact that although
+most of the businesses claim that they want to do
+Machine Learning, in reality they just want tools
+to do analytics dashboards (think Tableau). They
+can appreciate of-the-shelf tools for data
+visualization, cleaning, preparation, loading
+(ETL). They can use some simple models (Linear
+Regression, Logistic Regression, Random Forest,
+etc.). But they will most probably reject the
+idea of building custom Machine Learning
+solutions.
+
+
