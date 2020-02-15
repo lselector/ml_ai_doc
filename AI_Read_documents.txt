@@ -1,0 +1,56 @@
+=========================
+OCR and data extraction from documents.
+=========================
+
+You can use various OCR tools from Python.
+Which one to choose depends on specific requirements.
+For example, is it printed or hand-written ?
+Is it OK to using Amazon or Google APIs ?
+For example:
+  https://aws.amazon.com/textract/
+  https://cloud.google.com/vision
+  https://cloud.google.com/solutions/document-ai
+  etc.
+
+Here is an advanced tool using H2O driverless AI:
+  Mark Landry H2O.ai
+  Invoice 2 Vec: Creating AI to Read Documents
+  - https://www.youtube.com/watch?v=LczYc2o0dNo
+
+There are multiple libraries.
+It is always a trade off between quality, quantity, price, privacy requirements.
+It is really important to talk to the client to understand exactly what they need.
+
+=========================
+How to extract numeric data from text and tables
+=========================
+
+Google for
+   rnn+extract+numeric+from+text
+
+=========================
+Information Extraction From Text, MLMU Prague, May 18, 2016
+ - http://www.mlmu.cz/wp-content/uploads/2016/06/mlmu-Information-Extraction-from-Text.pdf
+=========================
+Text feature extraction based on deep learning: a review, 2017
+ - https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5732309/
+=========================
+Bloomberg - information extraction, David Rosenberg, 2018
+ - https://twimlai.com/twiml-talk-126-information-extraction-natural-document-formats-david-rosenberg/
+ - https://www.techatbloomberg.com/blog/data-science-qa-david-rosenberg-office-cto/
+ - https://2018gputechconf.smarteventscloud.com/connect/sessionDetail.ww?SESSION_ID=148756
+ Extract from chart images:
+ - https://www.microsoft.com/en-us/research/wp-content/uploads/2017/02/ChartSense-CHI2017.pdf
+=========================
+bloomberg - Information Extraction with Character-level Neural Networks and Free Noisy Supervision, 2017
+  - https://arxiv.org/pdf/1612.04118.pdf
+by Philipp Meerkamp, Bloomberg LP, pmeerkamp@bloomberg.net
+Zhengyi Zhou, AT&T Labs Research, zzhou@research.att.com
+=========================
+Knowledge extraction from medical literature using Recurrent Neural Networks, 2016
+Abhimanyu Banerjee, manyu@stanford.edu
+ - https://cs224d.stanford.edu/reports/Banerjee.pdf
+=========================
+Best method to extract numerical data from product descriptions, 2018
+ - https://www.reddit.com/r/MachineLearning/comments/8f98z1/d_best_method_to_extract_numerical_data_from/
+=========================
