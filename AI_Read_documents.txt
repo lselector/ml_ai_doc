@@ -111,3 +111,17 @@ Best method to extract numerical data from product descriptions, 2018
  - https://www.reddit.com/r/MachineLearning/comments/8f98z1/d_best_method_to_extract_numerical_data_from/
 =========================
 
+
+=========================
+OCR for handwriting
+=========================
+ - https://cloud.google.com/vision/docs/handwriting
+ - https://docs.microsoft.com/en-us/azure/cognitive-services/computer-vision/concept-recognizing-text
+ - https://www.makeuseof.com/tag/convert-handwriting-text-ocr/
+
+   ABBYY - https://www.abbyy.com/en-us/
+   TeleForm (owned by OpenText) - https://www.opentext.com/products-and-solutions/products/customer-experience-management/intelligent-forms-automation/opentext-teleform
+   A2IA - https://www.a2ia.com/en
+   
+
+
