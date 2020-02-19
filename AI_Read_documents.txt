@@ -15,14 +15,25 @@ There is always a trade off between quality, quantity, price, privacy requiremen
 Google
   tesseract OCR (HP 1985-2005, Opensorced in 2005, then developed by Google)
    - https://github.com/tesseract-ocr/tesseract
+   - https://tesseract-ocr.github.io/tessdoc/Command-Line-Usage
+     On Mac:
+        brew install tesseract
+        pip install pillow
+        pip install pytesseract
+        tesseract myimage.tif myimage --oem 1 -l eng   # outputs text file myimage.txt
+   - https://github.com/madmaze/pytesseract
+   - https://www.pyimagesearch.com/2017/07/10/using-tesseract-ocr-python/
+
   gvision
    - https://cloud.google.com/vision
+
   Document AI
    - https://cloud.google.com/solutions/document-ai
+
   etc.
 
 AWS Textract
-  https://aws.amazon.com/textract/
+  - https://aws.amazon.com/textract/
 
 Microsoft
   - https://azure.microsoft.com/is-is/services/cognitive-services/form-recognizer/
