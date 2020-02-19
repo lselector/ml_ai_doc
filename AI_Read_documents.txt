@@ -6,27 +6,72 @@ You can use various OCR tools from Python.
 Which one to choose depends on specific requirements.
 For example, is it printed or hand-written ?
 Is it OK to using Amazon or Google APIs ?
-For example:
-  https://aws.amazon.com/textract/
-  https://cloud.google.com/vision
-  https://cloud.google.com/solutions/document-ai
+There are multiple libraries.
+The most common go-to library is tesseract OCR.
+
+There is always a trade off between quality, quantity, price, privacy requirements.
+
+
+Google
+  tesseract OCR (HP 1985-2005, Opensorced in 2005, then developed by Google)
+   - https://github.com/tesseract-ocr/tesseract
+  gvision
+   - https://cloud.google.com/vision
+  Document AI
+   - https://cloud.google.com/solutions/document-ai
   etc.
 
-Here is an advanced tool using H2O driverless AI:
-  Mark Landry H2O.ai
-  Invoice 2 Vec: Creating AI to Read Documents
-  - https://www.youtube.com/watch?v=LczYc2o0dNo
+AWS Textract
+  https://aws.amazon.com/textract/
 
-There are multiple libraries.
-It is always a trade off between quality, quantity, price, privacy requirements.
-It is really important to talk to the client to understand exactly what they need.
+Microsoft
+  - https://azure.microsoft.com/is-is/services/cognitive-services/form-recognizer/
+  - https://docs.microsoft.com/en-us/azure/cognitive-services/text-analytics/overview
+  - https://azure.microsoft.com/en-ca/services/cognitive-services/text-analytics/
+  
+H2O driverless AI:
+  Mark Landry NYC 2019 - H2O.ai - OCR.ai: Creating AI to Read Documents
+  - https://www.youtube.com/watch?v=LczYc2o0dNo
+  Mark Landry London 2018 - Invoice 2 Vec: Creating AI to Read Documents - 
+  - https://www.youtube.com/watch?v=18Pxvs50G-0
+
+Open Source:
+  https://www.softwareadvice.com/resources/easiest-to-use-free-and-open-source-text-analysis-software/
+    AYLIEN Text Analysis Software
+    Keatext Software
+    KNIME Analytics Platform Software
+    Refinitiv Intelligent Tagging
+
+  The Top 33 Information Extraction Open Source Projects
+  https://awesomeopensource.com/projects/information-extraction
+  
+  Automating Receipt Digitization with OCR and Deep Learning
+  https://nanonets.com/blog/receipt-ocr/
+  
+  PdfPig
+  https://uglytoad.github.io/PdfPig/
+  
+  Veryfi OCR API for Real-Time Data Extraction from Receipts & Invoices
+  https://www.veryfi.com/receipt-ocr-api/
+  
+  Concur Invoice Capture
+  https://www.concur.com/en-us/effortless-invoice-capture
+  
+  invoice2data
+  https://github.com/invoice-x/invoice2data
+  
+
+  robela OCR-Invoice
+  https://github.com/robela/OCR-Invoice/blob/master/README.md
+  
+  nanonets
+  https://nanonets.com/blog/invoice-ocr/
 
 =========================
 How to extract numeric data from text and tables
 =========================
 
-Google for
-   rnn+extract+numeric+from+text
+Google for: rnn+extract+numeric+from+text
 
 =========================
 Information Extraction From Text, MLMU Prague, May 18, 2016
@@ -54,3 +99,4 @@ Abhimanyu Banerjee, manyu@stanford.edu
 Best method to extract numerical data from product descriptions, 2018
  - https://www.reddit.com/r/MachineLearning/comments/8f98z1/d_best_method_to_extract_numerical_data_from/
 =========================
+
