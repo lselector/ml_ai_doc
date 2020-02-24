@@ -130,7 +130,17 @@ AGI = Artificial General Intelligence
 Supervised Learning - trained with labeled data
 
 Unsupervised learning - no labels. 
-  System learns to recognize structure in data.
+  System learns to recognize structure in data
+
+semi-supervised learning - uses combination of 
+  labeled and unlabeled data
+
+self-supervised learning - automatically creates labels
+  trains using those labels, generates representations,
+  then uses these representations for other tasks
+  Examples how labels can be created:
+    - remove word, and learn to predict it
+    - rotate picture, and learn to predict original picture
 
 =================
 Feature Engineering
@@ -524,7 +534,11 @@ Unfortunately on new data the error will be still big.
    - Elastic Net = combination of L1 and L2 
 
    - regularization via Bagging or using other Ensemble methods
-   
+
+=================
+ - Sparse coding - representation of items by the strong 
+     activation of a relatively small set of neurons.
+     Using L1 norm tends to make representation more sparse (than using L2).
 
 =================
 - data-sets: training , validation, test
@@ -1009,6 +1023,11 @@ Some Conferences / Events:
 
 NIPS = NeurIPS - https://nips.cc/
 
+ICLR = International Conference on Learning Representations
+       https://iclr.cc/
+
+ICMLR = International Conference on Machine Learning in Robotics
+
 IntelliSys - https://saiconference.com/IntelliSys
 
 IJCAI = International Joint Conferences on Artificial Intelligence
@@ -1052,7 +1071,6 @@ AAAI Conference on AI
 CVPR = Conference on Computer Vision and Pattern Recognition   
   - http://cvpr2020.thecvf.com/
   - http://www.wikicfp.com/cfp/program?id=628
-  
 
 =================
 Some Prominent People:

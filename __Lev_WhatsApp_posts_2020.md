@@ -3,6 +3,26 @@
 <p>Lev Selector - WhatsApp messages, 2020</p>
 <br/>
 =================================================<br/>
+2020-02-23<br/>
+Recent interview with Andrew Ng: </br>
+<br/>
+&nbsp;- <a href="https://www.youtube.com/watch?v=0jspaMLxBig" target="_blank">https://www.youtube.com/watch?v=0jspaMLxBig</a><br/>
+<br/>
+=================================================<br/>
+2020-02-20<br/>
+Talking about reliability of software. <br/>
+It is estimated that standard "test-driven" development <br/>
+allows to uncover only ~10% of bugs. <br/>
+But "Fuzz testing" allows to uncover ~ 80%, so only 10% <br/>
+is left to be found by customers. <br/>
+Listen to this video "Fuzz or lose ..." - very inspirational. <br/>
+You can skip the technicalities in this lecture, <br/>
+just absorb the big picture. <br/>
+<br/>
+&nbsp;- <a href="https://www.youtube.com/watch?v=k-Cv8Q3zWNQ" target="_blank">https://www.youtube.com/watch?v=k-Cv8Q3zWNQ</a><br/>
+<br/>
+
+=================================================<br/>
 2020-02-14<br/>
 Citizen Data Scientist (CDS) - a term coined in 2016<br/>
 by Joao Tapadinhas, Carlie Idoine from Gartner research:<br/>
