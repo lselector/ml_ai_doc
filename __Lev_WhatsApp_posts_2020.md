@@ -3,6 +3,21 @@
 <p>Lev Selector - WhatsApp messages, 2020</p>
 <br/>
 =================================================<br/>
+2020-02-25<br/>
+To survive, your business has to collect data <br/>
+and use ML & AI to make better decisions.<br/>
+<br/>
+If your business does not use ML - it will lose to those who use it.<br/>
+<br/>
+It is "live or die" situation.<br/>
+Very simple.<br/>
+<br/>
+A company needs to implement AI transormation.<br/>
+Here is a great step-by-step playbook:<br/>
+<br/>
+&nbsp;- <a href="https://landing.ai/ai-transformation-playbook/" target="_blank">https://landing.ai/ai-transformation-playbook/</a><br/>
+<br/>
+=================================================<br/>
 2020-02-23<br/>
 Recent interview with Andrew Ng: </br>
 <br/>
