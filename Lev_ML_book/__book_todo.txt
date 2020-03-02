@@ -1,0 +1,62 @@
+
+=================================================
+Plan:
+    TOC plan + Empty Pages - 1 day
+    Fill-in pages - 2 weeks
+    Convert photos to drawings - 1 day
+    Edit/polish - 2 days
+    create cover - 2 days
+    submit to IngramSpark
+=================================================
+IngramSpark
+
+Paper: 8.5" x 5.5"
+Font: 11 (small - 10, 9 in tables)
+Bold Titles: 11", 16", 20"
+
+=================================================
+cover file:
+page size: 5.5"w x 8.5"h
+spine:     0.493"w x 8.5"h   (!!!  fix spine width)
+bleeding - 1/16" 
+  Note: bleeding = extra size to allow artwork to reach
+  the edge of a page (page printed - then trimmed).
+
+image size (!!!  fix spine width):
+  height = 8.75" (8.5" + (1/16)*2)
+  width = 11.618" (5.5 + 0.493" + 5.5 + (1/16)*2)
+
+text file: printing is done 4 pages at a time. 
+  Last page should be blank.
+
+Cover - 3 photoshop image files : front, back, and spine.
+Image sizes:
+For front and back add 1/8 on every side for bleeding.
+So the image size should be 8.75 x 5.75.
+
+Spine will be approximately 5/8". 
+We need to add 1/16 on each side for bleeding. 
+So the size of the image for the spine is 8.125 x 0.75"
+
+The images can be 300 dpi or 600dpi. 
+We can use color photographs and /or graphics as needed.
+
+Note: 
+  Image Mode in photoshop should be "CMYK color".
+
+Note: 
+  The bar codes will be placed on the bottom of the back cover. 
+  So don't put text there.
+
+=================================================
+How to insert table of contents in Microsoft Word
+ - https://shaunakelly.com/word/numbering/tableofcontents.html
+   In main text apply 
+     "Heading 1" style to chapter titles,
+     "Heading 2" to sub-headings, "Heading 3" to sub-sub, etc.
+   Click on page where you want TOC to appear, 
+   go to menu:
+      References > Table of Contents.
+
+=================================================
+=================================================
