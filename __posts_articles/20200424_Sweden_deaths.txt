@@ -1,0 +1,53 @@
+If US will follow Sweden and remove lockdown, we
+will end up with more than 300,000 deaths.
+
+Published on April 24, 2020
+
+Here are some calculations. Sweden population is
+~10M, Stockholm population is ~1M. As of today
+(April 24, 2020) they have reported 17,600 cases
+for the whole country, and 2,152 deaths.
+
+At the same time they claim that ~20% of
+population in Stockholm is already immune. Let's
+assume that the share of infected people for the
+whole country is a bit smaller ( ~15%). Then we
+can estimate the total number of infected in
+Sweden as 1.5M. Note that this is ~ 100 times
+more than reported on worldometers.info web site
+(17K).
+
+Let's estimate the death rate: 2.15K/1.5M =
+0.0014, or 0.14%
+
+This is in agreement with the death rates
+estimated in other countries. If we take their
+death rate and estimate how many people will die
+when they reach herd immunity at 70% infected, we
+will get: Number of deaths = 10M * 0.7 * 0.0014 =
+9.8K
+
+So, approximately 10 thousand people will end up
+dying in Sweden. Probably even more, because the
+reported death numbers are too low (because
+deaths are lagging behind, and also because there
+are always at-home not-tested not-reported
+deaths).
+
+Suppose we do similar calculation for US with
+population 330M. Assuming the same low death rate
+of 0.0014 (one out of 700 people), we will get:
+330M population * 70% infected * 0.14% death rate
+= 323K . The actual number of deaths will be
+higher, of course.
+
+So, what is happening in Sweden is not a mystery.
+They simply allow people to die. I am happy that
+US government uses lockdown to prevent huge
+number of deaths.
+
+Here is a CNBC post about Sweden which describes
+the numbers there -
+https://www.cnbc.com/2020/04/22/no-lockdown-in-
+sweden-but-stockholm-could-see-herd-immunity-in-
+weeks.html

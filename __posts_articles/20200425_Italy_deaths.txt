@@ -1,0 +1,54 @@
+Why there were so many deaths in Italy?
+Published on April 25, 2020
+
+Question - why there were so many deaths in
+Italy?
+
+Answer: The death rate from coronavirus in Italy
+is actually same as in other countries. The
+difference is that in Italy the lockdown was done
+late, more than two weeks after first deaths were
+reported, which allowed the infection to spread
+very fast.
+
+Feb21:      21 cases,      1 death
+Mar01:   1,701 cases,     41 deaths
+Mar09:   9,172 cases,    463 deaths, LOCKDOWN order
+Mar31: 105,792 cases, 12,428 deaths
+Apr24: 192,994 cases, 25,969 deaths
+
+So they have waited for more than two weeks to
+implement the lockdown (from February 21st until
+March 9th).
+
+Compare this with fast reaction in San Francisco.
+London Breed, the Mayor of San Francisco, has
+issued a "stay-at-home" order when there were no
+deaths yet. San Francisco has become the first
+city in US to do that. 
+
+Compare today's numbers of two cities:
+
+ San Francisco :   22 deaths
+ New York City : 11,544 deaths
+
+Anyway, returning to Italy, here are today's
+numbers: Population : 60M, Cases: 0.2M, Deaths:
+26K.
+
+If infections = 15% of population, we have ~10M
+infections, so the death rate:  26K / 10M =
+0.0026 = 0.26% .
+
+This number is similar to rates we were
+estimating for other countries. The rate may be
+even smaller if the actual spread of the
+infection in Italy is more than 15%. Italy just
+started series of tests to determine the actual
+number of infected in northern region of
+Lombardy. So hopefully we will have more accurate
+estimates in a couple of weeks.
+
+https://www.afp.com/en/news/826/italy-launches-
+antibody-tests-virus-immunity-doc-1qr7ph2
+

@@ -127,6 +127,15 @@ AGI = Artificial General Intelligence
      - assemble IKEA furniture (Tony Severyns) 
 
 =================
+"Responsible AI Framework" 
+usually means a combination of 5 principles:
+1. Security with validation, monitoring, verification
+2. Transparent, explainable, provable
+3. Ethical, understandable, legal
+4. Governance with AI operating models, processes
+5. Test for bias in data, models, human use of algorithms
+
+=================
 Supervised Learning - trained with labeled data
 
 Unsupervised learning - no labels. 
@@ -646,6 +655,14 @@ one probability distribution is different from another.
  D_KL(p,q) = H(p,q) - H(p)
  where H(p,q) - cross-entropy
        H(p)   - entropy
+=================
+Some famous datasets
+  MNIST    - 60,000 28x28 black and white images
+             of hand-written digits
+  EMNIST   - 240,000 training images, and 40,000 test 
+             images of digits and characters
+  CIFAR-10 - 60,000 32x32 color images in 10 different classes.
+  ImageNet - 14 Million images, 20,000 categories
 =================
 - NLP (Natural Language Processing) - part of ML
 dealing with processing of speech and text.
