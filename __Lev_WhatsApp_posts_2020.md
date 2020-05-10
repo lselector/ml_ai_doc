@@ -3,6 +3,28 @@
 <p>Lev Selector - WhatsApp messages (ML & AI), 2020</p>
 <br/>
 =================================================<br/>
+2020-05-07<br/>
+<br/>
+Which comes first: training a model or extracting high-quality features? <br/>
+New approach - do both simultaneously:<br/>
+CURL = Contrastive Unsupervised Representations for Reinforcement Learning<br/>
+&nbsp;- <a href="https://arxiv.org/pdf/2004.04136.pdf"</a><br/>
+<br/>
+=================================================<br/>
+2020-04-26<br/>
+<br/>
+AutoML-Zero from Google.<br/>
+<br/>
+This is the continuation of the work by Quoc V. Le et al from Google.<br/>
+The idea is to use genetic algorithms <br/>
+for optimizing Neural Network architectures.<br/>
+The goal is to use these algorithms to build <br/>
+ML solutions without human intervention (from zero).<br/>
+<br/>
+&nbsp;- <a href="https://www.sciencealert.com/coders-mutate-ai-systems-to-make-them-evolve-faster-than-we-can-program-them"</a><br/>
+<br/>
+&nbsp;- <a href="https://arxiv.org/abs/2003.03384"</a><br/>
+<br/>
 =================================================<br/>
 2020-04-25<br/>
 <br/>
