@@ -99,9 +99,11 @@ models, including:
  - Decision Trees
  - Ensembles of models
  - Random Forest
+ - Extremely Randomized Trees
  - GBM (Gradient Boosting Machine)
  - XGBoost, LightGBM, CatBoost, etc.
- - Neural Networks (CNNs, RNNs, etc.) 
+ - Deep Learning, Deep Neural Nets
+   Deep Neural Networks (CNNs, RNNs, etc.) 
 
 =================
 Deep Learning (DL)  = ML models implemented using 
@@ -199,6 +201,12 @@ Model does prediction by running data through all trees,
 and voting their predictions.
 RF can be used for both classification and regression.
 
+ - ET = Extra-(Randomized)-Trees = Extremely Randomized Trees
+   similar to RF, but with two key differences: 
+    - ET does not bootstrap observations (meaning it samples without replacement)
+    - ET does random splits, not best splits
+   In some (manually tuned) cases ET may be faster than RF.
+
 =================
 GBM (Gradient Boosting Machine) is an ensemble 
 decision tree model (Jerome Friedman, 1999).
@@ -210,7 +218,7 @@ Implementations of GBM:
  - XGBoost - eXtreme Gradient Boosting
  - LightGBM
  - CatBoost
- - AdaBoost
+ - AdaBoost (Ada Boost)
 
 =================
 - Naive Bayes - a classifier working off of Bayes
@@ -218,7 +226,9 @@ rule/theorem: P(B|A) = P(A|B)*P(B)/P(A). This model
 is called "naive" because it assumes that all 
 features' influences are equally important and 
 independent.
-
+- Gaussian Naive-Bayes - variation where features'
+  values are numeric and have and have Gaussian 
+  distribution
 =================
 - SVM (Support Vector Machine)
   Vladimir Vapnik and Alexey Chervonenkis (1963)
@@ -229,6 +239,9 @@ independent.
     A common technique is to project data points into 
     a higher-dimensional space in which the data is 
     linearly separable.
+
+- Linear SVM (linear separator), 
+- RBF SVM  (RBF = Radial Basis Function kernel)
 
 =================
 - KNN (K-Nearest Neighbors) - a classification
@@ -251,7 +264,16 @@ of clusters in data as following:
 the observations are generated from multiple 
 gaussian distributions - and solve the problem of
 finding the parameters of those distributions.
- 
+
+Look here for nice pictures showing differences
+between many different ways of clustering
+  (K-Means, Affinity propagation, Mean-shift, 
+   Spectral clustering, Ward hierarchical clustering,
+   Agglomerative clustering, DBSCAN, OPTICS,
+   Gaussian mixtures, Birch):
+
+    - https://scikit-learn.org/stable/modules/clustering.html
+
 =================
 Neural Networks (NN)
 
@@ -342,6 +364,18 @@ gradient problem.
  - U-Net - Network model used for Image segmentation
 (for example, in biology and medicine - identifying
 and counting living cells)
+
+=================
+ - stochastic process, time series - set of random 
+   numbers variables viewed as points in time
+ - white noise - random signal having equal intensity at
+   all frequencies (constant power spectral density), thus
+   infinite energy (if integrate over all frequencies).
+ - Gaussian noise - statistical noise having a Gaussian 
+   PDF (Probability Density Function)
+ - Gaussian process - stochastic process (collection of
+   random variables) such that every finite collection 
+   of those random variables has a multivariate normal distribution.
 
 =================
  - RNN = Recurrent Neural Network - NN for 
@@ -768,9 +802,11 @@ of topic model and is used to classify text in a
 document to a particular topic. 
 
 - LDA = Linear Discriminant Analysis - trying to find 
-a linear combination of features to separate/classify
-a predicted variable
+  a linear combination of features allowing
+  to separate/classify a predicted variable
 
+- QDA - Quadratic Discriminant Analysis - similar to LDA,
+  but estimates a covariance matrix for each class
 =================
 - Boltzmann Machine (BM) - a network of symmetrically
 connected nodes. Not used in practice.
