@@ -3,6 +3,71 @@
 <p>Lev Selector - WhatsApp messages (ML & AI), 2020</p>
 <br/>
 =================================================<br/>
+2020-05-28<br/>
+<br/>
+About NLP (Natural Language Processing).<br/>
+<br/>
+Look at Hugging Face, a startup company in Brooklyn, New York, <br/>
+which develops AI chatbot software (NLP libraries).<br/>
+&nbsp;- <a href="https://github.com/huggingface</a><br/>
+&nbsp;- <a href="https://huggingface.co/transformers/</a><br/>
+<br/>
+Note that modern NLP software usually requires lots <br/>
+of hardware to run, because systems tend to be huge<br/>
+ - billions of parameters.<br/>
+<br/>
+OpenAI - last year built the NLP model "GPT-2" with <br/>
+up to 1.6 Billion parameters. <br/>
+Recently they received a custom system from Microsoft <br/>
+with 10,000 GPUs and 285,000 CPUs. <br/>
+It probably costs ~ $200 Mln to build (or more).<br/>
+<br/>
+Google Brain offers new chatbot Meena - transformer <br/>
+architecture using 2.6 Billion parameters.<br/>
+&nbsp;- <a href="https://ai.googleblog.com/2020/01/towards-conversational-agent-that-can.html</a><br/>
+<br/>
+Facebook built Generative BST, a transformer-based model <br/>
+comprising up to 9.4 billion parameters. <br/>
+Read about chatbot "Blender" here:<br/>
+&nbsp;- <a href="https://ai.facebook.com/blog/state-of-the-art-open-source-chatbot/</a><br/>
+<br/>
+Recent record - 17 Billion parameters from Microsoft:<br/>
+&nbsp;- <a href="https://www.microsoft.com/en-us/research/blog/turing-nlg-a-17-billion-parameter-language-model-by-microsoft/</a><br/>
+<br/>
+There are also libraries trying to achieve good results with minimum hardware.<br/>
+Look for example at Google's Reformer<br/>
+Watch this video by Siraj Raval - The Reformer:<br/>
+&nbsp;- <a href="https://www.youtube.com/watch?v=rNG_hpSyZcE</a><br/>
+And here is some code:<br/>
+&nbsp;- <a href="https://github.com/google/trax/tree/master/trax/models/reformer</a><br/>
+<br/>
+=================================================<br/>
+2020-05-28<br/>
+<br/>
+Just three years ago, experts were forecasting <br/>
+that jobs in the arts were safe from AI invasion. <br/>
+But since then robot-artists earned millions in sales and auctions.<br/>
+&nbsp;- <a href="https://news.artnet.com/exhibitions/bucharest-biennial-curated-by-artificial-intelligence-1872342</a><br/>
+<br/>
+=================================================<br/>
+2020-05-14<br/>
+<br/>
+Financial Trading via Image Classification<br/>
+&nbsp;- <a href="https://arxiv.org/abs/1907.10046v2</a><br/>
+<br/>
+Idea: experienced traders develop intuition. <br/>
+They can recommend to buy or not just looking at the time graph. <br/>
+It would be fun to train an AI system to do the same. <br/>
+In this recent paper JPMorgan AI researches have trained <br/>
+ML algorithms to match the standard "buy" signals <br/>
+(input - images, output - some standard signal).  <br/>
+It would've been more interesting if they had trained<br/>
+to predict market moves instead of only training to match <br/>
+standard signals. I was surprised that they haven't <br/>
+included RNNs (Recurrent Neural Networks) into their <br/>
+set of classification methods.<br/>
+<br/>
+=================================================<br/>
 2020-05-07<br/>
 <br/>
 Which comes first: training a model or extracting high-quality features? <br/>
