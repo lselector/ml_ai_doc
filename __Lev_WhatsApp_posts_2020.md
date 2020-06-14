@@ -3,7 +3,7 @@
 <p>Lev Selector - WhatsApp messages (ML & AI), 2020</p>
 <br/>
 =================================================<br/>
-2020-06-14<br/>
+2020-06-14 .. <br/>
 <br/>
 Two open source projects everyone should know about:<br/>
 ===================<br/>
