@@ -3,6 +3,34 @@
 <p>Lev Selector - WhatsApp messages (ML & AI), 2020</p>
 <br/>
 =================================================<br/>
+2020-06-14<br/>
+<br/>
+Two open source projects everyone should know about:<br/>
+===================<br/>
+ONNX Runtime (Microsoft + Facebook) is a<br/>
+cross-platform inferencing and training accelerator:<br/>
+&nbsp;- <a href="https://github.com/microsoft/onnxruntime"</a><br/>
+<br/>
+Usage: export your trained model (TensorFlow or PyTorch)<br/>
+into ONNX format, and run efficiently.<br/>
+&nbsp;- <a href="https://cloudblogs.microsoft.com/opensource/2019/05/22/onnx-runtime-machine-learning-inferencing-0-4-release/"</a><br/>
+<br/>
+===================<br/>
+Huggingface Transformers<br/>
+<br/>
+&nbsp;- <a href="https://huggingface.co/transformers/"</a><br/>
+&nbsp;- <a href="https://github.com/huggingface/transformers"</a><br/>
+<br/>
+Here is a very good lecture introducing main idea of transformers:<br/>
+&nbsp;- <a href="https://www.youtube.com/watch?v=S27pHKBEp30"</a><br/>
+<br/>
+=================================================<br/>
+2020-06-01<br/>
+<br/>
+Very nice summary of a recent lecture - Self-Supervised Learning<br/>
+&nbsp;- <a href="https://bdtechtalks.com/2020/03/23/yann-lecun-self-supervised-learning/amp/"</a><br/>
+<br/>
+=================================================<br/>
 2020-05-28<br/>
 <br/>
 About NLP (Natural Language Processing).<br/>
