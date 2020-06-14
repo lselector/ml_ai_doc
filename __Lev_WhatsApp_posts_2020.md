@@ -37,8 +37,8 @@ About NLP (Natural Language Processing).<br/>
 <br/>
 Look at Hugging Face, a startup company in Brooklyn, New York, <br/>
 which develops AI chatbot software (NLP libraries).<br/>
-&nbsp;- <a href="https://github.com/huggingface</a><br/>
-&nbsp;- <a href="https://huggingface.co/transformers/</a><br/>
+&nbsp;- <a href="https://github.com/huggingface"</a><br/>
+&nbsp;- <a href="https://huggingface.co/transformers/"</a><br/>
 <br/>
 Note that modern NLP software usually requires lots <br/>
 of hardware to run, because systems tend to be huge<br/>
@@ -52,22 +52,22 @@ It probably costs ~ $200 Mln to build (or more).<br/>
 <br/>
 Google Brain offers new chatbot Meena - transformer <br/>
 architecture using 2.6 Billion parameters.<br/>
-&nbsp;- <a href="https://ai.googleblog.com/2020/01/towards-conversational-agent-that-can.html</a><br/>
+&nbsp;- <a href="https://ai.googleblog.com/2020/01/towards-conversational-agent-that-can.html"</a><br/>
 <br/>
 Facebook built Generative BST, a transformer-based model <br/>
 comprising up to 9.4 billion parameters. <br/>
 Read about chatbot "Blender" here:<br/>
-&nbsp;- <a href="https://ai.facebook.com/blog/state-of-the-art-open-source-chatbot/</a><br/>
+&nbsp;- <a href="https://ai.facebook.com/blog/state-of-the-art-open-source-chatbot/"</a><br/>
 <br/>
 Recent record - 17 Billion parameters from Microsoft:<br/>
-&nbsp;- <a href="https://www.microsoft.com/en-us/research/blog/turing-nlg-a-17-billion-parameter-language-model-by-microsoft/</a><br/>
+&nbsp;- <a href="https://www.microsoft.com/en-us/research/blog/turing-nlg-a-17-billion-parameter-language-model-by-microsoft/"</a><br/>
 <br/>
 There are also libraries trying to achieve good results with minimum hardware.<br/>
 Look for example at Google's Reformer<br/>
 Watch this video by Siraj Raval - The Reformer:<br/>
-&nbsp;- <a href="https://www.youtube.com/watch?v=rNG_hpSyZcE</a><br/>
+&nbsp;- <a href="https://www.youtube.com/watch?v=rNG_hpSyZcE"</a><br/>
 And here is some code:<br/>
-&nbsp;- <a href="https://github.com/google/trax/tree/master/trax/models/reformer</a><br/>
+&nbsp;- <a href="https://github.com/google/trax/tree/master/trax/models/reformer"</a><br/>
 <br/>
 =================================================<br/>
 2020-05-28<br/>
@@ -75,13 +75,13 @@ And here is some code:<br/>
 Just three years ago, experts were forecasting <br/>
 that jobs in the arts were safe from AI invasion. <br/>
 But since then robot-artists earned millions in sales and auctions.<br/>
-&nbsp;- <a href="https://news.artnet.com/exhibitions/bucharest-biennial-curated-by-artificial-intelligence-1872342</a><br/>
+&nbsp;- <a href="https://news.artnet.com/exhibitions/bucharest-biennial-curated-by-artificial-intelligence-1872342"</a><br/>
 <br/>
 =================================================<br/>
 2020-05-14<br/>
 <br/>
 Financial Trading via Image Classification<br/>
-&nbsp;- <a href="https://arxiv.org/abs/1907.10046v2</a><br/>
+&nbsp;- <a href="https://arxiv.org/abs/1907.10046v2"</a><br/>
 <br/>
 Idea: experienced traders develop intuition. <br/>
 They can recommend to buy or not just looking at the time graph. <br/>
@@ -116,7 +116,8 @@ ML solutions without human intervention (from zero).<br/>
 <br/>
 &nbsp;- <a href="https://www.sciencealert.com/coders-mutate-ai-systems-to-make-them-evolve-faster-than-we-can-program-them"</a><br/>
 <br/>
-&nbsp;- <a href="https://arxiv.org/abs/2003.03384"</a><br/>
+&nbsp;- <a href="https://arxiv.org/abs/2003.03384"
+ target="_blank">https://arxiv.org/abs/2003.03384</a><br/>
 <br/>
 =================================================<br/>
 2020-04-25<br/>
