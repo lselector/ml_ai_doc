@@ -9,11 +9,13 @@ Two open source projects everyone should know about:<br/>
 ===================<br/>
 ONNX Runtime (Microsoft + Facebook) is a<br/>
 cross-platform inferencing and training accelerator:<br/>
-&nbsp;- <a href="https://github.com/microsoft/onnxruntime"</a><br/>
+&nbsp;- <a href="https://github.com/microsoft/onnxruntime" 
+ target="_blank">xxxxxxxxx</a><br/>
 <br/>
 Usage: export your trained model (TensorFlow or PyTorch)<br/>
 into ONNX format, and run efficiently.<br/>
-&nbsp;- <a href="https://cloudblogs.microsoft.com/opensource/2019/05/22/onnx-runtime-machine-learning-inferencing-0-4-release/"</a><br/>
+&nbsp;- <a href="https://cloudblogs.microsoft.com/opensource/2019/05/22/onnx-runtime-machine-learning-inferencing-0-4-release/" 
+ target="_blank">xxxxxxxxx</a><br/>
 <br/>
 ===================<br/>
 Huggingface Transformers<br/>
