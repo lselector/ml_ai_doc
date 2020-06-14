@@ -10,27 +10,31 @@ Two open source projects everyone should know about:<br/>
 ONNX Runtime (Microsoft + Facebook) is a<br/>
 cross-platform inferencing and training accelerator:<br/>
 &nbsp;- <a href="https://github.com/microsoft/onnxruntime" 
- target="_blank">xxxxxxxxx</a><br/>
+ target="_blank">https://github.com/microsoft/onnxruntime</a><br/>
 <br/>
 Usage: export your trained model (TensorFlow or PyTorch)<br/>
 into ONNX format, and run efficiently.<br/>
 &nbsp;- <a href="https://cloudblogs.microsoft.com/opensource/2019/05/22/onnx-runtime-machine-learning-inferencing-0-4-release/" 
- target="_blank">xxxxxxxxx</a><br/>
+ target="_blank">https://cloudblogs.microsoft.com/opensource/2019/05/22/onnx-runtime-machine-learning-inferencing-0-4-release/</a><br/>
 <br/>
 ===================<br/>
 Huggingface Transformers<br/>
 <br/>
-&nbsp;- <a href="https://huggingface.co/transformers/"</a><br/>
-&nbsp;- <a href="https://github.com/huggingface/transformers"</a><br/>
+&nbsp;- <a href="https://huggingface.co/transformers/" 
+ target="_blank">https://huggingface.co/transformers/</a><br/>
+&nbsp;- <a href="https://github.com/huggingface/transformers" 
+ target="_blank">https://github.com/huggingface/transformers</a><br/>
 <br/>
 Here is a very good lecture introducing main idea of transformers:<br/>
-&nbsp;- <a href="https://www.youtube.com/watch?v=S27pHKBEp30"</a><br/>
+&nbsp;- <a href="https://www.youtube.com/watch?v=S27pHKBEp30" 
+ target="_blank">https://www.youtube.com/watch?v=S27pHKBEp30</a><br/>
 <br/>
 =================================================<br/>
 2020-06-01<br/>
 <br/>
 Very nice summary of a recent lecture - Self-Supervised Learning<br/>
-&nbsp;- <a href="https://bdtechtalks.com/2020/03/23/yann-lecun-self-supervised-learning/amp/"</a><br/>
+&nbsp;- <a href="https://bdtechtalks.com/2020/03/23/yann-lecun-self-supervised-learning/amp/" 
+ target="_blank">https://bdtechtalks.com/2020/03/23/yann-lecun-self-supervised-learning/amp/</a><br/>
 <br/>
 =================================================<br/>
 2020-05-28<br/>
@@ -39,8 +43,10 @@ About NLP (Natural Language Processing).<br/>
 <br/>
 Look at Hugging Face, a startup company in Brooklyn, New York, <br/>
 which develops AI chatbot software (NLP libraries).<br/>
-&nbsp;- <a href="https://github.com/huggingface"</a><br/>
-&nbsp;- <a href="https://huggingface.co/transformers/"</a><br/>
+&nbsp;- <a href="https://github.com/huggingface" 
+ target="_blank">https://github.com/huggingface</a><br/>
+&nbsp;- <a href="https://huggingface.co/transformers/" 
+ target="_blank">https://huggingface.co/transformers/</a><br/>
 <br/>
 Note that modern NLP software usually requires lots <br/>
 of hardware to run, because systems tend to be huge<br/>
@@ -54,22 +60,27 @@ It probably costs ~ $200 Mln to build (or more).<br/>
 <br/>
 Google Brain offers new chatbot Meena - transformer <br/>
 architecture using 2.6 Billion parameters.<br/>
-&nbsp;- <a href="https://ai.googleblog.com/2020/01/towards-conversational-agent-that-can.html"</a><br/>
+&nbsp;- <a href="https://ai.googleblog.com/2020/01/towards-conversational-agent-that-can.html" 
+ target="_blank">https://ai.googleblog.com/2020/01/towards-conversational-agent-that-can.html</a><br/>
 <br/>
 Facebook built Generative BST, a transformer-based model <br/>
 comprising up to 9.4 billion parameters. <br/>
 Read about chatbot "Blender" here:<br/>
-&nbsp;- <a href="https://ai.facebook.com/blog/state-of-the-art-open-source-chatbot/"</a><br/>
+&nbsp;- <a href="https://ai.facebook.com/blog/state-of-the-art-open-source-chatbot/" 
+ target="_blank">https://ai.facebook.com/blog/state-of-the-art-open-source-chatbot/</a><br/>
 <br/>
 Recent record - 17 Billion parameters from Microsoft:<br/>
-&nbsp;- <a href="https://www.microsoft.com/en-us/research/blog/turing-nlg-a-17-billion-parameter-language-model-by-microsoft/"</a><br/>
+&nbsp;- <a href="https://www.microsoft.com/en-us/research/blog/turing-nlg-a-17-billion-parameter-language-model-by-microsoft/" 
+ target="_blank">https://www.microsoft.com/en-us/research/blog/turing-nlg-a-17-billion-parameter-language-model-by-microsoft/</a><br/>
 <br/>
 There are also libraries trying to achieve good results with minimum hardware.<br/>
 Look for example at Google's Reformer<br/>
 Watch this video by Siraj Raval - The Reformer:<br/>
-&nbsp;- <a href="https://www.youtube.com/watch?v=rNG_hpSyZcE"</a><br/>
+&nbsp;- <a href="https://www.youtube.com/watch?v=rNG_hpSyZcE" 
+ target="_blank">https://www.youtube.com/watch?v=rNG_hpSyZcE</a><br/>
 And here is some code:<br/>
-&nbsp;- <a href="https://github.com/google/trax/tree/master/trax/models/reformer"</a><br/>
+&nbsp;- <a href="https://github.com/google/trax/tree/master/trax/models/reformer" 
+ target="_blank">https://github.com/google/trax/tree/master/trax/models/reformer</a><br/>
 <br/>
 =================================================<br/>
 2020-05-28<br/>
@@ -77,13 +88,15 @@ And here is some code:<br/>
 Just three years ago, experts were forecasting <br/>
 that jobs in the arts were safe from AI invasion. <br/>
 But since then robot-artists earned millions in sales and auctions.<br/>
-&nbsp;- <a href="https://news.artnet.com/exhibitions/bucharest-biennial-curated-by-artificial-intelligence-1872342"</a><br/>
+&nbsp;- <a href="https://news.artnet.com/exhibitions/bucharest-biennial-curated-by-artificial-intelligence-1872342" 
+ target="_blank">https://news.artnet.com/exhibitions/bucharest-biennial-curated-by-artificial-intelligence-1872342</a><br/>
 <br/>
 =================================================<br/>
 2020-05-14<br/>
 <br/>
 Financial Trading via Image Classification<br/>
-&nbsp;- <a href="https://arxiv.org/abs/1907.10046v2"</a><br/>
+&nbsp;- <a href="https://arxiv.org/abs/1907.10046v2" 
+ target="_blank">https://arxiv.org/abs/1907.10046v2</a><br/>
 <br/>
 Idea: experienced traders develop intuition. <br/>
 They can recommend to buy or not just looking at the time graph. <br/>
@@ -103,7 +116,8 @@ set of classification methods.<br/>
 Which comes first: training a model or extracting high-quality features? <br/>
 New approach - do both simultaneously:<br/>
 CURL = Contrastive Unsupervised Representations for Reinforcement Learning<br/>
-&nbsp;- <a href="https://arxiv.org/pdf/2004.04136.pdf"</a><br/>
+&nbsp;- <a href="https://arxiv.org/pdf/2004.04136.pdf" 
+ target="_blank">https://arxiv.org/pdf/2004.04136.pdf</a><br/>
 <br/>
 =================================================<br/>
 2020-04-26<br/>
@@ -116,7 +130,8 @@ for optimizing Neural Network architectures.<br/>
 The goal is to use these algorithms to build <br/>
 ML solutions without human intervention (from zero).<br/>
 <br/>
-&nbsp;- <a href="https://www.sciencealert.com/coders-mutate-ai-systems-to-make-them-evolve-faster-than-we-can-program-them"</a><br/>
+&nbsp;- <a href="https://www.sciencealert.com/coders-mutate-ai-systems-to-make-them-evolve-faster-than-we-can-program-them"
+ target="_blank">https://www.sciencealert.com/coders-mutate-ai-systems-to-make-them-evolve-faster-than-we-can-program-them</a><br/>
 <br/>
 &nbsp;- <a href="https://arxiv.org/abs/2003.03384"
  target="_blank">https://arxiv.org/abs/2003.03384</a><br/>
