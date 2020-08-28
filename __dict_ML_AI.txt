@@ -89,6 +89,14 @@ Example 2 - Logistic Regression
   and class is usually binary (1 or 0, True of False)
 
 =================
+Example 3 - deep learning models:
+ GPT-3 model (NLP from Open AI, 2020) - 175 Billion parameters
+ GPT-2 model (NLP from Open AI, 2019) -   1.5 Billion parameters
+ ResNet-50 (CNN, 2016) - 23 Mln parameters
+ AlexNet   (CNN, 2012) - 61 Mln parameters (x1000 in 14 years)
+ LeNet-5   (CNN, 1998) -  0.06 Mln parameters
+
+=================
 Term "Machine Learning" (ML) covers many types of 
 models, including:
  - Linear Regression
@@ -161,7 +169,7 @@ Feature Engineering
   - extract / select data
   - convert data to numeric vectors, clean
   - transform - scale/normalize (rotate/rescale/crop image, etc.)
-  - transform  concentrate (for example, PCA  Principal Component Analysis, 
+  - transform - concentrate (e.g. PCA - Principal Component Analysis)
   - impute (shift, rotate, mirror, rescale images, add 
        fake data to minority class to decrease imbalance, etc. )
   - make composite features
@@ -171,7 +179,12 @@ Feature Engineering
 One-hot encoding
 
 =================
-Ridge Regression, LASSO, Elastic Net
+Ridge Regression - L2 penalties (least sum of squared errors), 
+    deals with collinearity (correlation) of features
+
+LASSO - L1 penalties (least sum of absolute values)
+
+Elastic Net - combines L1 & L2 penalties of the lasso and ridge
 
 =================
 ML classification:
@@ -203,7 +216,8 @@ RF can be used for both classification and regression.
 
  - ET = Extra-(Randomized)-Trees = Extremely Randomized Trees
    similar to RF, but with two key differences: 
-    - ET does not bootstrap observations (meaning it samples without replacement)
+    - ET does not bootstrap observations 
+      (meaning it samples without replacement)
     - ET does random splits, not best splits
    In some (manually tuned) cases ET may be faster than RF.
 
@@ -246,7 +260,7 @@ independent.
 =================
 - KNN (K-Nearest Neighbors) - a classification
 algorithm that classifies a new observation by the
-majority of the k points closest to it by some 
+majority of the K points closest to it by some 
 chosen metric. (Tell me who are your K closest
 friends, and I will tell you who you are).
 
@@ -322,6 +336,17 @@ Typical output stages of NN include:
  - softmax function - to do normalization of output
  - cross-entropy calculation - as error function
 
+===================
+Conrastive Learning: learning in two stages:
+  Stage 1: find/train a contrastive representation of data.
+           Contrasive = Polarized.
+           Get "cats" close to each other,
+           and father from "dogs".
+  Stage 2: use softmax and cross-entropy to
+           find separation (classification)
+           of polarized data
+===================
+
 Hyper-parameters of the NN model
   - number of layers
   - size of layers
@@ -371,7 +396,7 @@ and counting living cells)
  - white noise - random signal having equal intensity at
    all frequencies (constant power spectral density), thus
    infinite energy (if integrate over all frequencies).
- - Gaussian noise - statistical noise having a Gaussian 
+ - Gaussian noise - statistical noise having a Gaussian
    PDF (Probability Density Function)
  - Gaussian process - stochastic process (collection of
    random variables) such that every finite collection 
@@ -386,8 +411,10 @@ music, time series, etc.
  - LSTM & GRU - Gated RNNs in which each node has
 internal structure with gates and hidden parameters.
 Gated RNNs helped to fight the vanishing gradient problem.
-LSTM = Long Short Term Memory
-GRU = Gated Recurrent Unit
+   LSTM = Long Short Term Memory 
+          (Sepp Hochreiter and Jürgen Schmidhuber, 1997)
+   GRU  = Gated Recurrent Unit 
+          (Kyunghyun Cho et al, 2014)
 
 =================
  - seq2seq model (Google, 2017) first introduced for 
@@ -419,6 +446,8 @@ GRU = Gated Recurrent Unit
   BERT is designed to pre-train deep bidirectional 
   representations from unlabeled text
 
+  Hugging Face - open source NLP models:
+    https://huggingface.co/transformers/
 =================
  - GAN = Generative Adversarial Network (Ian Goodfellow, 2014)
    - using two NNs:
@@ -472,7 +501,6 @@ Disentangled Representation means extracting and
   learning by forming abstract ideas. That's how
   humans can learn from few explanations, while
   modern networks need million data samples.
-   is how human brains works.
 
 Disentangled Variational Auto-Encoder (D-VAE) - we 
   train the VAE in a way so that the latent generative 
@@ -504,8 +532,8 @@ of "winning" for each possible action ("move").
 
 For more complex games the policy matrix becomes
 too big. So modern algorithm use a different
-approach - a set of networks working together,
-for example actor & critic.
+approach - a set of two networks working together,
+for example "actor" & "critic".
 Here the "critic" network works as a long-term
 strategy advisor, whereas the "actor" network 
 makes short-term decisions based on the value
@@ -517,12 +545,12 @@ Transfer Learning
   a different but related problem. 
   Example:
      Train a CNN to recognize cars. 
-     Then use first pre-trained layers of this CNN
+     Then use pre-trained layers of this CNN
      to effectively train new CNN to recognize trucks
      using very small dataset of trucks. 
-     If objects a similar in nature, we can freeze 
-     these first layers, and only train the output 
-     fully-connected layers of the CNN. 
+     If objects are similar in nature, we can freeze 
+     all layers except the last 1-2 output layers, 
+     and only train these fully-connected layers of the CNN. 
      Which makes training much faster and easier.
 
 =================
@@ -576,7 +604,8 @@ Unfortunately on new data the error will be still big.
    - LASSO       = L1 regularization
    - Elastic Net = combination of L1 and L2 
 
-   - regularization via Bagging or using other Ensemble methods
+   - regularization via Bagging or via using 
+     other Ensemble methods
 
 =================
  - Sparse coding - representation of items by the strong 
@@ -660,8 +689,8 @@ error and its variance.
    We calculate error as following:
    
    Target    Error
-    0         -log(1 - p)
-    1         -log(p)
+    0         -log(1 - p)      -> +inf as p -> 1
+    1         -log(p)          -> +inf as p -> 0
 
     For example, 
       if target is 0:
@@ -741,16 +770,25 @@ also be close to each other.
 Main idea - a word can be described by its neighbors,
 a company this word has. 
 
-     V(King)   V(Man) + V(Woman)  ~  V(Queen)
+     V(King) - V(Man) + V(Woman)  ~  V(Queen)
 
-You can download standard Word2Vec pre-trained vectors.
+You can download standard Word2Vec pre-trained vectors
+for 294 languages:
+  https://developer.syn.co.in/tutorial/bot/oscova/pretrained-vectors.html
 
 =================
 GloVe - Global Vectors for Word Representation (2014)
   GloVe is an unsupervised learning algorithm for 
   obtaining vector representations for words. 
-  Training is performed on aggregated global 
-  word-word co-occurrence statistics from a corpus.
+
+  The advantage of GloVe is that, unlike Word2vec, 
+  GloVe does not rely just on local statistics 
+  (local neighbours of words), but incorporates 
+  global statistics (word co-occurrence) to obtain
+  word vectors.
+
+  GloVe allows for parallel implementation, so
+  GloVe can be trained faster than Word2Vec
 
 =================
 - hidden layers, latent factors - intermediate nodes,
@@ -778,7 +816,7 @@ and averaging the outcomes.
 - Numenta - a company devoted to figuring out how
 the brain cortex works. 
 Created open source software.
-Founded and led by Jeff Hawkins.
+Founded and led by Jeff Hawkins (founder of PalmPilot).
 
 =================
 - PCA (Principal Component Analysis) - a method
@@ -803,7 +841,7 @@ document to a particular topic.
 
 - LDA = Linear Discriminant Analysis - trying to find 
   a linear combination of features allowing
-  to separate/classify a predicted variable
+  to separate/classify/discriminate a predicted variable
 
 - QDA - Quadratic Discriminant Analysis - similar to LDA,
   but estimates a covariance matrix for each class
@@ -884,7 +922,7 @@ requires cleaning before doing analysis, etc.).
 
 - FPGA - Field-Programmable Gate Array (Microsoft, Amazon)
 
-- Many proprietary hardware solutions (Tesla, AMD, 
+- Many proprietary hardware solutions - Tesla, AMD, 
     QUALCOMM, Apple, Xilinx, IBM, etc.
 
 - distributed ML (running on top of Hadoop Spark, etc.)
@@ -1061,7 +1099,7 @@ Some companies to know:
      Kaggle
   OpenAI - Ilya Sutskever - Gym, RoboSumo, Debate Game,
            OpenAI Five (Dota 2), Dactyl (robot hand),
-           GPT2 (text generation), GYM Retro
+           GPT-3 (text generation), GYM Retro
   Facebook AI Research - Yann LeCun 
   Apple - Ian Goodfellow, Chris Lattner (LLVM, Swift)
   NYU - Yann LeCun
