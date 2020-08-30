@@ -152,14 +152,27 @@ Unsupervised learning - no labels.
   System learns to recognize structure in data
 
 semi-supervised learning - uses combination of 
-  labeled and unlabeled data
+  labeled and unlabeled data. Can use strategies
+  like self-supervised learning and active learning.
+  Also can use denoising autoencoder (ladder network).
+  Another example - use clustering, and see how 
+  labeled/unlabeled data gets clustered - and use
+  this to label the non-labeled data.
 
-self-supervised learning - automatically creates labels
+Self-supervised learning - automatically creates labels
   trains using those labels, generates representations,
   then uses these representations for other tasks
   Examples how labels can be created:
     - remove word, and learn to predict it
     - rotate picture, and learn to predict original picture
+
+Active Learning (AL) - when only few data points are labeled.
+    We start learning with few labeled examples, 
+    and then label only those examples that 
+    contribute the most to the model quality.
+    The AL strategies 
+      - based on data density and uncertainty
+      - based on support vectors
 
 =================
 Feature Engineering
@@ -197,59 +210,122 @@ Number of features may be one or more.
 Number of class label's values may be two or more.
 
 =================
+Decision Tree building:
+   ID3 (ID.3 = Iterative Dichotomiser 3) is an algorithm 
+   invented by Ross Quinlan (1986) used to generate 
+   a decision tree from a dataset. 
+   ID3 splits data by an attribute that has smallest 
+   entropy (or largest information gain).
+
+   C4.5 is an extension of ID3.
+   C4.5 is used for classification.
+   C4.5 vs ID3:
+    - handles both continuous and discrete attributes
+      (creates a threshold and then splits the list)
+    - handles missing attributes data (simply not using
+      them in entropy calculations).
+    - handles attributes with differing costs
+    - pruning trees after creation (attempts to remove
+      inefective branches or replace them with leaf nodes).
+
+   C5.0/See5 algorithm - improved C4.5, commercial:
+    - much faster
+    - less memory usage
+    - builds smaller decision trees
+    - support for boosting
+    - support for weighting
+    - automating winnowing (removing not effective attributes)
+
+=================
 Ensemble - combine multiple models together
 Bagging  - combining models in parallel (Random Forest)
 Boosting - combining models sequentially (XGBoost ...)
+
+Other ways to combine (strong) models:
+ - Average predictions of several models
+ - Majority vote (for classification).
+ - Stacking - use a meta-model that takes 
+   the output of base models as input. Train
+   stacking using cross-validation.
+
+Note: combining multiple uncorrelated models 
+  can bring better performance, whereas combining
+  several similar models may not result in a 
+  signicant performance boost.
+
 =================
 - Random Forest (RF) - an ensemble decision tree model
-that trains many decision trees (typically ~200) 
-using random subsets of observations and features
-sampled from a training data set.
-  Leo Breiman, 2002 (Berkeley)
+    that trains many decision trees (typically ~200) 
+    using random subsets of observations and features
+    sampled from a training data set.
+      Leo Breiman, 2002 (Berkeley)
 
-All data subsets are independent. 
-Trees are trained independently. 
+    Bootstrap sampling - random sampling with replacement.
+      Can have the same data point more than once
+      (becasue of replacement).
+    
+    All data subsets are independent. 
+    Trees are trained independently. 
+    
+    Model does prediction by running data through all trees,
+    and voting their predictions. Using multiple data samples
+    and building multiple trees reduces the variance 
+    of the final model. Low variance  = low overtting.
+    
+    RF can be used for both classification and regression.
 
-Model does prediction by running data through all trees,
-and voting their predictions.
-RF can be used for both classification and regression.
-
+=================
  - ET = Extra-(Randomized)-Trees = Extremely Randomized Trees
-   similar to RF, but with two key differences: 
-    - ET does not bootstrap observations 
-      (meaning it samples without replacement)
-    - ET does random splits, not best splits
-   In some (manually tuned) cases ET may be faster than RF.
+    similar to RF, but with two key differences: 
+      - ET does not bootstrap observations 
+        (meaning it samples without replacement)
+      - ET does random splits, not best splits
+    In some (manually tuned) cases ET may be faster than RF.
 
 =================
 GBM (Gradient Boosting Machine) is an ensemble 
-decision tree model (Jerome Friedman, 1999).
-But the trees are trained sequentially so that each 
-tree has ability to decrease the error of the 
-model made of previously trained trees.
+    decision tree model (Jerome Friedman, 1999).
+    But the trees are trained sequentially so that each 
+    tree has ability to decrease the error of the 
+    model made of previously trained trees.
+    So trees trained sequentially.
+    The model can eventually overfit - perfrctly
+    learn the training data set.
+    To avoid overfitting, a separate validation
+    set is used to evaluate the error - and stop
+    training when validation error stops decreasing.
+    
+    Implementations of GBM:
+     - XGBoost - eXtreme Gradient Boosting
+     - LightGBM
+     - CatBoost
+     - AdaBoost (Ada Boost)
 
-Implementations of GBM:
- - XGBoost - eXtreme Gradient Boosting
- - LightGBM
- - CatBoost
- - AdaBoost (Ada Boost)
+    Three main parameters of GBM model:
+      - number of trees
+      - depth of trees
+      - learning rate
 
 =================
 - Naive Bayes - a classifier working off of Bayes
-rule/theorem: P(B|A) = P(A|B)*P(B)/P(A). This model
-is called "naive" because it assumes that all 
-features' influences are equally important and 
-independent.
+    rule/theorem: P(B|A) = P(A|B)*P(B)/P(A). This model
+    is called "naive" because it assumes that all 
+    features' influences are equally important and 
+    independent.
+
 - Gaussian Naive-Bayes - variation where features'
-  values are numeric and have and have Gaussian 
-  distribution
+    values are numeric and have and have Gaussian 
+    distribution
+
 =================
 - SVM (Support Vector Machine)
-  Vladimir Vapnik and Alexey Chervonenkis (1963)
-  - a family of algorithms separating groups of points
-    by a line or a plane.
+    Vladimir Vapnik and Alexey Chervonenkis (1963)
+    SVM is a family of algorithms separating groups 
+    of points by a line or a plane.
     The points closest to separation line/plane are
-    called "Support Vectors".
+    called "Support Vectors". You want to find a 
+    line/plane which gives you a widest separation,
+    a widest "road" between support points/vectors.
     A common technique is to project data points into 
     a higher-dimensional space in which the data is 
     linearly separable.
@@ -257,12 +333,37 @@ independent.
 - Linear SVM (linear separator), 
 - RBF SVM  (RBF = Radial Basis Function kernel)
 
+- SVR - Support Vector Regression. Similar to SVM,
+    but the goal is to find a narrowest "road"
+    between two lines: ax + b +/- e
+    which would cover most of the points Y(i):
+        -e < Y(i) - ax+b < +e 
+
 =================
 - KNN (K-Nearest Neighbors) - a classification
 algorithm that classifies a new observation by the
 majority of the K points closest to it by some 
 chosen metric. (Tell me who are your K closest
 friends, and I will tell you who you are).
+
+=================
+Multiclass Classication - more than two classes.
+
+   Algorithms for Multiclass Classication:
+     - Logistic Regression
+     - kNN
+     - decision trees
+   Multiclass can be also solved using 
+     "one versus rest" strategy
+
+One-Class Classication (aka unary classication or class modeling)
+   - "one class versus rest"
+   - using Gaussian, k-means, kNN, SVM
+=================
+Multi-Label Classication
+   - each data example may have several labels/tags.
+   - model can not only classify, but also predict
+     "missing" labels
 
 =================
 - K-means - a clustering algorithm that finds centers
@@ -408,6 +509,14 @@ processing sequences. Examples - text, speech,
 music, time series, etc. 
 
 =================
+Sequence labeling - automatically assigning a label 
+    to each element of a sequence.
+
+ - CRF (Conditional Random Fields) - can be viewed as
+     generalization of Logistic Regression to sequences.
+   CRF was outperformed by bidirectional deep gated RNN.
+
+=================
  - LSTM & GRU - Gated RNNs in which each node has
 internal structure with gates and hidden parameters.
 Gated RNNs helped to fight the vanishing gradient problem.
@@ -417,8 +526,8 @@ Gated RNNs helped to fight the vanishing gradient problem.
           (Kyunghyun Cho et al, 2014)
 
 =================
- - seq2seq model (Google, 2017) first introduced for 
-   machine translation.
+ - seq2seq model - sequence-to-sequence learning.
+   Google (2017) - first introduced for language translation
      Input - a sequence (sentence(s)) of words
      Output - another sequence (translation)
      It mainly has two components i.e encoder and decoder.
@@ -607,6 +716,15 @@ Unfortunately on new data the error will be still big.
    - regularization via Bagging or via using 
      other Ensemble methods
 
+   - Early stopping - save preliminary model after
+       every epoch, check it on the validation set,
+       stop when further training doesn't yield better accuracy. 
+
+   - Batch normalization/standardization - standardizing 
+     the outputs of each layer before using them for
+     the next layer. Causes faster and better training,
+     has some regularization eect. 
+
 =================
  - Sparse coding - representation of items by the strong 
      activation of a relatively small set of neurons.
@@ -679,6 +797,10 @@ error and its variance.
     (False Positives and False Negatives)
     Accuracy = weight_of_diagonal / whole_matrix
 
+Cost-Sensitive Accuracy - assign different weight/cost
+    to different type of errors (FP and FN)
+    (when calculating the overall error/cost).
+
 =================
  - MSE = Mean Square Error = sum ( Yi - Yi_model)^2
    MSE is a common error function for regression
@@ -726,6 +848,27 @@ Some famous datasets
              images of digits and characters
   CIFAR-10 - 60,000 32x32 color images in 10 different classes.
   ImageNet - 14 Million images, 20,000 categories
+=================
+One-Shot Learning - typically applied in face recognition.
+    Recognize that two photos represent the same of different person(s).
+    Approach - use SNN (Siamese Neural Network).
+      Triplet loss function - use 3 images:
+          image A (for anchor)
+          image P (for positive, same person)
+          image N (for negative, different person)
+      Each training example is not a triplet (Aim Pi, Ni).
+      Cost function consists of  sum(max( (f(A)-f(P))^2 - (f(A)-f(N))^2 ))
+
+Metric Learning - create a metric that would work better for your dataset.
+    The One-Shot Learning with Siamese Neural Network
+    and Triplet loss function can be considered as an example
+    of Metric Learning (the pairs of pictures (tuples) of same
+    person belong to set "S", and pairs of random pictures - to set "D".
+
+=================
+ZSL (Zero-Shot Learning) - learn to assign lables to images.
+  The trick is to use embeddings representing input (image) and output (label).
+
 =================
 - NLP (Natural Language Processing) - part of ML
 dealing with processing of speech and text.
@@ -776,6 +919,9 @@ You can download standard Word2Vec pre-trained vectors
 for 294 languages:
   https://developer.syn.co.in/tutorial/bot/oscova/pretrained-vectors.html
 
+skip-gram - part of word2vec where "friends" words
+  are being predicted from the main "central" word.
+
 =================
 GloVe - Global Vectors for Word Representation (2014)
   GloVe is an unsupervised learning algorithm for 
@@ -799,6 +945,61 @@ layers, and parameters of a Neural Network
 a text is modeled as a bag of words without 
 considering order of words and composition of
 sentences.
+
+=================
+ - Unsupervised Learning - data doesnt have labels.
+
+ - Density estimation - model PDF (Probability Density Function).
+     For example, we try to find a fit as a combination
+     of several Gaussian distributions (using some sort
+     of grid search in space of parameters of those distributions).
+     See also "Gaussian Mixture Model" in this text
+
+ - Clustering
+
+ - K-Means clustering (clusters are spheres)
+ 
+ - GMM (Gaussian Mixture Model - clusters can be ellipses)
+   - Expectation Maximization algorithm, maximum likelihood
+   - grid search, Bayessian search
+
+ - DBSCAN (Density-Based Spatial Clustering of Applications with Noise )
+     density-based clustering algorithm, can build 
+     clusters that have an arbitrary shape
+
+ - HDBSCAN (Hierarchical DBSCAN) - improved DBSCAN,
+     Can build clusters of varying shape and density. 
+     It has one important hyperparameter - the minimum number
+     of examples to put in a cluster.
+
+        import hdbscan
+        from sklearn.datasets import make_blobs
+        
+        data, _ = make_blobs(1000)
+        
+        clusterer = hdbscan.HDBSCAN(min_cluster_size=10)
+        cluster_labels = clusterer.fit_predict(data)
+
+ - number of clusters:
+     - prediction strength (train & test co-ownership matrix)
+     - gap statistics method
+     - elbow method
+     - average silhouette method
+
+ - spectral clustering
+ - hierarchical clustering
+
+=================
+ - Dimensionality Reduction
+     - PCA = Principal Component Analysis
+       (find dimensions of highest variance of data)
+     - UMAP = Uniform Manifold Approximation and Projection
+     - Autoencoders
+
+=================
+ - Outlier Detection - detecting examples that are very different
+   from typical in the dataset.
+   We can use autoencoder or one-class classification.
 
 =================
 - explainability - how well can a model explain
@@ -856,16 +1057,39 @@ layer at a time (Hinton, Salakhutdinov, 2006)
 Deep Belief Network - many layers of RBMs.
 
 =================
-- Recommender Systems
+ - Learning to Rank - search engine (rank search results).
+   It is a supervised learning problem.
+   There are 3 approaches:
+    - pointwise (one document at a time)
+    - pairwise (pair of documents at a time - decide which ranks higher)
+    - listwise  - state-of-the-art (like LambdaMART)
+      MAP (Mean Average Precision) - metric that combines
+      precision and recall :
+                      |{relevant docs} and {retrieved docs}|
+         precision =  --------------------------------------
+                                |{retrieved docs}|
+=================
+- Recommender Systems (RS)
   Make recommendations in different ways:
+  - based on features of products / content
+    (that customer considered or bought)
   - based on features of the customer
     (country, language, age, ...)
-  - based on features of products customer considered or bought
   - based on similarity of customer to other
     customers (by customer features or products features)
 
 - Collaborative filtering - customers who bought
-this, have also bought that ...
+    this, have also bought that ...
+
+Real-life RSs use hybrid approach
+  (combine content-based and collaborative-based)
+
+ - FM = Factorization Model (2006, a.k.a. Factorization Machine)
+     an RS based on decomposing the huge user-item 
+     interaction matrix into the product of two lower 
+     dimensionality rectangular matrices.
+ - (DAE) = Denoizing AutoEncoder - also can serve as an RS
+ - FFNN (Feed Forward Neural Network) with 3 inputs: user, movie, rank
 
 =================
 - Data Engineering - the process of collecting, 
@@ -970,6 +1194,16 @@ minority of all transactions, the training data
 is heavily imbalanced. Special methods need to 
 be used to work with imbalanced data.
 
+Some algorithms (Logistic Regression, SVM, 
+  Decision Trees, Random Forest, Gradient Boosting)
+allow you to provide weights for every class. 
+
+Other uproaches:
+  - undersampling - randomly remove some examples of the majority class.
+  - oversampling - repeating minority members (or increasing their weight).
+  - SMOTE (Synthetic Minority Oversampling Technique)
+  - ADASYN (Adaptive Synthetic) sampling method
+
 =================
 - Anomaly Detection - use ML/DS techniques to 
 detect points that are vastly different from the 
@@ -1002,6 +1236,14 @@ should be removed, as well as features which
 potentially may be highly correlated with them
 (for example, zip code, because certain races
 live in close proximity to each other).
+
+=================
+GP = Gaussian Processes
+GLM = Generalized Linear Model
+PGM = Probabilistic Graphical Models
+MCMC = Markov Chain Monte Carlo (sampling from complex distributions)
+GA = Genetic Algorithms - mimic biological evolution to solve
+     optimization problems. Slower than gradient-based optimization.
 
 =================
 AutoML - systems allowing to run multiple models,
