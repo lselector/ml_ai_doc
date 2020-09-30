@@ -1092,6 +1092,22 @@ Real-life RSs use hybrid approach
  - FFNN (Feed Forward Neural Network) with 3 inputs: user, movie, rank
 
 =================
+ - SVD = Singular Value Decomposition - used in recommender engines 
+      SVD of a m x n matrix is factorization of the form USV*
+     where 
+       U : m x m unitary matrix
+       V : n x n unitary matrix
+       S : m x n rectangular diagonal matrix with non-negative
+           real numbers on the diagonal
+       unitary: its conjugate transpose M* is also its inverse M-1
+
+=================
+ - ALS = Alternating Least Squares
+     Alternating minimization - trying to minimize one coordinate at a time.
+     Successful and accurate method, a major component 
+     of the winning entry in the Netflix recommendation problem. 
+
+=================
 - Data Engineering - the process of collecting, 
 storing, cleaning, preprocessing, and loading data.
 
@@ -1513,5 +1529,13 @@ Interpretable Machine Learning (2019)
 Reinforcement Learning and Optimal Control (2019)
   by Dimitri Bertsekas (Author)
   - http://web.mit.edu/dimitrib/www/RLbook.html
+
+=================
+SAS (Statistical Analysis System)
+  since 1966, IBM mainframe, OpenVMS Alpha, Windows, Unix
+ - Base SAS - language in SAS
+ - STAT - statistical software in SAS
+ - EM   - Enterprise Miner
+ - EG   - Enterprise Guide
 
 =================
