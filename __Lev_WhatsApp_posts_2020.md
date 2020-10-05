@@ -3,7 +3,37 @@
 <p>Lev Selector - WhatsApp messages (ML & AI), 2020</p>
 <br/>
 =================================================<br/>
-2020-06-14 .. <br/>
+2020-10-04<br/>
+LSTM is dead. Long Live Transformers!<br/>
+Great short lecture by Leo Dirac<br/>
+&nbsp;- <a href="https://www.youtube.com/watch?v=S27pHKBEp30" 
+ target="_blank">https://www.youtube.com/watch?v=S27pHKBEp30</a><br/>
+<br/>
+=================================================<br/>
+2020-08-30<br/>
+Neuralink: Elon Musk's brain chip summary in 14 min<br/>
+https://youtu.be/CLUWDLKAF1M<br/>
+&nbsp;- <a href="https://youtu.be/CLUWDLKAF1M" 
+ target="_blank">https://youtu.be/CLUWDLKAF1M</a><br/>
+<br/>
+=================================================<br/>
+2020-08-27<br/>
+TecoGAN - Super Resolution<br/>
+TecoGAN (Temporally Coherent GANs) for improving resolution of video and images<br/>
+TecoGAN can upscale the video quality from 720p to 4K !<br/>
+&nbsp;- <a href="https://www.youtube.com/watch?v=MwCgvYtOLS0" 
+ target="_blank">https://www.youtube.com/watch?v=MwCgvYtOLS0</a><br/>
+<br/>
+=================================================<br/>
+2020-08-01 <br/>
+GPT-3 vs Human Brain<br/>
+GPT-3 has 175 Billion parameters/synapses.<br/>
+Human brain has 100trillion synapses.<br/>
+&nbsp;- <a href="https://youtu.be/kpiY_LemaTc" 
+ target="_blank">https://youtu.be/kpiY_LemaTc</a><br/>
+ <br/>
+=================================================<br/>
+2020-06-14 <br/>
 <br/>
 Two open source projects everyone should know about:<br/>
 ===================<br/>
