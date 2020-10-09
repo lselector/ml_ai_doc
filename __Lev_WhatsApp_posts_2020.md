@@ -3,6 +3,12 @@
 <p>Lev Selector - WhatsApp messages (ML & AI), 2020</p>
 <br/>
 =================================================<br/>
+2020-10-07<br/>
+DeepPavlov is an open source framework for chatbots and virtual assistants development.<br/>
+&nbsp;- <a href="https://deeppavlov.ai/" 
+ target="_blank">https://deeppavlov.ai/</a><br/>
+<br/>
+=================================================<br/>
 2020-10-04<br/>
 LSTM is dead. Long Live Transformers!<br/>
 Great short lecture by Leo Dirac<br/>
