@@ -70,9 +70,9 @@ It is split into two files.<br/>
 Please review.<br/>
 Let me know if I have missed something worth including there.<br/>
 <br/>
-&nbsp;- <a href="https://github.com/lselector/ml_ai_doc/blob/master/__dict_ML_AI.txt" target="_blank">https://github.com/lselector/ml_ai_doc/blob/master/__dict_ML_AI.txt</a>&nbsp;<br/>
+&nbsp;- <a href="https://github.com/lselector/ml\_ai\_doc/blob/master/\_dict\_ML\_AI.txt" target="_blank">https://github.com/lselector/ml\_ai\_doc/blob/master/\_dict\_ML\_AI.txt</a>&nbsp;<br/>
 <br/>
-&nbsp;- <a href="https://github.com/lselector/ml_ai_doc/blob/master/__dict_Math.txt" target="_blank">https://github.com/lselector/ml_ai_doc/blob/master/__dict_Math.txt</a>&nbsp;<br/>
+&nbsp;- <a href="https://github.com/lselector/ml\_ai\_doc/blob/master/\_dict\_Math.txt" target="_blank">https://github.com/lselector/ml\_ai\_doc/blob/master/\_dict\_Math.txt</a>&nbsp;<br/>
 <br/>
 =================================================<br/>
 2019-11-08<br/>
@@ -166,7 +166,7 @@ The main announcement was the H2O “Q”.<br/>
 <br/>
 Another announcements was that Driverless AI<br/>
 is now available as SaaS on cloud:<br/>
-&nbsp;- <a href="http://docs.h2o.ai/puddle/userguide/_build/html/index.html" target="_blank">http://docs.h2o.ai/puddle/userguide/_build/html/index.html</a>&nbsp;<br/>
+&nbsp;- <a href="http://docs.h2o.ai/puddle/userguide/\_build/html/index.html" target="_blank">http://docs.h2o.ai/puddle/userguide/\_build/html/index.html</a>&nbsp;<br/>
 <br/>
 =================================================<br/>
 2019-10-12<br/>
@@ -213,7 +213,7 @@ Target Leakage:<br/>
 2019-09-22<br/>
 Moore's Law animation<br/>
 <br/>
-&nbsp;- <a href="https://www.youtube.com/watch?v=7uvUiq_jTLM" target="_blank">https://www.youtube.com/watch?v=7uvUiq_jTLM</a>&nbsp;<br/>
+&nbsp;- <a href="https://www.youtube.com/watch?v=7uvUiq\_jTLM" target="_blank">https://www.youtube.com/watch?v=7uvUiq\_jTLM</a>&nbsp;<br/>
 <br/>
 =================================================<br/>
 2019-09-14<br/>
@@ -397,7 +397,7 @@ but this is just such a gem to listen <br/>
 "from the horses mouth" about first days, <br/>
 a must-watch for any computer engineer.<br/>
 <br/>
-&nbsp;- <a href="https://www.youtube.com/watch?v=EY6q5dv_B-o" target="_blank">https://www.youtube.com/watch?v=EY6q5dv_B-o</a>&nbsp;<br/>
+&nbsp;- <a href="https://www.youtube.com/watch?v=EY6q5dv\_B-o" target="_blank">https://www.youtube.com/watch?v=EY6q5dv\_B-o</a>&nbsp;<br/>
 <br/>
 =================================================<br/>
 2019-05-15<br/>
@@ -476,7 +476,7 @@ Imagine that it is possible to use 3D-printer <br/>
 to print pre-trained Neural Network. <br/>
 It then can perform very fast <br/>
 and use very low power to operate.<br/>
-&nbsp;- <a href="https://www.photonics.com/Articles/UCLA_Researchers_Create_All-Optical_Diffractive/a63751" target="_blank">https://www.photonics.com/Articles/UCLA_Researchers_Create_All-Optical_Diffractive/a63751</a>&nbsp;<br/>
+&nbsp;- <a href="https://www.photonics.com/Articles/UCLA\_Researchers\_Create\_All-Optical\_Diffractive/a63751" target="_blank">https://www.photonics.com/Articles/UCLA\_Researchers\_Create\_All-Optical\_Diffractive/a63751</a>&nbsp;<br/>
 <br/>
 &nbsp;- <a href="https://twimlai.com/twiml-talk-237-deep-learning-in-optics-with-aydogan-ozcan/" target="_blank">https://twimlai.com/twiml-talk-237-deep-learning-in-optics-with-aydogan-ozcan/</a>&nbsp;<br/>
 <br/>
@@ -490,7 +490,7 @@ classifier (for hand-written digits)<br/>
 <br/>
 Topic: BIAS-VARIANCE TRADE-OFF.<br/>
 <br/>
-Model_Error = Bias + Vairance + Noise<br/>
+Model\_Error = Bias + Vairance + Noise<br/>
 <br/>
 Bias:<br/>
 Model is too simple.<br/>

@@ -3,8 +3,97 @@
 <p>Lev Selector - WhatsApp messages (ML & AI), 2020</p>
 <br/>
 =================================================<br/>
+2020-10-26<br/>
+Universal translators from different companies:<br/>
+ - Facebook M2M-100 - translating 100 languages, open source<br/>
+ - Microsoft T-ULRv2 - translating 94 languages, top results<br/>
+ - Google MT5 - translating more than 100 languages, open source<br/>
+<br/>
+&nbsp;- <a href="https://venturebeat.com/2020/10/26/google-open-sources-mt5-a-multilingual-model-trained-on-over-101-languages/" 
+ target="_blank">https://venturebeat.com/2020/10/26/google-open-sources-mt5-a-multilingual-model-trained-on-over-101-languages/</a><br/>
+<br/>
+=================================================<br/>
+2020-10-24<br/>
+RISC-V is the future of computing - Chris Lattner and Lex Friedman<br/>
+<br/>
+&nbsp;- <a href="https://youtu.be/lXdx0X2WHfY" 
+ target="_blank">https://youtu.be/lXdx0X2WHfY</a><br/>
+<br/>
+=================================================<br/>
+2020-10-22<br/>
+Generate books online and PDF (ready for publishing): <br/>
+<br/>
+using fastdoc project:<br/>
+&nbsp;- <a href="https://github.com/fastai/fastdoc" 
+ target="_blank">https://github.com/fastai/fastdoc</a><br/>
+&nbsp;- <a href="https://asciidoctor.org/" 
+ target="_blank">https://asciidoctor.org/</a><br/>
+<br/>
+using Jupyter Book project:<br/>
+&nbsp;- <a href="https://jupyterbook.org/intro.html" 
+ target="_blank">https://jupyterbook.org/intro.html</a><br/>
+&nbsp;- <a href="https://jupyterbook.org/advanced/pdf.html" 
+ target="_blank">https://jupyterbook.org/advanced/pdf.html</a><br/>
+<br/>
+=================================================<br/>
+2020-10-21<br/>
+In 2005, neuroscientists at CalTech and UCLA discovered <br/>
+a single neuron in a patient’s brain that appeared to <br/>
+respond only to the actress Halle Berry: photos, <br/>
+caricatures, even the spelling of her name. <br/>
+<br/>
+&nbsp;- <a href="https://www.scientificamerican.com/article/one-face-one-neuron/" 
+ target="_blank">https://www.scientificamerican.com/article/one-face-one-neuron/</a><br/>
+<br/>
+"This neuron is responding to the abstract concept <br/>
+of Halle Berry rather than to any particular visual <br/>
+feature. ... <br/>
+This suggests we store memories as abstract concepts ..."<br/>
+<br/>
+=================================================<br/>
+2020-10-20<br/>
+Jeremy Howard & fast.ai<br/>
+<br/>
+&nbsp;- <a href="https://www.fast.ai/" 
+ target="_blank">https://www.fast.ai/</a> - home, courses<br/>
+&nbsp;- <a href="https://www.fast.ai/about/" 
+ target="_blank">https://www.fast.ai/about/</a><br/>
+&nbsp;- <a href="https://www.fast.ai/topics/" 
+ target="_blank">https://www.fast.ai/topics/</a><br/>
+<br/>
+Book:<br/>
+
+&nbsp;- <a href="https://www.amazon.com/Deep-Learning-Coders-fastai-PyTorch/dp/1492045527" 
+ target="_blank">https://www.amazon.com/Deep-Learning-Coders-fastai-PyTorch/dp/1492045527</a><br/>
+<br/>
+Interview:<br/>
+&nbsp;- <a href="https://www.youtube.com/watch?v=6x2D1EKFHe4" 
+ target="_blank">https://www.youtube.com/watch?v=6x2D1EKFHe4</a><br/>
+<br/>
+=================================================<br/>
+2020-10-16<br/>
+AutoML - drop-in replacement for a scikit-learn estimator:<br/>
+&nbsp;- <a href="https://github.com/automl/auto-sklearn" 
+ target="_blank">https://github.com/automl/auto-sklearn</a><br/>
+<br/>
+=================================================<br/>
+2020-10-15<br/>
+Evolution 2.0 - Origin of Life, <br/>
+Where did the information come from? <br/>
+Genetic code vs Artificial Intelligence.<br/>
+A new $10M prize for a definitive answer.<br/>
+<br/>
+&nbsp;- <a href="https://evo2.org/" 
+ target="_blank">https://evo2.org/</a><br/>
+&nbsp;- <a href="https://www.herox.com/evolution2.0" 
+ target="_blank">https://www.herox.com/evolution2.0</a><br/>
+&nbsp;- <a href="https://www.youtube.com/watch?v=oG6dTuQ5z1U" 
+ target="_blank">https://www.youtube.com/watch?v=oG6dTuQ5z1U</a><br/>
+<br/>
+=================================================<br/>
 2020-10-07<br/>
-DeepPavlov is an open source framework for chatbots and virtual assistants development.<br/>
+DeepPavlov is an open source framework for chatbots <br/>
+and virtual assistants development.<br/>
 &nbsp;- <a href="https://deeppavlov.ai/" 
  target="_blank">https://deeppavlov.ai/</a><br/>
 <br/>
@@ -179,19 +268,19 @@ I have posted three short articles calculating COVID death rates.<br/>
 <br/>
 Estimating Coronavirus Death Rate using US numbers<br/>
 <br/>
-&nbsp;- <a href="https://github.com/lselector/ml_ai_doc/blob/master/__posts_articles/20200423_COVID_death_rates.txt" 
- target="_blank">https://github.com/lselector/ml_ai_doc/blob/master/__posts_articles/20200423_COVID_death_rates.txt</a><br/>
+&nbsp;- <a href="https://github.com/lselector/ml\_ai\_doc/blob/master/\_posts\_articles/20200423\_COVID\_death\_rates.txt" 
+ target="_blank">https://github.com/lselector/ml\_ai\_doc/blob/master/\_posts\_articles/20200423\_COVID\_death\_rates.txt</a><br/>
 <br/>
 If US will follow Sweden and remove lockdown, we<br/>
 will end up with more than 300,000 deaths.<br/>
 <br/>
-&nbsp;- <a href="https://github.com/lselector/ml_ai_doc/blob/master/__posts_articles/20200424_Sweden_deaths.txt" 
- target="_blank">https://github.com/lselector/ml_ai_doc/blob/master/__posts_articles/20200424_Sweden_deaths.txt</a><br/>
+&nbsp;- <a href="https://github.com/lselector/ml\_ai\_doc/blob/master/\_posts\_articles/20200424\_Sweden\_deaths.txt" 
+ target="_blank">https://github.com/lselector/ml\_ai\_doc/blob/master/\_posts\_articles/20200424\_Sweden\_deaths.txt</a><br/>
 <br/>
 Why there were so many deaths in Italy?<br/>
 <br/>
-&nbsp;- <a href="https://github.com/lselector/ml_ai_doc/blob/master/__posts_articles/20200425_Italy_deaths.txt" 
- target="_blank">https://github.com/lselector/ml_ai_doc/blob/master/__posts_articles/20200425_Italy_deaths.txt</a><br/>
+&nbsp;- <a href="https://github.com/lselector/ml\_ai\_doc/blob/master/\_posts\_articles/20200425\_Italy\_deaths.txt" 
+ target="_blank">https://github.com/lselector/ml\_ai\_doc/blob/master/\_posts\_articles/20200425\_Italy\_deaths.txt</a><br/>
 <br/>
 =================================================<br/>
 2020-04-14<br/>
@@ -216,8 +305,8 @@ usually means a combination of 5 principles:<br/>
 =================================================<br/>
 2020-03-27<br/>
 <br/>
-&nbsp;- <a href="https://www.youtube.com/watch?v=qFmaSNP6_z4" 
- target="_blank">https://www.youtube.com/watch?v=qFmaSNP6_z4</a><br/>
+&nbsp;- <a href="https://www.youtube.com/watch?v=qFmaSNP6\_z4" 
+ target="_blank">https://www.youtube.com/watch?v=qFmaSNP6\_z4</a><br/>
 <br/>
 This is a very good 5-min video by Lex Fridman, host of AI interviews. <br/>
 He talks about statistics, that masks work. <br/>
@@ -267,8 +356,8 @@ Google's website for COVID-19 screening<br/>
 <br/>
 Coronavirus Outbreak Trajecties - by country<br/>
 <br/>
-&nbsp;- <a href="https://www.reddit.com/r/CoronavirusUS/comments/fhawki/i_used_primary_data_from_who_to_predict_the/" 
- target="_blank">https://www.reddit.com/r/CoronavirusUS/comments/fhawki/i_used_primary_data_from_who_to_predict_the/</a><br/>
+&nbsp;- <a href="https://www.reddit.com/r/CoronavirusUS/comments/fhawki/i\_used\_primary\_data\_from\_who\_to\_predict\_the/" 
+ target="_blank">https://www.reddit.com/r/CoronavirusUS/comments/fhawki/i\_used\_primary\_data\_from\_who\_to\_predict\_the/</a><br/>
 <br/>
 Good DeepMind AI-generated predictions<br/>
 <br/>
@@ -392,8 +481,8 @@ Graph algorithms: <br/>
  target="_blank">https://www.kdnuggets.com/2019/09/5-graph-algorithms-data-scientists-know.html</a><br/>
 <br/>
   Graph databases: <br/>
-&nbsp;- <a href="https://en.wikipedia.org/wiki/Graph_database" 
- target="_blank">https://en.wikipedia.org/wiki/Graph_database</a><br/>
+&nbsp;- <a href="https://en.wikipedia.org/wiki/Graph\_database" 
+ target="_blank">https://en.wikipedia.org/wiki/Graph\_database</a><br/>
 <br/>
   Data managements: <br/>
 &nbsp;- <a href="https://www.kdnuggets.com/2019/10/data-scientist-data-management.html" 
