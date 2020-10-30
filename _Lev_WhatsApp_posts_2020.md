@@ -3,6 +3,19 @@
 <p>Lev Selector - WhatsApp messages (ML & AI), 2020</p>
 <br/>
 =================================================<br/>
+<br/>
+<b><font color="red">nbdev</font></b> - a toolset to do all your python<br/>
+development in Jupyter notebooks.<br/>
+Here is a lecture where Jeremy Howard<br/>
+explains why he is using notebooks,<br/>
+and how to use them effectively.<br/>
+This one lecture gives you tons of value,<br/>
+advice and good practicies. <br/>
+Jeremy is amazing:<br/>
+&nbsp;- <a href="https://www.youtube.com/watch?v=9Q6sLbz37gk" 
+ target="_blank">https://www.youtube.com/watch?v=9Q6sLbz37gk</a><br/>
+<br/>
+=================================================<br/>
 2020-10-26<br/>
 Universal translators from different companies:<br/>
  - Facebook M2M-100 - translating 100 languages, open source<br/>
