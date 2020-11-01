@@ -4,6 +4,7 @@
 <br/>
 =================================================<br/>
 2020-11-01<br/>
+<br/>
 Wow! <br/>
 New work from Caltech & Purdue. <br/>
 Fourier neural operator (combining <br/>
@@ -36,6 +37,7 @@ deep-learning methods."<br/>
 <br/>
 =================================================<br/>
 2020-10-30<br/>
+<br/>
 <b><font color="red">nbdev</font></b> - a toolset to do all your python<br/>
 development in Jupyter notebooks.<br/>
 Here is a lecture where Jeremy Howard<br/>
@@ -49,6 +51,7 @@ Jeremy is amazing:<br/>
 <br/>
 =================================================<br/>
 2020-10-26<br/>
+<br/>
 Universal translators from different companies:<br/>
  - Facebook M2M-100 - translating 100 languages, open source<br/>
  - Microsoft T-ULRv2 - translating 94 languages, top results<br/>
@@ -59,6 +62,7 @@ Universal translators from different companies:<br/>
 <br/>
 =================================================<br/>
 2020-10-24<br/>
+<br/>
 RISC-V is the future of computing - Chris Lattner and Lex Friedman<br/>
 <br/>
 &nbsp;- <a href="https://youtu.be/lXdx0X2WHfY" 
@@ -66,6 +70,7 @@ RISC-V is the future of computing - Chris Lattner and Lex Friedman<br/>
 <br/>
 =================================================<br/>
 2020-10-22<br/>
+<br/>
 Generate books online and PDF (ready for publishing): <br/>
 <br/>
 using fastdoc project:<br/>
@@ -82,6 +87,7 @@ using Jupyter Book project:<br/>
 <br/>
 =================================================<br/>
 2020-10-21<br/>
+<br/>
 In 2005, neuroscientists at CalTech and UCLA discovered <br/>
 a single neuron in a patient’s brain that appeared to <br/>
 respond only to the actress Halle Berry: photos, <br/>
@@ -97,6 +103,7 @@ This suggests we store memories as abstract concepts ..."<br/>
 <br/>
 =================================================<br/>
 2020-10-20<br/>
+<br/>
 Jeremy Howard & fast.ai<br/>
 <br/>
 &nbsp;- <a href="https://www.fast.ai/" 
@@ -117,16 +124,18 @@ Interview:<br/>
 <br/>
 =================================================<br/>
 2020-10-16<br/>
+<br/>
 AutoML - drop-in replacement for a scikit-learn estimator:<br/>
 &nbsp;- <a href="https://github.com/automl/auto-sklearn" 
  target="_blank">https://github.com/automl/auto-sklearn</a><br/>
 <br/>
 =================================================<br/>
 2020-10-15<br/>
+<br/>
 Evolution 2.0 - Origin of Life, <br/>
 Where did the information come from? <br/>
 Genetic code vs Artificial Intelligence.<br/>
-A new $10M prize for a definitive answer.<br/>
+A new \$10M prize for a definitive answer.<br/>
 <br/>
 &nbsp;- <a href="https://evo2.org/" 
  target="_blank">https://evo2.org/</a><br/>
@@ -137,6 +146,7 @@ A new $10M prize for a definitive answer.<br/>
 <br/>
 =================================================<br/>
 2020-10-07<br/>
+<br/>
 DeepPavlov is an open source framework for chatbots <br/>
 and virtual assistants development.<br/>
 &nbsp;- <a href="https://deeppavlov.ai/" 
@@ -144,6 +154,7 @@ and virtual assistants development.<br/>
 <br/>
 =================================================<br/>
 2020-10-04<br/>
+<br/>
 LSTM is dead. Long Live Transformers!<br/>
 Great short lecture by Leo Dirac<br/>
 &nbsp;- <a href="https://www.youtube.com/watch?v=S27pHKBEp30" 
@@ -151,6 +162,7 @@ Great short lecture by Leo Dirac<br/>
 <br/>
 =================================================<br/>
 2020-08-30<br/>
+<br/>
 Neuralink: Elon Musk's brain chip summary in 14 min<br/>
 https://youtu.be/CLUWDLKAF1M<br/>
 &nbsp;- <a href="https://youtu.be/CLUWDLKAF1M" 
@@ -158,6 +170,7 @@ https://youtu.be/CLUWDLKAF1M<br/>
 <br/>
 =================================================<br/>
 2020-08-27<br/>
+<br/>
 TecoGAN - Super Resolution<br/>
 TecoGAN (Temporally Coherent GANs) for improving resolution of video and images<br/>
 TecoGAN can upscale the video quality from 720p to 4K !<br/>
@@ -166,6 +179,7 @@ TecoGAN can upscale the video quality from 720p to 4K !<br/>
 <br/>
 =================================================<br/>
 2020-08-01 <br/>
+<br/>
 GPT-3 vs Human Brain<br/>
 GPT-3 has 175 Billion parameters/synapses.<br/>
 Human brain has 100trillion synapses.<br/>
