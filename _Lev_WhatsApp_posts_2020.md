@@ -3,6 +3,38 @@
 <p>Lev Selector - WhatsApp messages (ML & AI), 2020</p>
 <br/>
 =================================================<br/>
+2020-11-01<br/>
+Wow! <br/>
+New work from Caltech & Purdue. <br/>
+Fourier neural operator (combining <br/>
+the power of Deep Neural Network <br/>
+and Fourier transform) consistently <br/>
+outperforms all existing deep learning <br/>
+methods for parametric PDEs <br/>
+(Partial Differential Equations).<br/>
+<br/>
+&nbsp;- <a href="https://twitter.com/techreview/status/1322595041899171841" 
+ target="_blank">https://twitter.com/techreview/status/1322595041899171841</a><br/>
+<br/>
+&nbsp;- <a href="https://www.technologyreview.com/2020/10/30/1011435/ai-fourier-neural-network-cracks-navier-stokes-and-partial-differential-equations/" 
+ target="_blank">https://www.technologyreview.com/2020/10/30/1011435/ai-fourier-neural-network-cracks-navier-stokes-and-partial-differential-equations/</a><br/>
+<br/>
+&nbsp;- <a href="https://arxiv.org/pdf/2010.08895.pdf" 
+ target="_blank">https://arxiv.org/pdf/2010.08895.pdf</a><br/>
+<br/>
+"Why does this matter? <br/>
+Because it’s far easier to approximate <br/>
+a Fourier function in Fourier space <br/>
+than to wrangle with PDEs in Euclidean space, <br/>
+which greatly simplifies the neural network’s job. <br/>
+Cue major accuracy and efficiency gains: <br/>
+in addition to its huge speed advantage <br/>
+over traditional methods, their technique <br/>
+achieves a 30% lower error rate when <br/>
+solving Navier-Stokes than previous <br/>
+deep-learning methods."<br/>
+<br/>
+=================================================<br/>
 <br/>
 <b><font color="red">nbdev</font></b> - a toolset to do all your python<br/>
 development in Jupyter notebooks.<br/>
