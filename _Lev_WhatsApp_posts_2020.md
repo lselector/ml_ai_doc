@@ -35,7 +35,7 @@ solving Navier-Stokes than previous <br/>
 deep-learning methods."<br/>
 <br/>
 =================================================<br/>
-<br/>
+2020-10-30<br/>
 <b><font color="red">nbdev</font></b> - a toolset to do all your python<br/>
 development in Jupyter notebooks.<br/>
 Here is a lecture where Jeremy Howard<br/>
