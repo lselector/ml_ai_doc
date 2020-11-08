@@ -8,8 +8,8 @@ Dictionary of Common Machine Learning & AI terms.
 """ ultimately, AI will benefit us in the same way 
     that previous technologies have. 
     My view is not that AI is going to displace us, 
-    (but) ...  Its going to enhance us. 
-    It does already. """
+    (but) ...  It's going to enhance us. 
+    It does already. """
             -- Ray Kurzweil, 
                famous futurist
                Chief Engineer for Google
@@ -549,14 +549,31 @@ Gated RNNs helped to fight the vanishing gradient problem.
   Translate and other text-processing algorithms.
 
 =================
+from RNNs to Transformers to BERT to GPT:
+- RNNs - vanishing gradient problem
+- Gated RNN (LSTM) + Attention
+- Transformer (Google, 2017):
+     - Deep Neural Network for language models
+     - not an RNN, allows parallel processing
+     - replaces RNNs like LSTM
+     - multi-head Attention.
+     - encoder: self-attention + Feed-Forward Network
+     - decoder: self-attention, attention over encodings, and a feed-forward Network
+
 - BERT = "Bidirectional Encoder Representations 
           from Transformers" - a language representation
           model. (Google, 2018)
   BERT is designed to pre-train deep bidirectional 
   representations from unlabeled text
 
-  Hugging Face - open source NLP models:
+- GPT (Generative Pre-trained Transformer) 
+    - NLP models from OpenAI, 2018
+    - 2019 - GPT-2, 1.5 Billion parameters
+    - 2020 - GPT-3, 175 Billion parameters
+
+- Hugging Face - open source NLP models:
     https://huggingface.co/transformers/
+
 =================
  - GAN = Generative Adversarial Network (Ian Goodfellow, 2014)
    - using two NNs:
