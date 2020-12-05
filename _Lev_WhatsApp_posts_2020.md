@@ -3,6 +3,55 @@
 <p>Lev Selector - WhatsApp messages (ML & AI), 2020</p>
 <br/>
 =================================================<br/>
+2020-12-04<br/>
+Lex Fridman - very good explanation of AlphaFold 2<br/>
+<br/>
+&nbsp;- <a href="https://www.youtube.com/watch?v=W7wJDJ56c88" 
+ target="_blank">https://www.youtube.com/watch?v=W7wJDJ56c88</a><br/>
+<br/>
+=================================================<br/>
+2020-11-27<br/>
+Linsu Tech Tips - I can safely retire now (deep fake).<br/>
+<br/>
+&nbsp;- <a href="https://youtu.be/G0z50Am4Uw4" 
+ target="_blank">https://youtu.be/G0z50Am4Uw4</a><br/>
+<br/>
+=================================================<br/>
+2020-11-25<br/>
+<br/>
+Here are top libraries by stars, number of contributors, <br/>
+and type.<br/>
+<br/>
+===============<br/>
+Top Python Libraries for Data Science, Data Visualization<br/>
+& Machine Learning<br/>
+<br/>
+&nbsp;- <a href="https://www.kdnuggets.com/2020/11/top-python-libraries-data-science-data-visualization-machine-learning.html" 
+ target="_blank">https://www.kdnuggets.com/2020/11/top-python-libraries-data-science-data-visualization-machine-learning.html</a><br/>
+<br/>
+===============<br/>
+Top Libraries for deep learning, natural language processing,<br/>
+and computer vision:<br/>
+<br/>
+&nbsp;- <a href="https://www.kdnuggets.com/2020/11/top-python-libraries-deep-learning-natural-language-processing-computer-vision.html" 
+ target="_blank">https://www.kdnuggets.com/2020/11/top-python-libraries-deep-learning-natural-language-processing-computer-vision.html</a><br/>
+<br/>
+=================================================<br/>
+2020-11-17<br/>
+<br/>
+Attending NeurIPS conference used to be very expensive.<br/>
+You needed to take a week off, travel, pay for hotel<br/>
+and conference. And seating was limited.<br/>
+But this year it is all virtual - and very affordable.<br/>
+Check it out:<br/>
+<br/>
+December 6 - 12 (Sunday through Saturday), 2020<br/>
+Only \$100 for everything! <br/>
+<br/>
+&nbsp;- <a href="https://nips.cc/" 
+ target="_blank">https://nips.cc/</a><br/>
+<br/>
+=================================================<br/>
 2020-11-01<br/>
 <br/>
 Wow! <br/>
