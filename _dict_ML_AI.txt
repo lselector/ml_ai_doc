@@ -740,7 +740,7 @@ Unfortunately on new data the error will be still big.
    - Batch normalization/standardization - standardizing 
      the outputs of each layer before using them for
      the next layer. Causes faster and better training,
-     has some regularization eect. 
+     has some regularization effect. 
 
 =================
  - Sparse coding - representation of items by the strong 
