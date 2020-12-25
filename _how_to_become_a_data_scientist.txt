@@ -20,7 +20,7 @@ quality, etc.
 There are probably ~ 100-200 terms commonly used in DS & ML. 
 Here are most of them in one text file (a dictionary).
 You can learn them by looking them up on YouTube, Wikipedia, etc.:
-  - https://github.com/lselector/ml_ai_doc/blob/master/__dict_ML_AI.txt
+  - https://github.com/lselector/ml_ai_doc/blob/master/_dict_ML_AI.txt
 
 So, google the terms, memorize them.
 I someone asks you what is :
@@ -36,7 +36,7 @@ you should know the answer right away.
 
 
 And here are some math terms (no need to learn them):
-  - https://github.com/lselector/ml_ai_doc/blob/master/__dict_Math.txt
+  - https://github.com/lselector/ml_ai_doc/blob/master/_dict_Math.txt
 
 So if you look up 5-10 terms/day - then you can learn all DS
 terminology in ~ 1 month.
@@ -183,12 +183,7 @@ Chris Olah:
 
 =================================================
 11.
-Download my old lectures from: 
-    http://myhash.com/lectures/
-
-and listen to the first 3 (at least)
-
-I have also posted them on youtube - here are the first 4:
+Listen to my old lectures on youtube - here are the first 4:
 
    - https://www.youtube.com/watch?v=1iGVdjw34iI
    - https://www.youtube.com/watch?v=oD0qtk09Lw4
@@ -210,7 +205,7 @@ the models and evaluating the quality of the models
     etc.
 
 They are part of my dictionary:
-  - https://github.com/lselector/ml_ai_doc/blob/master/__dict_ML_AI.txt
+  - https://github.com/lselector/ml_ai_doc/blob/master/_dict_ML_AI.txt
 
 =================================================
 13.
