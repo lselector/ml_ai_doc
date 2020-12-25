@@ -111,9 +111,17 @@ Look on youtube for online tutorials for:
     python, pandas, numpy, scikit-learn
 
 for example:
+
+Python Programming - tutorial by Derek Banas:
  - https://www.youtube.com/watch?v=N4mEzFDjqtA
+
+Python Pandas Data Science Tutorial by Keith Galli:
  - https://www.youtube.com/watch?v=vmEHCJofslg
+
+Python NumPy Tutorial by Edureka:
  - https://www.youtube.com/watch?v=8JfDAm9y_7s
+
+Scikit-Learn Tutorial by Simplilearn:
  - https://www.youtube.com/watch?v=0Lt9w-BxKFQ
 
 Note - I just spent 5 min to find those links.
