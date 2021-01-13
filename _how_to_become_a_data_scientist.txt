@@ -133,6 +133,10 @@ You need to know some statistics.
 Normal distribution & CLT (Central Limit Theorem), etc.
 There are many tutorials online (youtube).
 
+For example, from Justin Zeltzer (channel "zedstatistics"):
+  - https://www.youtube.com/watch?v=kyjlxsLW1Is 
+  - http://www.zstatistics.com/justinsfavourites
+
 You also need to be familiar with Excel
   (vlookup, pivot table, etc.)
   - https://www.youtube.com/watch?v=-WAEzokHSJM
