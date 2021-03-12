@@ -2,5 +2,6 @@
 **/junk*.*
 **/.DS_Store
 **/__pycache__/
+**/OLD/
 **/*.py[cod]
 **/Thumbs.db
