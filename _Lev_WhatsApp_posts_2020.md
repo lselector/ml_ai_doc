@@ -3,6 +3,31 @@
 <p>Lev Selector - WhatsApp messages (ML & AI), 2020</p>
 <br/>
 =================================================<br/>
+2020-12-16<br/>
+FeatureTools - open source python framework <br/>
+for automated feature engineering. <br/>
+<br/>
+&nbsp;- <a href="https://www.youtube.com/watch?v=Q5U9rEKHIsk" 
+ target="_blank">https://www.youtube.com/watch?v=Q5U9rEKHIsk</a><br/>
+
+&nbsp;- <a href="https://www.featuretools.com/" 
+ target="_blank">https://www.featuretools.com/</a><br/>
+
+&nbsp;- <a href="https://github.com/alteryx/featuretools" 
+ target="_blank">https://github.com/alteryx/featuretools</a><br/>
+
+&nbsp;- <a href="https://innovation.alteryx.com/open-sourcing-featuretools/" 
+ target="_blank">https://innovation.alteryx.com/open-sourcing-featuretools/</a> (2017) <br/> 
+<br/>
+=================================================<br/>
+2020-12-15<br/>
+Open-source streaming visualizations for AI applications<br/>
+Look at graphs and numbers changing in real time<br/>
+on this page<br/>
+&nbsp;- <a href="https://www.h2o.ai/products/h2o-wave/" 
+ target="_blank">https://www.h2o.ai/products/h2o-wave/</a><br/>
+<br/>
+=================================================<br/>
 2020-12-04<br/>
 Lex Fridman - very good explanation of AlphaFold 2<br/>
 <br/>
@@ -520,7 +545,6 @@ just absorb the big picture. <br/>
 &nbsp;- <a href="https://www.youtube.com/watch?v=k-Cv8Q3zWNQ" 
  target="_blank">https://www.youtube.com/watch?v=k-Cv8Q3zWNQ</a><br/>
 <br/>
-
 =================================================<br/>
 2020-02-14<br/>
 <br/>
