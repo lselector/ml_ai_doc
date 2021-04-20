@@ -37,6 +37,8 @@ for dir_path in mydirs:
     for myfile in sorted(myfiles):
         if "~$" in myfile:
             continue
+        if "OLD/" in myfile:
+            continue
         counter += 1
         if counter > 3:
             pass # break
