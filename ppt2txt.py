@@ -12,7 +12,6 @@ from pptx import Presentation
 
 
 if len(sys.argv) <= 1:
-    print("looking for pptx files in script directory")
     mypath = os.path.dirname(os.path.realpath(__file__))
     print("looking for pptx files in script directory: ", mypath)
     mydirs = [mypath]
