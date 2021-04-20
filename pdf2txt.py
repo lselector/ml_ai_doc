@@ -1,15 +1,32 @@
 
 """
 # pdf2txt.py
-# script recursively extractis text from all PDF files
+# script recursively extracts text from all PDF files
 # and saves to a text file 
 # It looks either in current directory
 # or in directories provided on command line (space-separaed)
+# 
+# This script uses binary "pdftotext"
+# You can install it on Mac using brew:
+#     brew install poppler
+# This adds this executable:
+#     /usr/local/bin/pdftotext@ -> ../Cellar/poppler/21.03.0_1/bin/pdftotext
+# So now you can use it from cmd prompt:
+#     pdftotext --help
+#
+# To use from Python, install wrapper:
+#     pip install xpdf_python
+#
+# Then:
+#     import xpdf_python
+#     txt_arr = xpdf_python.to_text("myfile.pdf")
+#     for txt in txt_arr:
+#         print(txt)
+#
 """ 
 
-# pip install PyPDF2
 import os, sys, glob
-import PyPDF2 
+import xpdf_python
 
 if len(sys.argv) <= 1:
     mypath = os.path.dirname(os.path.realpath(__file__))
@@ -46,21 +63,14 @@ for dir_path in mydirs:
         myfile_short = myfile.split(dir_path)[1][1:]
         # print(myfile_short,"\n")
         # print("----------------------")
-
-        pdfFileObj = open(myfile, 'rb') 
-        pdfReader = PyPDF2.PdfFileReader(pdfFileObj) 
-        N_pages = pdfReader.numPages
-        for p_num in range(N_pages):
-            pageObj = pdfReader.getPage(p_num) 
-            txt = pageObj.extractText()
-            txt_arr = txt.strip().split("\n")
-            txt_arr = [x.strip() for x in txt_arr]
-            txt_arr = [x.replace("\r"," ") for x in txt_arr]
-            txt_arr = [myfile_short+" : " + x + "\n" for x in txt_arr]
-            txt = "".join(txt_arr)
-            ss += txt
-            print(txt)
-        pdfFileObj.close() 
+        txt = xpdf_python.to_text(myfile)[0]
+        txt_arr = txt.strip().split("\n")
+        txt_arr = [x.strip() for x in txt_arr]
+        txt_arr = [x.replace("\r"," ") for x in txt_arr]
+        txt_arr = [myfile_short+" : " + x + "\n" for x in txt_arr]
+        txt = "".join(txt_arr)
+        ss += txt
+        print(txt)
 
     print("----------------------")
     print("writing to file ", fname_out)
