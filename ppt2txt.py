@@ -29,7 +29,7 @@ else:
 for dir_path in mydirs:
     print(dir_path)
     basedir = dir_path.split("/")[-1]
-    fname_out = dir_path + "/" + basedir+".txt"
+    fname_out = dir_path + "/" + basedir+"_ppt.txt"
 
     ss=""
     counter = 0
