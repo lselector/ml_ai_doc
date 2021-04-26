@@ -3,6 +3,7 @@
 **/.DS_Store
 **/__pycache__/
 **/OLD/
+**/SKIP/
 **/*.py[cod]
 **/Thumbs.db
 ml_ai_doc_pdf.txt
