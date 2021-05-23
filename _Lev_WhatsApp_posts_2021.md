@@ -87,6 +87,64 @@ Digital Humans substituting Sales People, Customer Service, Teachers, etc.<br/>
  target="_blank">https://digitalhumans.com/</a><br/>
 <br/>
 =================================================<br/>
+2021-05-06<br/>
+<br/>
+François Chollet (creator of Keras):
+<br/>
+Within 10-20 years, nearly every branch of science <br/>
+will be, for all intents and purposes, a branch <br/>
+of computer science.<br/>
+<br/>
+Computational physics, comp chemistry, comp biology, comp medicine... <br/>
+Even comp archeology. <br/>
+Realistic simulations, big data analysis, and ML everywhere.<br/>
+<br/>
+This tweet is infuriating many, apparently. <br/>
+Imagine the controversy if, in 2000, someone predicted <br/>
+that by 2020 most companies would be tech companies! <br/>
+Still true though.<br/>
+<br/>
+&nbsp;- <a href="https://twitter.com/fchollet/status/1389337090278658052" 
+ target="_blank">https://twitter.com/fchollet/status/1389337090278658052</a><br/>
+<br/>
+=================================================<br/>
+2021-05-10<br/>
+<br/>
+Transformers are the de facto choice of pre-trained language models. <br/>
+But this paper from Google shows that pre-trained CNNs can work well too! <br/>
+<br/>
+&nbsp;- <a href="https://arxiv.org/abs/2105.03322" 
+ target="_blank">https://arxiv.org/abs/2105.03322</a><br/>
+<br/>
+=================================================<br/>
+2021-05-11<br/>
+<br/>
+Interesting short video (for image processing) <br/>
+<br/>
+&nbsp;- <a href="https://www.youtube.com/watch?v=P192X3J6cg4" 
+ target="_blank">https://www.youtube.com/watch?v=P192X3J6cg4</a><br/>
+<br/>
+=================================================<br/>
+2021-05-15<br/>
+<br/>
+Very interesting - from standard Linear Algebra and <br/>
+calculating Eigen Vectors and Eigen Values using heavy <br/>
+matrix operations we are moving to "EigenGame" - a massively <br/>
+parallelized RL (Reinforcement Learning) game approach. <br/>
+This is a huge paradigm shift.<br/>
+<br/>
+&nbsp;- <a href="https://pub.towardsai.net/deepmind-wants-to-reimagine-one-of-the-most-important-algorithms-in-machine-learning-381884d42de" 
+ target="_blank">https://pub.towardsai.net/deepmind-wants-to-reimagine-one-of-the-most-important-algorithms-in-machine-learning-381884d42de</a><br/>
+<br/>
+=================================================<br/>
+2021-05-22<br/>
+<br/>
+Faces - Toonifications<br/>
+<br/>
+&nbsp;- <a href="https://youtu.be/9RzCZZBjlxM" 
+ target="_blank">https://youtu.be/9RzCZZBjlxM</a><br/>
+<br/>
+=================================================<br/>
 2021-MM-DD<br/>
 text<br/>
 <br/>
