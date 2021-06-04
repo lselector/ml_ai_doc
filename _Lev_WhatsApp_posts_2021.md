@@ -144,6 +144,31 @@ Faces - Toonifications<br/>
 &nbsp;- <a href="https://youtu.be/9RzCZZBjlxM" 
  target="_blank">https://youtu.be/9RzCZZBjlxM</a><br/>
 <br/>
+
+=================================================<br/>
+2021-06-03<br/>
+Determined AI - Open-Source framework for <br/>
+distributed training of Deep Learning models.<br/>
+<br/>
+Whether you use PyTorch or TensorFlow+Keras,<br/>
+you can speed up 20-100 times without<br/>
+changing your code.<br/>
+<br>
+ &nbsp;- <a href="https://www.determined.ai/" 
+  target="_blank">https://www.determined.ai/</a><br/>
+ &nbsp;- <a href="https://www.determined.ai/product" 
+  target="_blank">https://www.determined.ai/product</a><br/>
+ &nbsp;- <a href="https://github.com/determined-ai/determined" 
+  target="_blank">https://github.com/determined-ai/determined</a><br/> 
+ &nbsp;- <a href="https://www.determined.ai/blog/production-training-pipelines-with-determined-and-kubeflow" 
+  target="_blank">https://www.determined.ai/blog/production-training-pipelines-with-determined-and-kubeflow</a><br/>
+<br/>
+The whole production system may be built using <br/>
+three open-source technologies:<br/>
+ - Kubeflow Pipelines - for ML pipelines<br/>
+ - Determined AI - for production-scale model training<br/>
+ - Seldon Core - for model deployment and serving<br/>
+<br/>
 =================================================<br/>
 2021-MM-DD<br/>
 text<br/>
