@@ -170,6 +170,21 @@ three open-source technologies:<br/>
  - Seldon Core - for model deployment and serving<br/>
 <br/>
 =================================================<br/>
+2021-06-07<br/>
+<br/>
+What is the difference between<br/>
+Inferential and Predictive analysis / modeling ?<br/>
+<br/>
+Inference modeling<br/>
+   Cause and effect.<br/>
+   Make conclusions about past or future<br/>
+   based on evidence, like a detective.<br/>
+<br/>
+Predictive modeling<br/>
+   Predict future based on historical patterns<br/>
+   usually without understanding of mechanisms<br/>
+<br/>
+=================================================<br/>
 2021-MM-DD<br/>
 text<br/>
 <br/>
