@@ -1,0 +1,242 @@
+
+Below are general recommendations about 
+becoming a Data Scientist (DS) or Machine Learning (ML) Engineer.
+
+=================================================
+1.
+Data Science (DS) uses some math - but you don't need to learn it.
+
+Think about it this way.
+
+To drive a car you need to pass some driving lessons.
+You don't need to know how to build a car.
+You just need to know how to drive it.
+
+In ML you need to know some standard ML models, how to use
+them, how to select the best one, how to evaluate its
+quality, etc.
+
+=================================================
+2.
+There are probably ~ 100-200 terms commonly used in DS & ML. 
+Here are most of them in one text file (a dictionary).
+You can learn them by looking them up on YouTube, Wikipedia, etc.:
+  - https://github.com/lselector/ml_ai_doc/blob/master/_dict_ML_AI.txt
+
+So, google the terms, memorize them.
+I someone asks you what is :
+    Logistic Regression
+    Naive Bayes,
+    Random Forest
+    XGBoost
+    TF-IDF
+    KNN
+    SVM
+    etc.
+you should know the answer right away.
+
+
+And here are some math terms (no need to learn them):
+  - https://github.com/lselector/ml_ai_doc/blob/master/_dict_Math.txt
+
+So if you look up 5-10 terms/day - then you can learn all DS
+terminology in ~ 1 month.
+
+Remember the rule: to retain information you have to
+repeat terms for 2 weeks. So each day you learn new terms
+and repeat terms studied over the previous 2 weeks.
+
+=================================================
+3.
+You need to learn constantly. 
+Taking one-time course doesn't solvew the problem.
+
+Data Science changes very fast.
+The methods we are using today didn't exist 4-5 years ago.
+
+You need to learn constantly.
+You need to set-up routines / habits which will 
+inform/educate you automatically.
+For example, you can subscribe to newsletters and podcasts,
+follow certain people on social media, etc.
+
+There are many online resources.
+The main resource is youtube.
+Think about youtube as a university.
+As a professor which can teach you.
+As a teacher assistant which can asnwer your questions.
+
+So - get yourself a Youtube Prime subscription 
+($12..$18/mo) to be able to download training videos
+on your phone and watch them without annoying ads.
+
+=================================================
+4.
+Almost all data science happens on Unix (Linux or Mac).
+
+New Mac - 16" MacBook Pro with 64GB RAM and 1TB SSD.
+
+Used Mac - 15" mid-2015 MacBook Pro
+           Specific model (!!) MJLT2LL/A
+           Current eBay prices are ~ $900.
+           2.5 GHz Intel Core i7 Processor, 
+           16GB RAM
+           512GB SSD (fast PCIe 2.0 x4 interface)
+           Dual graphics:
+               Radeon R9 M370X
+               built-inIntel Iris Pro 5200
+
+Alternatively if you don't like Mac, there are
+many other options, for example:
+
+Lambda Labs TensorBook (with Linux):
+  https://lambdalabs.com/deep-learning/laptops/tensorbook/max/customize
+
+Dell Precision 5540 (with Ubuntu Linux):
+  https://www.dell.com/en-us/work/shop/cty/pdp/spd/precision-15-5540-laptop
+  https://wesmckinney.com/blog/linux-laptop-experience/
+
+=================================================
+5.
+Python has become THE language of Data Science.
+Everybody uses Anaconda python distribution.
+
+The main dev. environment is JupyterLab:
+  https://jupyterlab.readthedocs.io/en/stable/
+
+Also you need a simple text editor, for example:
+  https://www.sublimetext.com/
+
+Look on youtube for online tutorials for:
+
+    python, pandas, numpy, scikit-learn
+
+for example:
+
+Python Programming - tutorial by Derek Banas:
+ - https://www.youtube.com/watch?v=N4mEzFDjqtA
+
+Python Pandas Data Science Tutorial by Keith Galli:
+ - https://www.youtube.com/watch?v=vmEHCJofslg
+
+Python NumPy Tutorial by Edureka:
+ - https://www.youtube.com/watch?v=8JfDAm9y_7s
+
+Scikit-Learn Tutorial by Simplilearn:
+ - https://www.youtube.com/watch?v=0Lt9w-BxKFQ
+
+Note - I just spent 5 min to find those links.
+You may find better tutorials (may be) if you search yourself.
+
+=================================================
+6.
+You need to know some statistics.
+Normal distribution & CLT (Central Limit Theorem), etc.
+There are many tutorials online (youtube).
+
+For example, from Justin Zeltzer (channel "zedstatistics"):
+  - https://www.youtube.com/watch?v=kyjlxsLW1Is 
+  - http://www.zstatistics.com/justinsfavourites
+
+You also need to be familiar with Excel
+  (vlookup, pivot table, etc.)
+  - https://www.youtube.com/watch?v=-WAEzokHSJM
+  - https://www.youtube.com/watch?v=qu-AK0Hv0b4
+
+Also SQL (Structured Query Language):
+  - http://www.sqlcourse.com/
+  - https://www.youtube.com/watch?v=9Pzj7Aj25lw
+
+=================================================
+7.
+Data Science has become a huge field.
+Nobody can know everything.
+But it is important to know the main people,
+main milestones, main concepts.
+Start following some famous people on youtube, 
+facebook, twitter:
+
+    Yann LeCun
+    Geoffrey Hinton
+    Ian Goodfellow
+    Yoshua Bengio
+    Jürgen Schmidhuber
+    Andrew Ng
+    etc.
+
+Listen to these lectures:
+
+  Andrew Ng at Amazon re:MARS 2019
+    - https://www.youtube.com/watch?v=j2nGxw8sKYU
+
+  C3.ai - Thomas Siebel on Digital Transformation
+    - https://www.youtube.com/watch?v=4Ie4gat6idQ
+
+=================================================
+8. 
+There is a great podcast which I recommend to 
+listen to regularly:
+   Sam Charrington – “This Week in Machine Learning & AI”
+
+=================================================
+9. 
+Siraj Raval on youtube
+It is a great learning source.
+
+I know that he used other people materials
+without giving credit (plagiarized).
+He has apologized - and hopefully will never do it again. 
+His videos are very good.
+
+=================================================
+10.
+Chris Olah:
+  - http://colah.github.io/ 
+  - http://distill.pub
+
+=================================================
+11.
+Listen to my old lectures on youtube - here are the first 4:
+
+   - https://www.youtube.com/watch?v=1iGVdjw34iI
+   - https://www.youtube.com/watch?v=oD0qtk09Lw4
+   - https://www.youtube.com/watch?v=aPdrXQZy3ok
+   - https://www.youtube.com/watch?v=MJhGmWlHbRw
+
+=================================================
+12.
+You should also know terms related to training 
+the models and evaluating the quality of the models
+
+    error / loss function
+    regularization
+    cross-validation, folds
+    Precision and Recall
+    Accuracy
+    ROC curve
+    confusion matrix
+    etc.
+
+They are part of my dictionary:
+  - https://github.com/lselector/ml_ai_doc/blob/master/_dict_ML_AI.txt
+
+=================================================
+13.
+For Deep Leaning (CNNs, RNNs, etc.) I recommend
+to take this coursera course: 
+
+    deeplearning.ai
+
+But this only is after you have learned the basic 
+Machine Learning.
+
+=================================================
+14.
+Look at AutoML:
+
+    https://www.h2o.ai/
+    https://www.datarobot.com/
+    https://www.microsoft.com/en-us/research/project/automl/
+
+=================================================
+

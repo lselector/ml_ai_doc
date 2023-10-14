@@ -1,0 +1,245 @@
+=================
+Math - calculus:
+
+    e = 2.71828... lim( (1+1/N)^N ) for large N
+
+    ln, log
+
+    derivative - slope of a curve
+
+    integral - area under the curve
+
+    Dirac Delta Function
+
+    multivariate calculus
+
+    partial derivatives (derivative along one dimension)
+
+    gradient
+
+    gradient descent
+
+=================
+Math - linear algebra:
+
+    vector - array of scalars (individual numbers)
+
+    matrix - 2-dimensional table of vectors
+
+    tensor - multi-dimensional matrix
+
+    dot-product of vectors and matrices
+
+    vector spaces, base vectors
+
+    matrices of space transformations
+
+    determinant of a matrix (number showing tranformation of volume)
+
+    rank of a matrix - number of independent dimensions
+
+    eigen vectors, eigen values - solutions of
+          Ax = lambda * x 
+          (x=vector, lambda=value). 
+      Idea - turn matrix to diagonal form, which 
+      simplifies matrix multiplication. 
+      Also in many cases you can simplify calculations
+      by concentrating only on dimensions corresponding
+      to largest eigen values (this is the 
+      foundation of PCA = Principle Component Analysis.
+
+    inverse matrix - the 'reciprocal' of a matrix
+
+=================
+Probability & Statistics:
+ 
+    probability - the chance of something happening
+
+    combinatorics, subsets
+    the number of ways to choose m objects from n 
+    without replacement:
+        C(n,m) = n!/(m!*(n-m)!)
+
+     Venn Diagrams - graphical illustration of 
+     two (or more) event types hapenning.
+     They presented as circles (possibly intersecting).
+
+     Conditional Probability - the chance of something
+     happening given that something else has happened:
+         P(A|B)
+     Bayes's Theorem: 
+         P(B|A) = P(A|B)*P(B)/P(A).
+
+     random variable - a quantity which can randomly 
+       take different values with probability which
+       may depend on the value.
+
+     random variable may have descrete values (dice),
+       or continuous values in some range.
+
+     probability distribution - describes how 
+       the probability of value depends on value.
+       For example, uniform distribution, 
+       normal gaussian distribution, etc.
+
+     expected (average, mean) value - the sum (or integral)
+       of the products of the values multiplied 
+       by the probability of this value. 
+
+     variance - the 'spread' of a probability 
+       distribution calculated as sum of squares
+       of differences between values and expected value
+
+     standard deviation - square root of variance
+
+     PDF(x) = Probability Density Function - the 
+       chance of "x" occuring in given range
+
+     CPF(x) = Cumulative Probability Function - an
+       integral of PDF - the chance that value
+       is lower than "x"
+
+     Binomial distribution - tossing a coin.
+       P(x) is the probability of x successes 
+       out of N trials 
+       
+     Poisson distribution - arises as a limit
+       of binomial distribution when we trying
+       to solve a problem of how many events 
+       would occure during given time
+           P(x; l) = exp(-l) * l^x / x! 
+       where l = lambda = expected number of
+       events per unit of time. 
+       For Poisson distribution mean = variance = l
+
+     Exponential Distributions - distribution of
+       time gaps between events for a Poisson process 
+
+     Uniform Distribution - a probability density
+       function in which every value is equally likely
+
+     Central Limit Theorem (CLT)  - foundational theorem
+       in statistic leading to Normal (Gaussian) Distribution.
+       Here is an illustration of how it works.
+       Suppose that we have big number N1 of observations
+       of a random variable. We randomly split all 
+       this data into N2 groups - and then in each
+       group we calculate the mean value.
+       Now we make a histogram of those N2 mean values.
+       If N1 and N2 are big enough, the histogram
+       will have familiar bell shape.
+       As N1 and N2 become larger, the shape will
+       approach the gaussian formula:
+            exp(-x^2/2)
+       In other words, regardless of the PDF of the
+       underlying random variable, the distribution of
+       mean values of subgroups will always approach
+       bell shape.
+       In nature we meet CLT all the time, because we
+       we have groups of groups of groups
+       (atoms form molecules which form bigger structures,
+       etc.)
+       In finance events are not independent, not 
+       identically distributed - so CLT does not apply,
+       and financial returns are not normally distributed.
+
+=================
+More Statistics
+
+    Sample mean (average) Xm = sum(Xi)/N
+
+    Sample Standard Deviation = sum( (Xi-Xm)^2 )/(N-1)
+      Note - divides by (N-1) to correct for the fact
+      that we have already used one dimension when
+      we have calculated the mean Xm
+
+    Median - the 50th percentile of ranked observations
+      from least to greatest.
+
+    Linear Regression - draw line through points
+      an algorithm that draws a straight line 
+      that minimizes the least-squared error 
+      between this line and data points.
+
+    OLS = Ordinary Least Squares - a specific simple
+      implementation of Lnear Regression.
+
+    R2 = Coefficient of Determination - the proportion
+      of variance explained by a model fit. We want
+      R2 to be close to 1 for good fit. 
+
+    Z-score - distance from the mean measured in 
+      standard deviations (sigma-s). For example, 
+      Z = 2 means that the value is above mean by 2 sigmas.
+      z = -1.5 means that the value is below mean by 1.5 sigma
+
+    Confidence Interval - a range around mean value 
+      that contains certain percentage of the distribution.
+
+    689599.7 rule: simple rule to remember
+      the percentage of values that lie within a band
+      around the mean in a normal distribution
+      with a width of 2,4, or 6 standard deviations.
+      For normal distribution:
+        Z-value         Range          Confidence
+           1            -1,1              68.27%
+           2            -2,2              95.45%
+           3            -3,3              99.73%
+      
+
+    not needed: Student's t-distribution
+                Chi-squared distribution
+                F-distribution
+                Gamma-distribution
+    
+    Stochastic Processes - a time series of observations.
+      They may be empirical observations or values
+      generated at random from a distribution.
+
+    Time Series Analysis - methods of uncovering 
+      patterns in time series to make predictions.
+
+    Random Walk (RW) - a simple stochastic process consisting
+      of steps (up or down) with known constant probabilities.
+    Brownian motion - extension of Random Walk
+      when number of steps becomes very large. Observation
+      effectively generated from a gaussian distribution
+    Diffusion - long term spread of observations
+
+    Poisson Process - a stochastic process with known 
+      expected number of events per unit of time (lambda).
+      The actual observed number of events will follow
+      Poisson distribution. 
+      Both mean and variance are equal to lambda. 
+      The gaps between events follow exponential distribution. 
+
+    White noise - time series generated using
+      uniform distribution.
+    Gaussian noise - time series generated using a 
+      gaussian distribution
+
+    Markov Process - a stochastic process without memory
+      Next value depends only on current value (memoryless).
+
+     Monte Carlo method - using random trials to model
+       events for measuring or predictive purposes.
+    MCMC (Markov Chain Monte Carlo) - running Monte
+       Carlo simulations using Markov Chain model
+
+    Correlation function - function calculating how 
+      two variables relate to each other. If both 
+      variables go up and down synchronously, we 
+      say that they are correlated.
+
+    Autocorrelation - how a random variable relates
+      to itself in the past.
+
+    Fourier Analysis, filtering to reduce noise
+      taking some form of average of past time series
+      values to create a smoother time series, albeit 
+      one that suffers from lag or some other property
+      related to using past data. 
+
+    Extracting Signal from Noise by synchronization
+      Signal-to-Noise ratio improves ~sqrt(N))
+

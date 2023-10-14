@@ -1,0 +1,127 @@
+=========================
+OCR and data extraction from documents.
+=========================
+
+You can use various OCR tools from Python.
+Which one to choose depends on specific requirements.
+For example, is it printed or hand-written ?
+Is it OK to using Amazon or Google APIs ?
+There are multiple libraries.
+The most common go-to library is tesseract OCR.
+
+There is always a trade off between quality, quantity, price, privacy requirements.
+
+
+Google
+  tesseract OCR (HP 1985-2005, Opensorced in 2005, then developed by Google)
+   - https://github.com/tesseract-ocr/tesseract
+   - https://tesseract-ocr.github.io/tessdoc/Command-Line-Usage
+     On Mac:
+        brew install tesseract
+        pip install pillow
+        pip install pytesseract
+        tesseract myimage.tif myimage --oem 1 -l eng   # outputs text file myimage.txt
+   - https://github.com/madmaze/pytesseract
+   - https://www.pyimagesearch.com/2017/07/10/using-tesseract-ocr-python/
+
+  gvision
+   - https://cloud.google.com/vision
+
+  Document AI
+   - https://cloud.google.com/solutions/document-ai
+
+  etc.
+
+AWS Textract
+  - https://aws.amazon.com/textract/
+
+Microsoft
+  - https://azure.microsoft.com/is-is/services/cognitive-services/form-recognizer/
+  - https://docs.microsoft.com/en-us/azure/cognitive-services/text-analytics/overview
+  - https://azure.microsoft.com/en-ca/services/cognitive-services/text-analytics/
+  
+H2O driverless AI:
+  Mark Landry NYC 2019 - H2O.ai - OCR.ai: Creating AI to Read Documents
+  - https://www.youtube.com/watch?v=LczYc2o0dNo
+  Mark Landry London 2018 - Invoice 2 Vec: Creating AI to Read Documents - 
+  - https://www.youtube.com/watch?v=18Pxvs50G-0
+
+Open Source:
+  https://www.softwareadvice.com/resources/easiest-to-use-free-and-open-source-text-analysis-software/
+    AYLIEN Text Analysis Software
+    Keatext Software
+    KNIME Analytics Platform Software
+    Refinitiv Intelligent Tagging
+
+  The Top 33 Information Extraction Open Source Projects
+  https://awesomeopensource.com/projects/information-extraction
+  
+  Automating Receipt Digitization with OCR and Deep Learning
+  https://nanonets.com/blog/receipt-ocr/
+  
+  PdfPig
+  https://uglytoad.github.io/PdfPig/
+  
+  Veryfi OCR API for Real-Time Data Extraction from Receipts & Invoices
+  https://www.veryfi.com/receipt-ocr-api/
+  
+  Concur Invoice Capture
+  https://www.concur.com/en-us/effortless-invoice-capture
+  
+  invoice2data
+  https://github.com/invoice-x/invoice2data
+  
+
+  robela OCR-Invoice
+  https://github.com/robela/OCR-Invoice/blob/master/README.md
+  
+  nanonets
+  https://nanonets.com/blog/invoice-ocr/
+
+=========================
+How to extract numeric data from text and tables
+=========================
+
+Google for: rnn+extract+numeric+from+text
+
+=========================
+Information Extraction From Text, MLMU Prague, May 18, 2016
+ - http://www.mlmu.cz/wp-content/uploads/2016/06/mlmu-Information-Extraction-from-Text.pdf
+=========================
+Text feature extraction based on deep learning: a review, 2017
+ - https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5732309/
+=========================
+Bloomberg - information extraction, David Rosenberg, 2018
+ - https://twimlai.com/twiml-talk-126-information-extraction-natural-document-formats-david-rosenberg/
+ - https://www.techatbloomberg.com/blog/data-science-qa-david-rosenberg-office-cto/
+ - https://2018gputechconf.smarteventscloud.com/connect/sessionDetail.ww?SESSION_ID=148756
+ Extract from chart images:
+ - https://www.microsoft.com/en-us/research/wp-content/uploads/2017/02/ChartSense-CHI2017.pdf
+=========================
+bloomberg - Information Extraction with Character-level Neural Networks and Free Noisy Supervision, 2017
+  - https://arxiv.org/pdf/1612.04118.pdf
+by Philipp Meerkamp, Bloomberg LP, pmeerkamp@bloomberg.net
+Zhengyi Zhou, AT&T Labs Research, zzhou@research.att.com
+=========================
+Knowledge extraction from medical literature using Recurrent Neural Networks, 2016
+Abhimanyu Banerjee, manyu@stanford.edu
+ - https://cs224d.stanford.edu/reports/Banerjee.pdf
+=========================
+Best method to extract numerical data from product descriptions, 2018
+ - https://www.reddit.com/r/MachineLearning/comments/8f98z1/d_best_method_to_extract_numerical_data_from/
+=========================
+
+
+=========================
+OCR for handwriting
+=========================
+ - https://cloud.google.com/vision/docs/handwriting
+ - https://docs.microsoft.com/en-us/azure/cognitive-services/computer-vision/concept-recognizing-text
+ - https://www.makeuseof.com/tag/convert-handwriting-text-ocr/
+
+   ABBYY - https://www.abbyy.com/en-us/
+   TeleForm (owned by OpenText) - https://www.opentext.com/products-and-solutions/products/customer-experience-management/intelligent-forms-automation/opentext-teleform
+   A2IA - https://www.a2ia.com/en
+   
+
+

@@ -1,0 +1,66 @@
+Estimating Coronavirus Death Rate using US numbers
+
+Published on April 23, 2020
+
+Below are some calculations to estimate the death
+rate for COVID-19 using US numbers from this
+page:
+
+https://www.worldometers.info/coronavirus/country/us
+
+infected ~1M
+deaths ~50K
+Death rate estimate: 50K/1M = 1/20 = 5%
+
+Of course this number is wrong.
+The actual number should be ~ 0.2%.
+
+Why the estimate is too big?
+
+First, the reported number of cases is 10-50
+times lower than the actual number of infections.
+We know this from several independent studies.
+
+This happens because there are not enough tests.
+Most cases are asymptomatic or very mild, and
+people will not be tested unless they meet
+certain criteria (i.e. have severe symptoms).
+
+Second, actual number of deaths is also wrong.
+Many people die at home without being reported
+and tested.
+
+Let's try several numbers:
+
+Infected: official (1M), 20*official (20M), 15%
+of population (50M)
+Deaths: official (50K), 2*official (100K)
+The lowest death rate: 50K/50M = 0.001 = 0.1%
+
+More realistic: 100K/50M = 0.005 = 0.2%
+
+Also realistic: 100K/20M = 0.005 = 0.5%
+
+How does it compare with regular flu? According
+to CDC, since 2010 the annual deaths from Flu
+were in range 12K - 61K annually. This gives
+mortality rate for the flu:
+
+minimum: 12K/330M => 0.004%
+
+maximum: 61K/330M => 0.02%
+
+The COVID-19 estimates are much higher (0.1%-0.5%).
+
+How many people need to die to achieve herd
+immunity? Suppose herd immunity can be achieved
+when ~70% of population is immune. Then for death
+rate 0.2%, we can estimate how many people need
+to die to achieve this:
+
+330M * 70% * 0.2% => 462K
+
+This is a lot of dying. As of today, the number
+of deaths in the US is much smaller. 
+
+So - lockdown saves lives.
