@@ -1,0 +1,288 @@
+Simplicity in Software Architecture
+
+Lev Selector, Ph.D.
+
+Published November 07, 2019
+
+
+Some Quotes:
+
+"There are two ways of constructing a software design; one way
+is to make it so simple that there are obviously no
+deficiencies, and the other way is to make it so complicated
+that there are no obvious deficiencies. The first method is far
+more difficult." - C. A. R. Hoare
+
+"Make everything as simple as possible, but not simpler. " -
+Albert Einstein (1879-1955)
+
+"Thank you, Lord, for making all necessary things simple, and
+all complicated things unnecessary" - H. S. Skovoroda (1722-
+1794)
+
+"Any intelligent fool can make things bigger, more complex, and
+more violent. It takes a touch of genius -- and a lot of courage
+-- to move in the opposite direction." - Albert Einstein (1879-
+1955)
+
+KISS principle - Keep It Simple, Stupid - I don't know the
+author
+
+"You can see that [with a simpler toolkit] the amount of
+extension programming goes up considerably. What you don't see
+is that the total implementation effort may be much lower
+because the underlying toolkit is much simpler. There the
+programmers need spend much less time reading documentation,
+fitting their new software into the old, etc. Sometimes less is
+more. " - Philip Greenspun,
+http://philip.greenspun.com/panda/community
+
+
+
+Two-weeks rule
+
+If you can't see that you can complete the project in 2 weeks -
+don't do it immediately. Think first.
+
+Because if you think it takes 2 weeks- it will take 2 months.
+
+Whereas if you think it will take 2 months - it will take a
+year.
+
+And in the middle, you or your boss will realize that it should
+be done differently - thus you will never finish it.
+
+Many projects failed because their architects failed to make
+things simple. They tried to make things right. As a result,
+they have built systems which were never quite operational and
+couldn't survive change.
+
+The great marketer Joe Sugarman has a little formula for judging
+any project he gets involved in. He calls it ELF : Easy,
+Lucrative, and Fun.
+
+
+
+"Do we really need it" or 90/10 rule
+
+Often 10% of features takes 90% of your programming time.
+
+By sacrificing them you may make your project 10 times simpler.
+
+Same principle can be applied to the features of programming
+architecture. Trying to make perfect code may make your project
+10 times more complex.
+
+For example, let's say you need a report. So you asked two
+programmers ( John Hacker and Bob Architect ) to make it.
+
+John Hacker hacked a script in one hour and emailed you the
+report. You looked at the result - and realized that your
+original requirements were not correct. So you asked to make
+another report - which John emailed you in next 10 min. After
+going back and forth 5-10 times you were completely satisfied.
+You could customize the reports providing some simple parameters
+on the command line or in a short text file. John sent you all
+the scripts along with a short README instructions text file. He
+also put the scripts on the web server and made a simple text-
+only web page so that you can access the scripts using your
+browser. The results may be sent to you via email or shown on
+the web page.
+
+Bob Architect, on the other hand, is a true believer that if you
+do things right - it will save you effort in the long run. So he
+started to draw UML diagrams to make proper Object Oriented
+design of the "report engine". He also decided to make a proper
+GUI interface. When John already went through 10 revisions, Bob
+was still busy thinking about distributing responsibilities
+between his classes and interfaces, and was very proudly telling
+you about his elegant design of "request manager", "cache
+manager" and "report manager", etc., etc.  Finally, he made the
+application work - but it took him 10 times longer. And when he
+finished - you already needed different reports. So you asked
+him to change the reports - but only found that your new
+requirements don't fit well into his object model, so he will
+have to start from scratch. Does this sound familiar?
+
+In this scenario, first programmer sacrificed some features
+(GUI, OO design) - but got the job done. Yes, the approach was
+not very pretty. But it was fast, simple, allowed to move
+forward, and next time can be changed as necessary.
+
+Here is a wonderful story illustrating the above: 
+
+http://philip.greenspun.com/humor/eecs-difference-explained
+
+I truly believe that every time when you have to choose between
+"making things right" and "making things simple", the simple
+path will be much better for you over and over again.
+
+I have several personal cases of winning against competitors
+that had literally 100 times more resources (money, people,
+etc.). They failed because they wanted to make things right. So
+they would draw a plan, distribute responsibilities, debate a 5-
+year budget - and never (NEVER) deliver a final product. And we
+simply went after simplicity – and delivered very fast.
+
+
+
+Application vs Toolset
+
+You have to decide very carefully whether you really need to
+deliver a finished application - or the client will be much
+happier with a toolset which would allow him to get
+functionality he needs.
+
+It is ~100 times more difficult to deliver a finished
+application, because you have to test it on all supported
+platforms, provide documentation and customer service, work out
+all small details. On the other side, finished application is
+not flexible and may not fit customer needs. The bigger the
+client - the more flexibility he may require.
+
+Thus, it makes no sense to spend too much time on making a turn-
+key application for a big client. Instead you may design a set
+of modules which allow to easily construct custom applications
+for the client. While working with many clients, you will add
+more and more modules to your toolset, thus making your toolset
+more valuable to your market.
+
+Each individual module can be small, manageable and reliable.
+The custom application as a whole will be probably built by the
+client - so you don't have to provide customer support on it's
+quality.
+
+Thus by shifting your goal from making a compiled product to
+making a toolset, you made your work 10-100 times simpler and
+easier, and you made yourself 10 times more valuable to the
+marketplace.
+
+
+
+Best tool for the job
+
+There is no such thing as the best programming language. It is
+silly to think so. Different languages are best suited for
+different tasks. Good designer is the one who can select (and
+use) a good tool for the job at hand.
+
+Or, if he doesn't have a tool - he/she can create one.
+
+
+
+Changing Fast - Live or Die 
+
+Today (as always) we face 2 conflicting requirements:
+
+systems get larger and more complex
+systems need to change more often - and changes should be made
+faster
+When things start to change faster and faster - simplicity
+becomes a "live or die" requirement. In many situations you
+literally don't have enough time to make things "right" or
+complex.
+
+What do you prefer - a simple system which does the job - or a
+system which is architectured "correctly", - but never quite
+works, and can't be adapted to your requirements fast enough?
+
+So it is not about "making it right" any longer.  It is about
+making it simple to change and adapt faster.
+
+
+
+Perfect garbage
+
+Software systems are like live organisms - they have many
+imperfections, and they always growing and changing. By the time
+you make them perfect - they usually get thrown away and
+substituted by other systems.
+
+All real working systems are far from being perfect. Perfect
+systems are garbage.
+
+What makes more sense to you - making things right, or making
+things work and be useful ?
+
+
+
+When Object Oriented programming can cause problems
+
+I've heard many times that Object-Oriented paradigm is the best
+invention since starting the programming era. I agree, it is a
+great thing.
+
+I also believe that the best thing about OO programming is not
+objects themselves - but the culture of structuring the
+application in a way that helps you program and maintain the
+application. Experience in OO programming changes the way you
+think and makes you a better programmer.
+
+Or a worse programmer. Because when people get very familiar and
+involved with objects, they start creating them everywhere -
+even when they are not needed at all. This happens a lot when
+programmers use graphical tools (like Rational Rose) and UML
+diagrams to structure their applications. These tools make it
+extremely easy to create classes. And programmers get in a habit
+of drawing new classes every time they need some functionality.
+It is easy and addictive. And this occupation is well paid
+(called "Architect").
+
+As a result I've seen a program, which instead of simply
+printing an html tag was going though a process of creating a
+class for the tag, and then classes for all parameters of this
+tag, and then running methods to to get the tag together and
+print it out. This is like instead of saying "The height is 6
+feet", you would say: "The height is exp(ln(6.0)) feet".
+
+
+
+Dinosaurs.
+
+Big complex systems remind me of dinosaurs. Do you remember what
+happened to them? And who is now dominating the Earth?
+
+The hierarchical structures of OO programs can be very useful
+for some applications.  But not always.  For example, in big
+organizations you simply can't get everything into one
+hierarchical structure.  All you can do is establish some pretty
+liberal general guidelines and rules of communication.
+
+
+
+Evolutionary Development
+
+Let's say you started a web site with just one page. Then you
+added some more. You working one page at a time.  Each page is a
+finished product.  Together pages make a whole system - your web
+site. 
+
+This incremental growth is stable, you always succeed, because
+each step is simple enough and rewarding enough.
+
+This is an example of evolutionary development. You start from a
+simple bare bones single function utility. Then you write
+another one. And another. You add features. You combine them
+together - and finally you have a product.
+
+You allow the program to grow as a child. When the child is born
+- you don't know exactly what it will grow into. May be the
+product itself will not be a success - but one of the components
+will.
+
+The art is to structure the development process into a set of
+easy and rewarding small steps, so that the product starts to be
+useful at early stages. And then it grows and improves with the
+feedback from users.
+
+If software is simple and useful - it can start with a 2-week
+project - and then grow as a child. But if software is not
+simple or not useful - it will be very difficult for it to grow
+or even survive, regardless of how much time and money were
+originally invested, or how "right" was its design.
+
+I wrote this - and then found that I was not the first who
+formulated this. See for example
+http://www.dreamsongs.com/WorseIsBetter.html - "Worse Is Better"
+by Richard P. Gabriel.
+

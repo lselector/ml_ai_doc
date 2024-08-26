@@ -1,0 +1,172 @@
+How to Become a Data Architect (DA)
+
+Salary: 135K+ for 4+ years of experience
+
+Data Architecture = models, policies, rules, standadrds that govern
+  data collection, processing, storage, and usage.
+
+Data Architect (DA) designs a data system from scratch.
+How data is loaded, stored, maintained, queried, and consumed.
+DA draws diagrams - how data is connected, flows through states, etc.
+to allow automation, self-service reporting, data-led decisions.
+DA designs all stages and plans for execution: 
+    Designing, Creating, Deploying, Managing.
+
+# --------------------------------------------------------------
+Business skills:
+ - Excellent communication skills - listen to managers carefully to understand requirements
+ - Convert data challenges into automated processes, max results for min resources
+ - Excellent presenting skills - explain complex concepts to non-technical colleagues
+ - Advise data modelers, data engineers, database administrators, and junior architects
+ - Industry Knowledge, how data is collected, analyzed and utilized; 
+   maintaining flexibility in the face of big data developments.
+
+# --------------------------------------------------------------
+Responsibilities
+ - Design data-flow and data-storage strategy/architecture
+ - Build an inventory of data (available, needed, where to get)
+ - Work with IT, Data Scientists, and Management
+ - Identify and evaluate current data management technologies
+ - Create a fluid, end-to-end vision for how data will flow through an organization
+ - Develop data models for database structures
+ - Design, document, construct and deploy database architectures and apps
+ - Provide for scale, security, performance, data recovery, reliability, etc.
+ - Ensure data accuracy and accessibility
+ - Create frameworks / templates for solutions
+ - Constantly monitor, refine and report on the performance of data management systems
+ - Meld new systems with existing DW
+ - Produce and enforce database development standards
+ - Maintain a corporate repository of all data architecture artifacts and procedures
+ - Make presentations to upper management
+
+# --------------------------------------------------------------
+Several years of relevant experience
+Optional - BS Degree in Comp. Sci, Engineering, Information ...
+
+# --------------------------------------------------------------
+Technical Skills:
+ - Databases types (SQL, noSQ (Key-value), Graph, etc.)
+ - SQL mastery (DML , DDL, DCL, TCL)
+ - OLTP vs OLAP
+ - DBs: Mainframe DB2, Sybase, MS SQL Server, MySQL
+   Oracle, PostgreSQL, MongoDB, DynamoDB, CosmosDB, BigQuery, 
+   Apache Cassandra, SnowFlake.net, Pig, etc.
+ - Data Warehouse (Kimball Star Schema, Facts, Dimensions, Snowflake schema)
+ - ETL tools (bcp, Oracle Data Loader, Informatica, Ab Initio, StreamSets, 
+    ADF (Azure Data Factory), Azure Synapse Integrate, etc.)
+ - Data Analytics (Power BI, Tableau, visualizations, Reporting, self-service)
+ - Data modeling tools (ERWin, Enterprise Architect, Visio, etc.), 
+ - UML
+ - data schema, entities, relations, data flows, hierarchies
+ - CAP Theorem, geographical redundancy, 
+ - Distributed transactions, two-phase commit
+ - receiving/sending data in different formats (XML, SOAP, JSON, REST, protocol buffers)
+ - APIs
+ - File formats: CSV, parquet, JSON, Apache Arrow
+ - Handling nulls, missing data, data quality and integrity
+ - Hadoop/Spark data processing, loading, map-reduce, Google Big Table, HDFS, GDFS
+ - Streaming, Kafka, Event Hub, IoT ingesting
+ - Design patterns
+ - Big data handling
+ - Data mining
+ - Data security, access, data privacy, GDPR, differential privacy
+ - Risk assessment
+ - Data governance (measure and manage data quality, ownership, compliance, 
+     security, cleaning, standartization, categorization, encryption, etc.)
+ - Data lineage
+ - Agile methodologies and ERP implementation, GitHub, GitLab
+ - ACID transactions, dirty reads
+ - Replication, transaction log, Backup/archival software
+ - App Servers
+ - Machine Learning, predictive modeling, NLP and text analytics
+ - Python, C/C++, Java, Perl
+ - Unix/Linux and MS Windows
+ - Some Math and Statistics
+ - IaaS, PaaS, SaaS (infrastructure, Platform, Software as a Service)
+
+# --------------------------------------------------------------
+ - Reference architectures and specific tools for all 3 major Cloud providers
+   for ETL, SQL DW, Analytics, Machine Learning, Visualization, Reporting, etc.
+# --------------------------------------------------------------
+   AWS: S3 (Simple Storage Service), 
+        EC2 (Elastic Compute Cloud),
+        Lambda functions (serverless)
+        Databases: Red Shift, Snowflake, Athena (serveless), 
+                   Aurora (MySQL & PostreSQL compatible DB), 
+                   MariaDB, MySQL, PostreSQL, Microsoft SQL Server
+                   Dynamo DB, Neptune Graph Database
+        AWS Glue: managed ETL service
+        AWS Data Pipeline
+        AppFlow, Kinesis Firehose, AWS Datasync, AWS Data Migration Service
+        EMR (Elastic MapReduce) - Hadoop, Spark
+        Machine Learning: SageMaker (python, jupyter notebooks, deployment, ...)
+        AWS AI Services:
+          Amazon Comprehend (extract from text)
+          Amazon CodeGuru (auto code review)
+          Amazon Lex (Chatbots)
+          Amazon Forecast
+          Amazon Textract (extract tet and data from millions of docs)
+          Amazon Kendra (Natural Language Search)
+          Amazon Fraud Detector
+          Amazon Rekognition - image/video analysis, 
+          Amazon Personalize - recommendation engine, 
+          Amazon Translate - real time translation
+          Amazon Polly - text-to-speech
+          Amazon Transcribe - speech to text
+        Amazon QuickSight - Analytics dashboards, ...
+# --------------------------------------------------------------
+   Azure: ADLS (Azure Data Lake Storage Gen 2 - blobs and files)
+          ADF (Azure Data Factory)
+          Microsoft SQL Server
+          Azure Functions
+          Synapse (Integrate, serverless and dedicated SQL pools, PySpark, ADLS)
+          CosmosDB, Link for Cosmos DB
+          Power BI
+          Machine Learning Studio
+          Databricks
+          Cognitive Services
+# --------------------------------------------------------------
+   GCP: Cloud Storage
+        Storage Transfer Service
+        Cloud Functions
+        Databases:
+            Cloud SQL: managed MySQL, PostgreSQL, and SQL Server
+            Cloud BigQuery: Serverless DW, globally scalable, cost-effective
+            Cloud Spanner: 99.999% availability, gaming, global fin. ledger, inventory
+            Cloud Bigtable: NoSQL wide-column (similar to HBase & Apache Cassandra)
+            Firestore: NoSQL for Mobile, IoT, ...
+            Firebase Realtime DB: mobile, personalized ads, in-app chats, ...
+            Memorystore: Redis or Memcached
+            MongoDB Atlas
+            Neo4j Auro (Graph DB)
+            Datastax (NoSQL built on Apache Cassandra)
+        Datalab, DataPrep, and DataFlow        
+        Machine Learning: DataLab, ML Engine, AutoML
+        BI Dashboards: Google Data Studio
+        Colaboratory (Colab) - free jupyter notebooks with GPU
+         - https://colab.research.google.com/ 
+        Kaggle - ML competitions, code, notebooks (kernels), ...
+         - https://www.kaggle.com/ 
+# --------------------------------------------------------------
+   Oracle Cloud:
+        Oracle Infrastructure, DB, Java, ERP apps, NetSuite, HR, CRM, ...
+# --------------------------------------------------------------
+some terms:
+ - Data Block vs Data File
+ - cluster analysis (data mining, knowledge discovery, trees)
+ - Virtual Data Warehouse - 
+ - snapshot of DW
+ - XMLA - XML for Analysis services (standard in OLAP)
+ - view vs materialized view
+ - junk dimension
+ - Integrity constraints: Null, Unique Key, Primary Key, Foreign Key, Check
+ - dimension (table) vs attribute (column)
+ - Measures: non-additive, semi-additive, additive measures
+ - xxxx
+# --------------------------------------------------------------
+
+Datalab, DataPrep, and DataFlow; in AWS it’s Glue and Data Pipeline.
+
+# --------------------------------------------------------------
+# --------------------------------------------------------------
+

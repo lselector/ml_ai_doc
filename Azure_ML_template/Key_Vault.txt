@@ -1,0 +1,150 @@
+
+How to Handle logins in DEV and PROD:
+
+The best way to handle the logins is to use “Key Vault” (KV).
+ 
+https://docs.microsoft.com/en-us/azure/key-vault/general/basic-concepts
+
+A KV is basically a dictionary (key-value store).
+You can create as many of them as you want.
+
+==================================================
+Suppose for simplicity that you have one in DEV and one in PROD.
+ 
+You can use “Managed Identity” approach to allow your python
+code to access KV. Then you can get any values from KV as needed.
+ 
+This will allow you to use different logins in different environments.
+ 
+https://docs.microsoft.com/en-us/azure/machine-learning/how-to-use-secrets-in-runs
+ 
+https://github.com/Azure/MachineLearningNotebooks/blob/master/how-to-use-azureml/manage-azureml-service/authentication-in-azureml/authentication-in-azureml.ipynb
+
+==================================================
+
+When you create ML workspace - it comes with its own Key Vault (KV),
+which is very easy to use:
+ 
+import sys, os
+from azureml.core import Workspace
+from azureml.core import Keyvault
+ 
+ws = Workspace.from_config()
+kv = ws.get_default_keyvault()
+ 
+kv.set_secret(name="k1", value = "v1")
+vv = kv.get_secret(name="k1")
+ 
+print("vv")
+print("kv content:", kv.list_secrets())
+ 
+==================================================
+Note:
+Key Vault is not a simple dictionary.
+You can not delete the key, and then immediately set it again.
+When you delete a key - it actually does a soft-delete,
+and it is recoverable for 90 days (by default).
+ 
+Microsoft wrote:
+
+    “””
+    Purge Protection is designed so that no administrator 
+    role or permission can override, disable, or circumvent 
+    purge protection. 
+     
+    Once purge protection is enabled, it cannot be disabled 
+    or overridden by anyone including Microsoft. 
+     
+    This means you must recover a deleted key vault or wait 
+    for the retention period to elapse before 
+    reusing the key vault name.
+    “””
+ 
+==================================================
+Read more here:
+ 
+Azure Key Vault soft-delete overview:
+- https://docs.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview
+ 
+Azure Key Vault recovery management with soft delete and purge protection:
+- https://docs.microsoft.com/en-us/azure/key-vault/general/key-vault-recovery?tabs=azure-portal&WT.mc_id=Portal-Microsoft_Azure_KeyVault
+ 
+Here is another good link:
+https://docs.microsoft.com/en-us/azure/key-vault/secrets/quick-create-python
+https://docs.microsoft.com/en-us/azure/machine-learning/how-to-use-secrets-in-runs
+https://docs.microsoft.com/en-us/python/api/azureml-core/azureml.core.workspace.workspace?view=azure-ml-py
+
+======================================
+How to use Key Vault with Synapse:
+ 
+Key Vault is the recommended way to store and manage credentials. 
+To utilize them in Synapse, you create a linked service to the key vault.
+ 
+Then when you're setting up other linked services,
+one of the options for secrets is Key Vault.
+If you specify Key Vault, then you need to select
+the linked service that you set up that points to the Key Vault.
+
+======================================
+There are several env variables starting with CI_ :
+ 
+CI_RESOURCE_GROUP
+CI_WORKSPACE
+etc.
+ 
+See here:
+ 
+https://docs.microsoft.com/en-us/azure/machine-learning/how-to-create-manage-compute-instance?tabs=python
+ 
+It is very easy to get their values from python
+ 
+import os
+ 
+rg = os.getenv(“CI_RESOURCE_GROUP”)
+ws = os.getenv(“CI_WORKSPACE”)
+ 
+You can use os.getenv() 
+         or os.environ.get()
+ 
+https://able.bio/rhett/how-to-set-and-get-environment-variables-in-python--274rgt5
+
+======================================
+To run ML jobs you need to authenticate
+using one of three main methods:
+
+=========================================
+Method 1 - Interactive
+
+  Interactive = per-user authentication during 
+  experimentation and iterative development.
+  This is how you usually run your tests
+ 
+=========================================
+Method 2 - Service Principal
+
+   Service principal is non-human account 
+   to run your service jobs automatically.
+   It is basically name/password 
+   (called "clientId" and "clientSecret")
+
+   - https://docs.microsoft.com/en-us/azure/machine-learning/how-to-setup-authentication#configure-a-service-principal
+ 
+   I usually use this method (Service Principal)
+   Either hardcoding it in scripts, 
+   or saving clientId & clientSecret in the Key Vault
+ 
+=========================================
+Method 3 - Managed Identity
+
+  Managed identity - allow access between resources 
+  without password.
+  For example, you can allow access from your 
+  Machine Learning Studio to a Key Vault, and this
+  will allow all your scripts to access this Key Vault.
+ 
+  I think your scripts should use Service Principal 
+  authentication to access other resources (like databases),
+  and you should store the clientId & clientSecret 
+  of this Service Principal account in the Key Vault.
+
+=========================================

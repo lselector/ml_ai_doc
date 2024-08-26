@@ -1,0 +1,32 @@
+Today's post is about Tom Siebel and his companies.
+Tom Siebel was employee #20 at Oracle,
+then in 1993 he started his own company “Siebel Systems”,
+which he sold back to Oracle in 2016 for $5.85 Bln.
+Then in 2009 he started “C3 Energy”.
+Name "C3" comes from "Carbon-3", 
+where 3 comes from Measure-Mitigate-Monetize.
+
+Tom has restructured his company in 2011 
+into “C3 IoT” (Internet of Things),
+
+and in 2016 into C3.ai. 
+
+Today C3.ai is evaluated at $2+ Bln - and growing fast.
+
+In his last book “Digital Transformation" he writes 
+that AI and related technologies are disruptive,
+a life extinction event for corporations (similar to ice 
+age for dinosaurs). He states that since 2000, 52 percent 
+of Fortune 500 companies have fallen off the list. 
+
+So in order to survive, organizations must undergo digital 
+transformation by using elastic cloud computing, big data, 
+artificial intelligence, and internet of things. 
+
+The book provides a 10-point CEO action plan.
+
+Watch this short interview (~ 1 year old):
+ - https://lnkd.in/eF9sVpZ
+
+Also this full keynote Apr 8, 2019 at Carnegie Mellon:
+ - https://lnkd.in/eRDF6bb

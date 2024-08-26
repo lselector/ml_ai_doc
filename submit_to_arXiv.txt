@@ -1,0 +1,40 @@
+You want to submit your article to arXiv?
+
+Submission Guidelines:
+  https://info.arxiv.org/help/submit/index.html
+
+Steps:
+
+First time - register (create account) on arXiv.org
+   (email, username, password, ...)
+You may need an endorsement:
+   https://info.arxiv.org/help/endorsement.html
+
+
+Follow arXiv's guidelines for formatting your paper
+(TeX/LaTeX or PDF)
+For example, use Google Docs to create your article,
+then download it as PDF:
+   https://info.arxiv.org/help/submit_pdf.html
+
+Log in to your arXiv account
+Select Submit
+Fill out the necessary metadata
+   
+   (title, authors, abstract, and subject classification)
+
+Upload your PDF file and any supplemental material
+
+Select the appropriate subject area for your paper
+
+Click Submit
+Select Arxiv.org
+Download the zip file with submission files
+Upload the zip file to arXiv
+
+Researchers often submit papers to arXiv after submitting 
+them to a journal for publication or after they have 
+been accepted for publication. 
+
+All members must comply with arXiv's Code of Conduct. 
+   https://info.arxiv.org/help/policies/code_of_conduct.html
